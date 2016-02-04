@@ -1,0 +1,19 @@
+<form name="startRPForm" action="/controllers/?action=startRP" method="post" target="_blank">
+	<label>Referencia tranzakció azonosító * :</label>
+	<input type="text" name="referenceTransactionId" value="" size="40" />
+	<label>Válasz url * :</label>
+	<input type="text" name="responseUrl" value="" size="80" />
+	<label>Összeg * :</label>
+	<input type="text" name="amount" value="" />
+	<select name="currency" size="1">
+		<option value="HUF">HUF</option>
+		<option value="EUR">EUR</option>
+		<option value="USD">USD</option>
+	</select>
+	<label>Rendelés azonosító:</label>
+	<input type="text" name="orderId" value="" />
+	<label>Felhasználó azonosító:</label>
+	<input type="text" name="userId" value="" />
+	<br /><br />
+	<input type="submit" name="submit" value="Tovább" />
+</form>

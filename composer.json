@@ -1,0 +1,14 @@
+{
+	"name": "bigfish/paymentgateway-demo",
+	"description": "BIG FISH Payment Gateway Demo",
+	"require": {
+		"bigfish/paymentgateway": "*"
+	},
+	"authors": [
+		{
+			"name": "BIG FISH",
+			"email": "cafe@bigfish.hu"
+		}
+	],
+	"minimum-stability": "dev"
+}

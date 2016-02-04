@@ -1,0 +1,16 @@
+html, body, table {
+	font-family: arial;
+}
+
+h1 {
+	font-size: 20px;
+}
+
+label {
+	display: block;
+	margin: 15px 0;
+}
+
+table tr td {
+	padding: 5px;
+}
