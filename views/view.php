@@ -93,7 +93,7 @@ class View
 	protected function start()
 	{
 		$this->include = $this->controller->action . '.php';
-		$this->responseUrl = (($_SERVER['HTTPS'] == 'on') ? 'https' : 'http') . '://' . $_SERVER["HTTP_HOST"] . '/' . (($_SERVER["HTTP_HOST"] == 'test.paymentgateway.hu') ? 'DemoResponse' : 'response.php');
+		$this->responseUrl = (($_SERVER['HTTPS'] == 'on') ? 'https' : 'http') . '://' . $_SERVER["HTTP_HOST"] . '/response.php';
 	}
 	
 	/**
