@@ -147,8 +147,11 @@ class Controller
 	 */
 	protected function invoice()
 	{
-		if (!empty($_POST['data'])) {
-			eval("\$_POST['data'] = ".$_POST['data'].";");
+		/**
+		 * Űrlapból érkező tömb felépítésű string átforgatása tömb típusú változóra. Kizárólag teszteléshez!
+		 */
+		if (!empty($_POST['testData'])) {
+			eval("\$_POST['data'] = ".$_POST['testData'].";");
 		}
 
 		$invoice = Demo::invoice($_POST);
