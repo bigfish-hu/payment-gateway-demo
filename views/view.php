@@ -52,6 +52,7 @@ class View
 	{
 		$this->controller = $controller;
 		$this->include = $this->controller->action . '.html';
+		$this->responseUrl = (($_SERVER['HTTPS'] == 'on') ? 'https' : 'http') . '://' . $_SERVER["HTTP_HOST"] . '/response.php';
 		$this->call();
 	}
 	
@@ -81,7 +82,6 @@ class View
 	protected function output()
 	{
 		require_once(PROJECT_PATH . DS . 'views' . DS . 'frame.php');
-		exit;
 	}
 	
 	/**
@@ -92,8 +92,7 @@ class View
 	 */
 	protected function start()
 	{
-		$this->include = $this->controller->action . '.php';
-		$this->responseUrl = (($_SERVER['HTTPS'] == 'on') ? 'https' : 'http') . '://' . $_SERVER["HTTP_HOST"] . '/response.php';
+		$this->setPhpInclude();
 	}
 	
 	/**
@@ -104,9 +103,20 @@ class View
 	 */
 	protected function startOcp()
 	{
-		$this->include = $this->controller->action . '.php';
+		$this->setPhpInclude();
 	}
 	
+	/**
+	 * StartRP
+	 *
+	 * @return void
+	 * @access protected
+	 */
+	protected function startRP()
+	{
+		$this->setPhpInclude();
+	}
+
 	/**
 	 * Invoice
 	 *
@@ -116,7 +126,19 @@ class View
 	protected function invoice()
 	{
 		if (!empty($this->controller->data)) {
-			require_once(PROJECT_PATH . DS . 'views' . DS . 'invoice.php');
+			$this->setPhpInclude();
+			require_once(PROJECT_PATH . DS . 'views' . DS . $this->include);
 		}	
+	}
+	
+	/**
+	 * SetPhpInclude
+	 *
+	 * @return void
+	 * @access protected
+	 */
+	protected function setPhpInclude()
+	{
+		$this->include = $this->controller->action . '.php';
 	}
 }

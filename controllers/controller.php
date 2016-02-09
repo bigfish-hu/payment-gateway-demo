@@ -28,6 +28,25 @@ class Controller
 	 * @access public
 	 */
 	public $data;
+	
+	/**
+	 * enabledActions
+	 * 
+	 * @var array
+	 * @access public
+	 * @static
+	 */
+	public static $enabledActions = array(
+		'welcome',
+		'start',
+		'result',
+		'close',
+		'details',
+		'refund',
+		'selectOcp',
+		'startRP',
+		'invoice',
+	);
 
 	/**
 	 * Contructor
@@ -37,7 +56,23 @@ class Controller
 	 */
 	public function __construct()
 	{
-		$this->action = $_GET['action'];
+		$this->setAction($_GET['action']);
+	}
+	
+	/**
+	 * Check action
+	 *
+	 * @return void
+	 * @access protected
+	 */
+	protected function setAction($action)
+	{
+		if (in_array($action, self::$enabledActions)) {
+			$this->action = $action;
+		} else {
+			$this->action = 'welcome';
+			$this->result = 'Érvénytelen "action" paraméter';
+		}
 	}
 
 	/**

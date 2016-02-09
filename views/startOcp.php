@@ -6,7 +6,7 @@
 	<label>Korábban regisztrált felhasználó azonosító: <?=$_POST['userId'];?></label>
 	<input type="hidden" name="userId" value="<?=$_POST['userId'];?>" />
 	<label>Válasz url * :</label>
-	<input type="text" name="responseUrl" value="" size="80" />
+	<input type="text" name="responseUrl" value="<?=$this->responseUrl;?>" size="80" />
 	<label>Összeg * :</label>
 	<input type="text" name="amount" value="" />
 	<select name="currency" size="1">

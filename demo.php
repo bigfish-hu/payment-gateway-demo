@@ -79,7 +79,7 @@ abstract class Demo
 			}
 			
 			switch ($data['providerName']) {
-				case 'MKBSZEP':
+				case \BigFish\PaymentGateway::PROVIDER_MKB_SZEP:
 					$initRequest->setMkbSzepCafeteriaId(self::$szepCardId[$data['providerName']][$data["szepPocket"]]);
 
 					if ((int)$data["gatewayPaymentPage"]) {
@@ -89,10 +89,10 @@ abstract class Demo
 									->setMkbSzepCvv($data["cardCvc"]);
 					}
 					break;
-				case 'KHBSZEP':
+				case \BigFish\PaymentGateway::PROVIDER_KHB_SZEP:
 					$data['extra']['KhbCardPocketId'] = self::$szepCardId[$data['providerName']][$data["szepPocket"]];
 					break;
-				case 'OTP':
+				case \BigFish\PaymentGateway::PROVIDER_OTP:
 					if (!empty($data["szepPocket"])) {
 						$initRequest->setOtpCardPocketId(self::$szepCardId[$data['providerName']][$data["szepPocket"]]);
 					}
@@ -101,7 +101,7 @@ abstract class Demo
 						$initRequest->setOtpConsumerRegistrationId($data['otpConsumerRegistrationId']);
 					}
 					break;
-				case 'OTP2':
+				case \BigFish\PaymentGateway::PROVIDER_OTP_TWO_PARTY:
 					if (!empty($data['otpConsumerRegistrationId'])) {
 						$initRequest->setOtpConsumerRegistrationId($data['otpConsumerRegistrationId']);
 					}
@@ -110,12 +110,12 @@ abstract class Demo
 								->setOtpExpiration($data["cardExpiration"])
 								->setOtpCvc($data["cardCvc"]);
 					break;
-				case 'OTPay':
+				case \BigFish\PaymentGateway::PROVIDER_OTPAY:
 					if (!empty($data['phoneNumber'])) {
 						$initRequest->setMppPhoneNumber($data['phoneNumber']);
 					}
-				case 'Escalion':
-				case 'OTPSimple':
+				case \BigFish\PaymentGateway::PROVIDER_ESCALION:
+				case \BigFish\PaymentGateway::PROVIDER_OTP_SIMPLE:
 					if ((int)$data['oneClickPayment']) {
 						$initRequest->setOneClickPayment(true);
 					}
