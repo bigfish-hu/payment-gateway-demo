@@ -1,11 +1,11 @@
 <form name="closeForm" action="/controllers/?action=close" method="post" target="_blank">
-	<label>Tranzakció azonosító * :</label>
+	<label>Transaction ID * :</label>
 	<input type="text" name="TransactionId" value="" size="40" />
-	<label>Végrehajtás:</label>
+	<label>Approve:</label>
 	<select name="Approved" size="1">
-		<option value="true">Engedélyezve</option>
-		<option value="false">Visszavonva</option>
+		<option value="true">Allow</option>
+		<option value="false">Revoke</option>
 	</select>
 	<br /><br />
-	<input type="submit" name="submit" value="Tovább" />
+	<input type="submit" name="submit" value="Next" />
 </form>

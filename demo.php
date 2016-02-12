@@ -6,7 +6,7 @@
 abstract class Demo
 {
 	/**
-	 * SZÉP kártya zseb azonosítók megfeleltetése
+	 * Matching SZÉP Card pocket id
 	 * 
 	 * @var array
 	 * @access protected
@@ -31,7 +31,7 @@ abstract class Demo
 	);
 
 	/**
-	 * Konfiguráció beállítása
+	 * Config settings
 	 * 
 	 * @param array $data
 	 * @return void
@@ -51,7 +51,7 @@ abstract class Demo
 	}
 	
 	/**
-	 * Tranzakció inicializálása és indítása
+	 * Init and start transaction
 	 * 
 	 * @param array $data
 	 * @return object|string
@@ -133,7 +133,7 @@ abstract class Demo
 			
 			if ($initResponse->ResultCode == "SUCCESSFUL" && $initResponse->TransactionId) {
 				/**
-				 * A start hívás előtt mentsd el a TransactionId értékét az adatbázisba.
+				 * Save TransactionId into database before call start().
 				 */
 				\BigFish\PaymentGateway::start(new BigFish\PaymentGateway\Request\Start($initResponse->TransactionId));
 			}
@@ -145,7 +145,7 @@ abstract class Demo
 	}
 
 	/**
-	 * Tranzakció eredményének lekérdezése
+	 * Get transaction result
 	 * 
 	 * @param array $data
 	 * @return object|string
@@ -164,7 +164,7 @@ abstract class Demo
 	}
 	
 	/**
-	 * Későbbi időpontban végrehajtott tranzakció lezárása (2 lépcsős fizetés)
+	 * Close transaction (two-step payment)
 	 * 
 	 * @param array $data
 	 * @return object|string
@@ -183,7 +183,7 @@ abstract class Demo
 	}
 	
 	/**
-	 * Tranzakció részletes adatainak lekérdezése
+	 * Get transaction details
 	 * 
 	 * @param array $data
 	 * @return object|string
@@ -202,7 +202,7 @@ abstract class Demo
 	}
 	
 	/**
-	 * Tranzakciós összeg visszatérítése
+	 * Refund transaction
 	 * 
 	 * @param array $data
 	 * @return object|string
@@ -221,7 +221,7 @@ abstract class Demo
 	}
 
 	/**
-	 * Ismétlődő tranzakció inicializálása és indítása
+	 * Init and start recurring payment
 	 * 
 	 * @param array $data
 	 * @return object|string
@@ -253,7 +253,7 @@ abstract class Demo
 	}
 	
 	/**
-	 * Tranzakció számlázása
+	 * Invoice transaction
 	 * 
 	 * @param array $data
 	 * @return object|string
@@ -272,7 +272,7 @@ abstract class Demo
 	}
 	
 	/**
-	 * Korábbi sikeres fizetésekhez tartozó referencia azonosító lekérdezése One Click Payment indításához köztes oldal nélkül
+	 * Get reference transaction id to start One Click Payment without any intermediate page
 	 * 
 	 * @param array $data
 	 * @return object|string

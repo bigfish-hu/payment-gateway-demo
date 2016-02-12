@@ -1,17 +1,17 @@
 # BIG FISH Payment Gateway - Demo
 
-## Verzió
+## Version
 
 1.0.0
 
-## Szükséges modulok
+## Required modules
 
 BIG FISH Payment Gateway - PHP SDK: https://github.com/bigfish-hu/payment-gateway-php-sdk
 
-## Telepítés
+## Installation
 
-A csomagban található fájlok webszerverre történő felmásolása után installálni kell a BIG FISH Payment Gateway - PHP SDK modult, ami történhet composer használatával, vagy a GitHub-ról letöltött SDK-ban található payment-gateway-php-sdk-master mappa tartalmának bemásolásával a /vendor/bigfish/paymentgateway/ mappa alá.
+Use composer to install BIG FISH Payment Gateway - PHP SDK module or download it from GitHub and copy the payment-gateway-php-sdk-master folder contents into the /vendor/bigfish/paymentgateway/ folder.
 
-## Forrás
+## Source code
 
 https://github.com/bigfish-hu/payment-gateway-demo

@@ -10,7 +10,7 @@ $vendorAutoload = PROJECT_PATH . DS . 'vendor' . DS . 'autoload.php';
 $sdkAutoload = PROJECT_PATH . DS . 'vendor' . DS . 'bigfish' . DS . 'paymentgateway' . DS . 'src' . DS . 'BigFish' . DS . 'PaymentGateway' . DS . 'Autoload.php';
 
 if (!is_file($sdkAutoload)) {
-	echo 'A BIG FISH Payment Gateway - PHP SDK modul nincs telepítve.';
+	echo 'BIG FISH Payment Gateway - PHP SDK module not installed.';
 	exit;
 }
 

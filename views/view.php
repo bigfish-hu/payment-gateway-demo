@@ -30,15 +30,15 @@ class View
 	 */
 	public static $header = array(
 		'welcome' => 'BIG FISH Payment Gateway - Demo',
-		'start' => 'Tranzakció indítása (init, start)',
-		'result' => 'Eredmény lekérdezése (result)',
-		'close' => '2 lépcsős tranzakció engedélyezése/elutasítása (close)',
-		'details' => 'Részletes adatok lekérdezése (details)',
-		'refund' => 'Visszatérítés (refund)',
-		'selectOcp' => 'One Click Payment indítása (köztes oldal nélkül)',
-		'startOcp' => 'One Click Payment indítása (köztes oldal nélkül)',
-		'startRP' => 'Ismétlődő fizetés indítása (initRP, startRP)',
-		'invoice' => 'Számlázás (invoice)',
+		'start' => 'Start transaction (init, start)',
+		'result' => 'Get result (result)',
+		'close' => 'Allow/Revoke two-step transaction (close)',
+		'details' => 'Get details(details)',
+		'refund' => 'Refund (refund)',
+		'selectOcp' => 'One Click Payment (without any intermediate page)',
+		'startOcp' => 'One Click Payment (without any intermediate page)',
+		'startRP' => 'Start recurring payment (initRP, startRP)',
+		'invoice' => 'Invoice (invoice)',
 	);
 	
 	/**

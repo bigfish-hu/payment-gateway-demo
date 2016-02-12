@@ -71,7 +71,7 @@ class Controller
 			$this->action = $action;
 		} else {
 			$this->action = 'welcome';
-			$this->result = 'Érvénytelen "action" paraméter';
+			$this->result = 'Invalid "action" parameter';
 		}
 	}
 
@@ -183,7 +183,8 @@ class Controller
 	protected function invoice()
 	{
 		/**
-		 * Űrlapból érkező tömb felépítésű string átforgatása tömb típusú változóra. Kizárólag teszteléshez!
+		 * Convert string to array
+		 * Only for testing!
 		 */
 		if (!empty($_POST['testData'])) {
 			eval("\$_POST['data'] = ".$_POST['testData'].";");

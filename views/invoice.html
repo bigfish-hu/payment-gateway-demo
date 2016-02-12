@@ -1,7 +1,7 @@
 <form name="invoiceForm" action="/controllers/?action=invoice" method="post" target="_blank">
-	<label>Tranzakció azonosító * :</label>
+	<label>Transaction ID * :</label>
 	<input type="text" name="TransactionId" value="" size="40" />
-	<label>Adat * :</label>
+	<label>Test data * :</label>
 	<textarea name="testData" style="width: 660px; height: 660px;">
 array(
 	'beallitasok' => array(
@@ -11,7 +11,7 @@ array(
 		'kulcstartojelszo' => '',
 		'szamlaLetoltes' => 'true',
 		'szamlaLetoltesPld' => 2,
-		'valaszVerzio' => 2, //Alapértelmezetten mindig 2
+		'valaszVerzio' => 2,
 	),
 	'fejlec' => array(
 		'keltDatum' => '2015-07-09',
@@ -78,5 +78,5 @@ array(
 	),
 )</textarea>
 	<br /><br />
-	<input type="submit" name="submit" value="Tovább" />
+	<input type="submit" name="submit" value="Next" />
 </form>
