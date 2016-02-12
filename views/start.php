@@ -10,7 +10,7 @@
 		<li><input type="radio" name="providerName" value="KHBSZEP" /> K&H SZÉP Card</li>
 		<li><input type="radio" name="providerName" value="MKBSZEP" /> MKB SZÉP Card</li>
 		<li><input type="radio" name="providerName" value="OTP" /> OTP Bank, OTP SZÉP Card</li>
-		<li><input type="radio" name="providerName" value="OTP2" /> OTP Bank (two-way)</li>
+		<li><input type="radio" name="providerName" value="OTP2" /> OTP Bank (two-party)</li>
 		<li><input type="radio" name="providerName" value="OTPMultipont" /> OTP Multipont</li>
 		<li><input type="radio" name="providerName" value="OTPSimple" /> OTP Simple</li>
 		<li><input type="radio" name="providerName" value="OTPSimpleWire" /> OTP Simple wire</li>
