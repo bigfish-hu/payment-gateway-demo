@@ -21,6 +21,7 @@
 		<li><label><input type="radio" name="providerName" value="PayPal"><span><span></span></span>PayPal</label></li>
 		<li><label><input type="radio" name="providerName" value="PSC"><span><span></span></span>Paysafecard</label></li>
 		<li><label><input type="radio" name="providerName" value="PayU2"><span><span></span></span>PayU (Polish)</label></li>
+		<li><label><input type="radio" name="providerName" value="Saferpay"><span><span></span></span>Saferpay</label></li>
 		<li><label><input type="radio" name="providerName" value="SMS"><span><span></span></span>SMS</label></li>
 		<li><label><input type="radio" name="providerName" value="Sofort"><span><span></span></span>Sofort Banking</label></li>
 		<li><label><input type="radio" name="providerName" value="UniCredit"><span><span></span></span>UniCredit Bank</label></li>
@@ -39,76 +40,66 @@
 
 	<div class="providerData Borgun">
 		<table class="table-test-data">
-			<thead><tr><th colspan="3">Test data:</th></tr></thead>
+			<thead><tr><th colspan="4">Test data:</th></tr></thead>
 			<tbody>
-				<tr><td>To success payment:</td><td>4741520000000003</td><td>CVC: 000</td></tr>
-				<tr><td>To failed payment:</td><td>4155520000000002</td><td>CVC: 121</td></tr>
+				<tr><td>To success payment:</td><td>4741520000000003</td><td>CVC:</td><td>000</td></tr>
+				<tr><td>To failed payment:</td><td>4155520000000002</td><td>CVC:</td><td>121</td></tr>
 			</tbody>
 		</table>
 	</div>
 
 	<div class="providerData CIB">
 		<table class="table-test-data">
-			<thead><tr><th colspan="4">Test data:</th></tr></thead>
+			<thead><tr><th colspan="6">Test data:</th></tr></thead>
 			<tbody>
-				<tr><td>To success payment:</td><td>5111 1111 1111 1111</td><td>Expired date: any</td><td>CVC: 111</td></tr>
-				<tr><td>To failed payment:</td><td>4999 9999 9999 9999</td><td>Expired date: any</td><td>CVC: 111</td></tr>
+				<tr><td>To success payment:</td><td>5111 1111 1111 1111</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
+				<tr><td>To failed payment:</td><td>4999 9999 9999 9999</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
 			</tbody>
 		</table>
 	</div>
 
 	<div class="providerData Escalion">
 		<table class="table-test-data">
-			<thead><tr><th colspan="4">Test data:</th></tr></thead>
+			<thead><tr><th colspan="6">Test data:</th></tr></thead>
 			<tbody>
-				<tr><td>To success payment:</td><td>5431 1111 1111 1111</td><td>Expired date: any</td><td>CVC: 111</td></tr>
-				<tr><td>To failed payment:</td><td>4111 1111 1111 1111</td><td>Expired date: any</td><td>CVC: 111</td></tr>
+				<tr><td>To success payment:</td><td>5431 1111 1111 1111</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
+				<tr><td>To failed payment:</td><td>4111 1111 1111 1111</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
 			</tbody>
 		</table>
 	</div>
 
 	<div class="providerData FHB">
 		<table class="table-test-data">
-			<thead><tr><th colspan="4">Test data:</th></tr></thead>
+			<thead><tr><th colspan="6">Test data:</th></tr></thead>
 			<tbody>
-				<tr><td>To success payment:</td><td>4314 2299 9999 9913</td><td>Expired date: 01/18</td><td>CVC: 123</td></tr>
-				<tr><td>To failed payment:</td><td>4314 2299 9999 9913</td><td>Expired date: 01/20</td><td>CVC: 123</td></tr>
+				<tr><td>To success payment:</td><td>4314 2299 9999 9913</td><td>Expired date:</td><td>01/18</td><td>CVC:</td><td>123</td></tr>
+				<tr><td>To failed payment:</td><td>4314 2299 9999 9913</td><td>Expired date:</td><td>01/20</td><td>CVC:</td><td>123</td></tr>
 			</tbody>
 		</table>
 	</div>
 
 	<div class="providerData KHB">
 		<table class="table-test-data">
-			<thead><tr><th colspan="4">Test data:</th></tr></thead>
+			<thead><tr><th colspan="6">Test data:</th></tr></thead>
 			<tbody>
-				<tr><td>To success payment:</td><td>4550 5225 9830 5372</td><td>Expired date: 2003/11</td><td>CVV2: 271</td></tr>
-				<tr><td>To failed payment:</td><td>4205 7925 0786 4590</td><td>Expired date: 2006/10</td><td>CVV2: 106</td></tr>
+				<tr><td>To success payment:</td><td>4550 5225 9830 5372</td><td>Expired date:</td><td>2003/11</td><td>CVV2:</td><td>271</td></tr>
+				<tr><td>To failed payment:</td><td>4205 7925 0786 4590</td><td>Expired date:</td><td>2006/10</td><td>CVV2:</td><td>106</td></tr>
 			</tbody>
 		</table>
 	</div>
 
 	<div class="providerData KHBSZEP">
 		<table class="table-test-data">
-			<thead><tr><th colspan="2">Test data:</th></tr></thead>
+			<thead><tr><th colspan="3">Test data:</th></tr></thead>
 			<tbody>
-				<tr>
-					<td>To success payment:</td>
-					<td>
-						Card number: 64719254<br />
-						Expired date: 2019.12.31<br />
-						Controlling value: 213<br />
-						Password: PGtest01
-					</td>
-				</tr>
-				<tr>
-					<td>To failed payment:</td>
-					<td>
-						Card number: 05101182<br />
-						Expired date: 2019.12.31<br />
-						Controlling value: 508<br />
-						Password: Aa123456
-					</td>
-				</tr>
+				<tr><td>To success payment:</td><td>Card number:</td><td>64719254</td></tr>
+				<tr><td></td><td>Expired date:</td><td>2019.12.31</td></tr>
+				<tr><td></td><td>Controlling value:</td><td>213</td></tr>
+				<tr><td></td><td>Password:</td><td>PGtest01</td></tr>
+				<tr><td>To failed payment:</td><td>Card number:</td><td>05101182</td></tr>
+				<tr><td></td><td>Expired date:</td><td>2019.12.31</td></tr>
+				<tr><td></td><td>Controlling value:</td><td>508</td></tr>
+				<tr><td></td><td>Password:</td><td>Aa123456</td></tr>
 			</tbody>
 		</table>
 	</div>
@@ -122,16 +113,16 @@
 
 	<div class="providerData OTP">
 		<table class="table-test-data">
-			<thead><tr><th colspan="4">Test data:</th></tr></thead>
+			<thead><tr><th colspan="6">Test data:</th></tr></thead>
 			<tbody>
-				<tr><td>To success payment:</td><td>4908 3660 9990 0425</td><td>Expired date: 2014/10</td><td>CVC2: 823</td></tr>
-				<tr><td>To failed payment:</td><td>1111 1111 1111 1117</td><td>Expired date: 2004/04</td><td>CVC2: 111</td></tr>
+				<tr><td>To success payment:</td><td>4908 3660 9990 0425</td><td>Expired date:</td><td>any</td><td>CVC2:</td><td>any</td></tr>
+				<tr><td>To failed payment:</td><td>1111 1111 1111 1117</td><td>Expired date:</td><td>2004/04</td><td>CVC2:</td><td>111</td></tr>
 			</tbody>
 		</table>
 
 		<table class="table-test-data">
-			<thead><tr><th colspan="4">SZÉP Card test data:</th></tr></thead>
-			<tbody><tr><td>To success payment:</td><td>6101 3242 9999 2718</td><td>Expired date: 09/19</td><td>CVC2: 282</td></tr></tbody>
+			<thead><tr><th colspan="6">SZÉP Card test data:</th></tr></thead>
+			<tbody><tr><td>To success payment:</td><td>6101 3242 9999 2718</td><td>Expired date:</td><td>09/19</td><td>CVC2:</td><td>282</td></tr></tbody>
 		</table>
 	</div>
 	
@@ -210,6 +201,18 @@
 		</table>
 	</div>
 
+	<div class="providerData Saferpay">
+		<table class="table-test-data">
+			<thead><tr><th colspan="6">Test data:</th></tr></thead>
+			<tbody>
+				<tr><td>To success payment (VISA):</td><td>9010101052000002</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>To failed payment (VISA):</td><td>9010100152000003</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>To success payment (MASTERCARD):</td><td>9030101052000008</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>To failed payment (MASTERCARD):</td><td>9030100152000009</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+			</tbody>
+		</table>
+	</div>
+
 	<div class="providerData Sofort">
 		<table class="table-test-data">
 			<thead><tr><th colspan="2">Test data:</th></tr></thead>
@@ -224,20 +227,20 @@
 
 	<div class="providerData UniCredit">
 		<table class="table-test-data">
-			<thead><tr><th colspan="4">Test data:</th></tr></thead>
+			<thead><tr><th colspan="6">Test data:</th></tr></thead>
 			<tbody>
-				<tr><td>To success payment:</td><td>4314 2299 9999 9913</td><td>Expired date: 01/18</td><td>CVC: 123</td></tr>
-				<tr><td>To failed payment:</td><td>4314 2299 9999 9913</td><td>Expired date: 01/20</td><td>CVC: 123</td></tr>
+				<tr><td>To success payment:</td><td>4314 2299 9999 9913</td><td>Expired date:</td><td>01/18</td><td>CVC:</td><td>123</td></tr>
+				<tr><td>To failed payment:</td><td>4314 2299 9999 9913</td><td>Expired date:</td><td>01/20</td><td>CVC:</td><td>123</td></tr>
 			</tbody>
 		</table>
 	</div>
 
 	<div class="providerData QPAY">
 		<table class="table-test-data">
-			<thead><tr><th colspan="4">Test data:</th></tr></thead>
+			<thead><tr><th colspan="6">Test data:</th></tr></thead>
 			<tbody>
-				<tr><td>To success payment:</td><td>4200000000000018</td><td>Expired date: 01/19</td><td>CVC: 018</td></tr>
-				<tr><td>To failed payment:</td><td>4200000000000083</td><td>Expired date: 01/19</td><td>CVC: 083</td></tr>
+				<tr><td>To success payment:</td><td>4200000000000018</td><td>Expired date:</td><td>01/19</td><td>CVC:</td><td>018</td></tr>
+				<tr><td>To failed payment:</td><td>4200000000000083</td><td>Expired date:</td><td>01/19</td><td>CVC:</td><td>083</td></tr>
 			</tbody>
 		</table>
 	</div>
@@ -289,7 +292,7 @@
 		
 		<label class="col-2">
 			<span>Authorization :</span>
-			<select name="autoCommit" class="input FHB OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY">
+			<select name="autoCommit" class="input FHB OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
 				<option value="true">Immediate</option>
 				<option value="false">Later</option>
 			</select>
@@ -319,7 +322,7 @@
 	</label>
 
 	<label class="label-chkbox">
-		<span>One Click Payment (User registration or pay by a registered user on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Escalion OTPSimple"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		<span>One Click Payment (User registration or pay by a registered user on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Escalion OTPSimple Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
 
 	<label class="label-chkbox">

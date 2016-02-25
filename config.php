@@ -32,6 +32,7 @@ $config = array(
 );
 
 switch ($_POST['providerName']) {
+	case 'OTP':
 	case 'OTP2':
 		$config['encryptPublicKey'] = '-----BEGIN PUBLIC KEY-----
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCpRN6hb8pQaDen9Qjt18P2FqSc
