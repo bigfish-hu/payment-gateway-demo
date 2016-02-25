@@ -8,10 +8,19 @@
 	<title>BIG FISH Payment Gateway - Demo  (<?=$this->controller->action;?>)</title>
 
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700italic|Open+Sans:400,600,700'>
-    <link rel="stylesheet" href="/assets/css/demo.css">
+    <link rel="stylesheet" href="/assets/css/demo.min.css">
 	<script src="/assets/js/demo.js"></script>
 </head>
 <body>
+<div style="display: none;">
+    <svg>
+        <symbol id="svg-check">
+            <title>check</title>
+            <path fill="none" stroke="#01a7fe" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M1.5,7.5l3,3,7-9"></path>
+        </symbol>
+    </svg>
+</div>
+
 	<div id="page-wrap">
         <div class="pmgw-header">
             <div class="container">

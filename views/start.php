@@ -303,8 +303,8 @@
             </select>
         </label>
 
-        <label class="col-2">
-            <span>Add your card data on Payment Gateway page : <input type="checkbox" name="gatewayPaymentPage" value="1" class="input MKBSZEP"></span>
+        <label class="label-chkbox col-2">
+            <span>Add your card data on Payment Gateway page: <input type="checkbox" name="gatewayPaymentPage" value="1" class="input MKBSZEP"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
         </label>
     </div>
 
@@ -349,8 +349,8 @@
         </label>
     </div>
 
-    <label>
-        <span>One Click Payment (User registration or pay by a registered user on Payment Gateway page) : <input type="checkbox" name="oneClickPayment" value="1" class="input Escalion OTPSimple"></span>
+    <label class="label-chkbox">
+        <span>One Click Payment (User registration or pay by a registered user on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Escalion OTPSimple"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
     </label>
 
 	<input type="submit" name="submit" value="Next">
