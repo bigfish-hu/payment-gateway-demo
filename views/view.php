@@ -33,7 +33,7 @@ class View
 		'start' => 'Start transaction (init, start)',
 		'result' => 'Get result (result)',
 		'close' => 'Allow/Revoke two-step transaction (close)',
-		'details' => 'Get details(details)',
+		'details' => 'Get details (details)',
 		'refund' => 'Refund (refund)',
 		'selectOcp' => 'One Click Payment (without any intermediate page)',
 		'startOcp' => 'One Click Payment (without any intermediate page)',

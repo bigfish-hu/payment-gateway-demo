@@ -1,8 +1,12 @@
 <form name="invoiceForm" action="/controllers/?action=invoice" method="post" target="_blank">
-	<label>Transaction ID * :</label>
-	<input type="text" name="TransactionId" value="" size="40" />
-	<label>Test data * :</label>
-	<textarea name="testData" style="width: 660px; height: 660px;">
+	<label>
+		<span>Transaction ID * :</span>
+		<input type="text" name="TransactionId" value="">
+	</label>
+
+	<label>
+		<span>Test data * :</span>
+			<textarea name="testData">
 array(
 	'beallitasok' => array(
 		'felhasznalo' => '',
@@ -73,10 +77,10 @@ array(
 			'nettoErtek' => '20000.0',
 			'afaErtek' => '5000.0',
 			'bruttoErtek' => '25000.0',
-			'megjegyzes' => 'tétel megjegyzés 2',				
+			'megjegyzes' => 'tétel megjegyzés 2',
 		),
 	),
 )</textarea>
-	<br /><br />
-	<input type="submit" name="submit" value="Next" />
+	</label>
+	<input type="submit" name="submit" value="Next">
 </form>
