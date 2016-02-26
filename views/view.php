@@ -29,7 +29,6 @@ class View
 	 * @static
 	 */
 	public static $header = array(
-		'welcome' => 'BIG FISH Payment Gateway - Demo',
 		'start' => 'Start transaction (init, start)',
 		'result' => 'Get result (result)',
 		'close' => 'Allow/Revoke two-step transaction (close)',
@@ -41,6 +40,82 @@ class View
 		'invoice' => 'Invoice (invoice)',
 	);
 	
+	/**
+	 * Saferpay payment methods
+	 * 
+	 * @var array
+	 * @access public
+	 * @static
+	 */
+	public static $saferpayPaymentMethods = array(
+		'AMEX' => 'AMEX',
+		'DIRECTDEBIT' => 'DIRECTDEBIT',
+		'INVOICE' => 'INVOICE',
+		'BONUS' => 'BONUS',
+		'DINERS' => 'DINERS',
+		'EPRZELEWY' => 'EPRZELEWY',
+		'EPS' => 'EPS',
+		'GIROPAY' => 'GIROPAY',
+		'IDEAL' => 'IDEAL',
+		'JCB' => 'JCB',
+		'MAESTRO' => 'MAESTRO',
+		'MASTERCARD' => 'MASTERCARD',
+		'MYONE' => 'MYONE',
+		'PAYPAL' => 'PAYPAL',
+		'POSTCARD' => 'POSTCARD',
+		'POSTFINANCE' => 'POSTFINANCE',
+		'SAFERPAYTEST' => 'SAFERPAYTEST',
+		'SOFORT' => 'SOFORT',
+		'VISA' => 'VISA',
+		'VPAY' => 'VPAY',
+	);
+
+	/**
+	 * Saferpay wallets
+	 * 
+	 * @var array
+	 * @access public
+	 * @static
+	 */
+	public static $saferpayWallets = array(
+		'MASTERPASS' => 'MASTERPASS',
+	);
+
+	/**
+	 * Wirecard payment types
+	 * 
+	 * @var array
+	 * @access public
+	 * @static
+	 */
+	public static $wirecardPaymentTypes = array(
+		'SELECT' => 'Select it on Wirecard side',
+		'BANCONTACT_MISTERCASH' => 'Bancontact/Mister Cash',
+		'CCARD' => 'Credit Card, Maestro SecureCode',
+		'CCARD-MOTO' => 'Credit Card - Mail Order and Telephone Order',
+		'EKONTO' => 'eKonto',
+		'EPAY_BG' => 'ePay.bg',
+		'EPS' => 'eps Online-wire',
+		'GIROPAY' => 'giropay',
+		'IDL' => 'iDEAL',
+		'MONETA' => 'moneta.ru',
+		'MPASS' => 'mpass',
+		'PRZELEWY24' => 'Przelewy24',
+		'PAYPAL' => 'PayPal',
+		'PBX' => 'paybox',
+		'POLI' => 'POLi',
+		'PSC' => 'paysafecard',
+		'QUICK' => '@Quick',
+		'SEPA-DD' => 'SEPA Direct Debit',
+		'SKRILLDIRECT' => 'Skrill Direct',
+		'SKRILLWALLET' => 'Skrill Digital Wallet',
+		'SOFORTUEBERWEISUNG' => 'SOFORT Banking',
+		'TATRAPAY' => 'TatraPay',
+		'TRUSTLY' => 'Trustly',
+		'TRUSTPAY' => 'TrustPay',
+		'VOUCHER' => 'My Voucher',
+	);
+
 	/**
 	 * Contructor
 	 *

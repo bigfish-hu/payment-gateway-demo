@@ -37,7 +37,6 @@ class Controller
 	 * @static
 	 */
 	public static $enabledActions = array(
-		'welcome',
 		'start',
 		'result',
 		'close',

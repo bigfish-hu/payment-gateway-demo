@@ -2,7 +2,7 @@
 	<table class="table-test-data">
 		<tbody>
 			<tr><td>Provider:</td><td><?=$_POST['providerName'];?><input type="hidden" name="providerName" value="<?=$_POST['providerName'];?>" /></td></tr>
-			<tr><td>One Click Payment:</td><td>enabled</td></tr>
+			<tr><td>One Click Payment:</td><td>enabled<input type="hidden" name="oneClickPayment" value="1" /></td></tr>
 			<tr><td>Registered user ID:</td><td><?=$_POST['userId'];?><input type="hidden" name="userId" value="<?=$_POST['userId'];?>" /></td></tr>
 		</tbody>
 	</table>

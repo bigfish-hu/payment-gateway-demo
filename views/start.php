@@ -239,8 +239,17 @@
 		<table class="table-test-data">
 			<thead><tr><th colspan="6">Test data:</th></tr></thead>
 			<tbody>
-				<tr><td>To success payment:</td><td>4200000000000018</td><td>Expired date:</td><td>01/19</td><td>CVC:</td><td>018</td></tr>
-				<tr><td>To failed payment:</td><td>4200000000000083</td><td>Expired date:</td><td>01/19</td><td>CVC:</td><td>083</td></tr>
+				<tr><td>MasterCard without MasterCard SecureCode (SSL only):</td><td>9500000000000002</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>MasterCard with MasterCard SecureCode:</td><td>9500000000000001</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>Visa without Verified by Visa (SSL only):</td><td>9400000000000004</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>Visa with Verified by Visa:</td><td>9400000000000003</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>Maestro with Maestro SecureCode:</td><td>9600000000000005</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>American Express (SSL only):</td><td>9100000000000006</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>American Express with American Express SafeKey:</td><td>9100000000000005</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>Diners Club (SSL only):</td><td>9200000000000007</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>JCB (SSL only):</td><td>9300000000000008</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>UATP (SSL only):</td><td>9110000000000010</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>Discover (SSL only):</td><td>9090000000000011</td><td>Expired date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 			</tbody>
 		</table>
 	</div>
@@ -290,7 +299,7 @@
 			</select>
 		</label>
 		
-		<label class="col-2">
+		<label class="col-2 providerData FHB OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
 			<span>Authorization :</span>
 			<select name="autoCommit" class="input FHB OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
 				<option value="true">Immediate</option>
@@ -299,54 +308,89 @@
 		</label>
 	</div>
 
-	<div class="row">
-		<label class="col-2">
-			<span>SZÉP Card pocket ID (cafeteria) :</span>
-			<select name="szepPocket" class="input KHBSZEP MKBSZEP OTP">
-				<option value=""></option>
-				<option value="accommodation">Accommodation</option>
-				<option value="hospitality">Hospitality</option>
-				<option value="leisure">Leisure</option>
-			</select>
-		</label>
+	<label class="providerData KHBSZEP MKBSZEP OTP">
+		<span>SZÉP Card pocket ID (cafeteria) :</span>
+		<select name="szepPocket" class="input KHBSZEP MKBSZEP OTP">
+			<option value=""></option>
+			<option value="accommodation">Accommodation</option>
+			<option value="hospitality">Hospitality</option>
+			<option value="leisure">Leisure</option>
+		</select>
+	</label>
 
-		<label class="col-2">
-			<span>Phone number :</span>
-			<input type="text" name="phoneNumber" value="" class="input OTPay">
-		</label>
-	</div>
+	<label class="providerData OTPay">
+		<span>Phone number :</span>
+		<input type="text" name="phoneNumber" value="" class="input OTPay">
+	</label>
 
-	<label>
+	<label class="providerData OTP OTP2">
 		<span>OTP consumer registration ID (One Click Payment) :</span>
 		<input type="text" name="otpConsumerRegistrationId" value="" class="input OTP OTP2">
 	</label>
 
-	<label class="label-chkbox">
+	<label class="label-chkbox providerData Escalion OTPSimple Saferpay">
 		<span>One Click Payment (User registration or pay by a registered user on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Escalion OTPSimple Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
 
-	<label class="label-chkbox">
+	<label class="label-chkbox providerData MKBSZEP OTP2">
 		<span>Add your card data on merchant's page:</span>
 	</label>
 
-	<label>
+	<label class="providerData MKBSZEP OTP2">
 		<span>Card number :</span>
 		<input type="text" name="cardNumber" value="" class="input MKBSZEP OTP2" size="17">
 	</label>
 
-	<label>
+	<label class="providerData MKBSZEP OTP2">
 		<span>Expired date (mmyy) :</span>
 		<input type="text" name="cardExpiration" value="" class="input MKBSZEP OTP2">
 	</label>
 
-	<label>
+	<label class="providerData MKBSZEP OTP2">
 		<span>CVC/CVV :</span>
 		<input type="text" name="cardCvc" value="" class="input MKBSZEP OTP2">
 	</label>
 
-	<label class="label-chkbox">
+	<label class="label-chkbox providerData MKBSZEP">
 		<span>Add your card data on Payment Gateway page: <input type="checkbox" name="gatewayPaymentPage" value="1" class="input MKBSZEP"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
+
+	<label class="providerData Saferpay">
+		<span>Payment methods by card :</span>
+	</label>
+
+	<div class="row providerData Saferpay">
+		<?foreach (self::$saferpayPaymentMethods as $saferpayPaymentMethodKey => $saferpayPaymentMethodName) {?>
+			<label class="col-2">
+				<span><input type="checkbox" name="extra[SaferpayPaymentMethods][]" value="<?=$saferpayPaymentMethodKey;?>" class="input Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span> <?=$saferpayPaymentMethodName;?></span>
+			</label>
+		<?}?>
+	</div>
+
+	<label class="providerData Saferpay">
+		<span>Payment methods by wallet :</span>
+	</label>
+
+	<div class="row providerData Saferpay">
+		<?foreach (self::$saferpayWallets as $saferpayWalletKey => $saferpayWalletName) {?>
+			<label class="col-2">
+				<span><input type="checkbox" name="extra[SaferpayWallets][]" value="<?=$saferpayWalletKey;?>" class="input Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span> <?=$saferpayWalletName;?></span>
+			</label>
+		<?}?>
+	</div>
+
+	<label class="providerData QPAY">
+		<span>Payment type :</span>
+	</label>
+
+	<div class="row providerData QPAY">
+		<select name="extra[QpayPaymentType]" class="input QPAY">
+			<option value="">Setting by store</option>
+			<?foreach (self::$wirecardPaymentTypes as $wirecardPaymentTypeKey => $wirecardPaymentTypeName) {?>
+				<option value="<?=$wirecardPaymentTypeKey;?>"><?=$wirecardPaymentTypeName;?></option>
+			<?}?>
+		</select>
+	</div>
 
 	<input type="submit" name="submit" value="Next">
 </form>

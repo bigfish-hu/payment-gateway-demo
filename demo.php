@@ -116,7 +116,7 @@ abstract class Demo
 					}
 				case \BigFish\PaymentGateway::PROVIDER_ESCALION:
 				case \BigFish\PaymentGateway::PROVIDER_OTP_SIMPLE:
-				case \BigFish\PaymentGateway::PROVIDER_OTP_SAFERPAY:
+				case \BigFish\PaymentGateway::PROVIDER_SAFERPAY:
 					if ((int)$data['oneClickPayment']) {
 						$initRequest->setOneClickPayment(true);
 					}
