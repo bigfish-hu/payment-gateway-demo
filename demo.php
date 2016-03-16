@@ -117,6 +117,7 @@ abstract class Demo
 				case \BigFish\PaymentGateway::PROVIDER_ESCALION:
 				case \BigFish\PaymentGateway::PROVIDER_OTP_SIMPLE:
 				case \BigFish\PaymentGateway::PROVIDER_SAFERPAY:
+				case \BigFish\PaymentGateway::PROVIDER_PAYPAL:
 					if ((int)$data['oneClickPayment']) {
 						$initRequest->setOneClickPayment(true);
 					}
@@ -136,7 +137,8 @@ abstract class Demo
 				/**
 				 * Save TransactionId into database before call start().
 				 */
-				\BigFish\PaymentGateway::start(new BigFish\PaymentGateway\Request\Start($initResponse->TransactionId));
+				$startResponse = \BigFish\PaymentGateway::start(new BigFish\PaymentGateway\Request\Start($initResponse->TransactionId));
+				return $startResponse;
 			}
 
 			return $initResponse;
@@ -244,7 +246,8 @@ abstract class Demo
 			$initRPResponse = \BigFish\PaymentGateway::initRP($initRPRequest);
 			
 			if ($initRPResponse->ResultCode == "SUCCESSFUL" && $initRPResponse->TransactionId) {
-				\BigFish\PaymentGateway::startRP(new BigFish\PaymentGateway\Request\StartRP($initRPResponse->TransactionId));
+				$startRPResponse = \BigFish\PaymentGateway::startRP(new BigFish\PaymentGateway\Request\StartRP($initRPResponse->TransactionId));
+				return $startRPResponse;
 			}
 
 			return $initRPResponse;

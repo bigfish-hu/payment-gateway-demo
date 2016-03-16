@@ -10,5 +10,8 @@
 			"email": "cafe@bigfish.hu"
 		}
 	],
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+	"config": {
+		"secure-http": false
+	}
 }
