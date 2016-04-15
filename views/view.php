@@ -38,6 +38,7 @@ class View
 		'startOcp' => 'One Click Payment (without any intermediate page)',
 		'startRP' => 'Start recurring payment (initRP, startRP)',
 		'invoice' => 'Invoice (invoice)',
+		'oneClickTokenCancel' => 'One Click Token Cancel (oneClickTokenCancel)',
 	);
 	
 	/**

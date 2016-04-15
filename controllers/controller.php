@@ -45,6 +45,7 @@ class Controller
 		'selectOcp',
 		'startRP',
 		'invoice',
+		'oneClickTokenCancel',
 	);
 
 	/**
@@ -196,5 +197,16 @@ class Controller
 		} else {
 			$this->result = $invoice;
 		}
+	}
+
+	/**
+	 * OneClickTokenCancel
+	 *
+	 * @return void
+	 * @access protected
+	 */
+	protected function oneClickTokenCancel() 
+	{
+		$this->result = Demo::oneClickTokenCancel($_POST);
 	}
 }
