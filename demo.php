@@ -293,4 +293,23 @@ abstract class Demo
 			return $e->getMessage();
 		}
 	}
+	
+	/**
+	 * One Click Token Cancel
+	 * 
+	 * @param array $data
+	 * @return object|string
+	 * @access public
+	 * @static
+	 */
+	public static function oneClickTokenCancel(array $data = array())
+	{
+		try {
+			$oneClickTokenCancelResponse = \BigFish\PaymentGateway::oneClickTokenCancel(new BigFish\PaymentGateway\Request\OneClickTokenCancel($data['TransactionId']));
+
+			return $oneClickTokenCancelResponse;
+		} catch (\BigFish\PaymentGateway\Exception $e) {
+			return $e->getMessage();
+		}
+	}
 }

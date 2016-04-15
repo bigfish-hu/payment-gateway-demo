@@ -345,9 +345,9 @@
 		<input type="text" name="cardNumber" value="" class="input MKBSZEP OTP2" size="17">
 	</label>
 
-	<label class="providerData MKBSZEP OTP2">
+	<label class="providerData OTP2">
 		<span>Expired date (mmyy) :</span>
-		<input type="text" name="cardExpiration" value="" class="input MKBSZEP OTP2">
+		<input type="text" name="cardExpiration" value="" class="input OTP2">
 	</label>
 
 	<label class="providerData MKBSZEP OTP2">
