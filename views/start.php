@@ -340,20 +340,25 @@
 
 	<div class="row providerData PayPal-Reference">
 		<label class="col-2 providerData PayPal">
-			<span>Billing date start, in UTC/GMT format *:</span>
-			<input type="text" name="extra[REFERENCE][PROFILESTARTDATE]" value="" class="input PayPal-Reference" required placeholder="<?php echo gmdate("Y-m-d\TH:i:s\Z", time()+3600);?>">
+			<span>Initial amount:</span>
+			<input type="text" name="extra[REFERENCE][INITAMT]" value="0" class="input PayPal-Reference">
 		</label>
 
 		<label class="col-2 providerData PayPal">
-			<span>Description *:</span>
-			<input type="text" name="extra[REFERENCE][DESC]" value="" class="input PayPal-Reference" required>
+			<span>Billing date start, in UTC/GMT format *:</span>
+			<input type="text" name="extra[REFERENCE][PROFILESTARTDATE]" value="" class="input PayPal-Reference" required placeholder="<?php echo gmdate("Y-m-d\TH:i:s\Z", time()+3600);?>">
 		</label>
 	</div>
 
 	<div class="row providerData PayPal-Reference">
 		<label class="col-2 providerData PayPal">
 			<span>Frequency of charges *:</span>
-			<select name="extra[REFERENCE][BILLINGFREQUENCY]" class="input PayPal-Reference" required>
+			<input type="text" name="extra[REFERENCE][BILLINGFREQUENCY]" value="" class="input PayPal-Reference" required>
+		</label>
+
+		<label class="col-2 providerData PayPal">
+			<span>Time period between billings *:</span>
+			<select name="extra[REFERENCE][BILLINGPERIOD]" class="input PayPal-Reference" required>
 				<option value="" selected>Setting by frequency</option>
 				<option value="Day">Day</option>
 				<option value="Week">Week</option>
@@ -362,10 +367,12 @@
 				<option value="Year">Year</option>
 			</select>
 		</label>
+	</div>
 
+	<div class="row providerData PayPal-Reference">
 		<label class="col-2 providerData PayPal">
-			<span>Time period between billings *:</span>
-			<input type="text" name="extra[REFERENCE][BILLINGPERIOD]" value="" class="input PayPal-Reference" required>
+			<span>Description *:</span>
+			<input type="text" name="extra[REFERENCE][DESC]" value="" class="input PayPal-Reference" required>
 		</label>
 	</div>
 
@@ -374,6 +381,10 @@
 			<thead><tr><th>Note:</th></tr></thead>
 			<tbody>
 			<tr><td>The combination of BillingPeriod and BillingFrequency cannot exceed one year.</td></tr>
+			<tr><td>
+					PayPal has some extra[REFERENCE][field]. See documentation:
+					<a href="https://developer.paypal.com/docs/classic/api/merchant/CreateRecurringPaymentsProfile_API_Operation_NVP/" target="_blank">CreateRecurringPaymentsProfile</a>
+				</td></tr>
 			</tbody>
 		</table>
 	</div>
