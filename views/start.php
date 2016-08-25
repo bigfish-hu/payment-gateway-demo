@@ -332,10 +332,63 @@
 		<span>One Click Payment (User registration or pay by a registered user on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Escalion OTPSimple Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
 
-	<label class="label-chkbox providerData PayPal">
-		<span>Buyer registration to Recurring Payment: <input type="checkbox" name="oneClickPayment" value="1" class="input PayPal"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
-	</label>
-	
+	<ul class="providerData PayPal">
+		<li><label><input type="radio" name="oneClickPayment" class="input PayPal" onclick="showPayPalReference(false);" checked><span><span></span></span>Normal Payment</label></li>
+		<li><label><input type="radio" name="oneClickPayment" value="1" class="input PayPal" onclick="showPayPalReference(false);"><span><span></span></span>Buyer registration to Reference Payment</label></li>
+		<li><label><input type="radio" name="oneClickPayment" value="1" class="input PayPal" onclick="showPayPalReference(true);"><span><span></span></span>Buyer registration to Recurring Payment</label></li>
+	</ul>
+
+	<div class="row providerData PayPal-Reference">
+		<label class="col-2 providerData PayPal">
+			<span>Initial amount:</span>
+			<input type="text" name="extra[REFERENCE][INITAMT]" value="0" class="input PayPal-Reference">
+		</label>
+
+		<label class="col-2 providerData PayPal">
+			<span>Billing date start, in UTC/GMT format *:</span>
+			<input type="text" name="extra[REFERENCE][PROFILESTARTDATE]" value="" class="input PayPal-Reference" required placeholder="<?php echo gmdate("Y-m-d\TH:i:s\Z", time()+3600);?>">
+		</label>
+	</div>
+
+	<div class="row providerData PayPal-Reference">
+		<label class="col-2 providerData PayPal">
+			<span>Frequency of charges *:</span>
+			<input type="text" name="extra[REFERENCE][BILLINGFREQUENCY]" value="" class="input PayPal-Reference" required>
+		</label>
+
+		<label class="col-2 providerData PayPal">
+			<span>Time period between billings *:</span>
+			<select name="extra[REFERENCE][BILLINGPERIOD]" class="input PayPal-Reference" required>
+				<option value="" selected>Setting by frequency</option>
+				<option value="Day">Day</option>
+				<option value="Week">Week</option>
+				<option value="SemiMonth">SemiMonth</option>
+				<option value="Month">Month</option>
+				<option value="Year">Year</option>
+			</select>
+		</label>
+	</div>
+
+	<div class="row providerData PayPal-Reference">
+		<label class="col-2 providerData PayPal">
+			<span>Description *:</span>
+			<input type="text" name="extra[REFERENCE][DESC]" value="" class="input PayPal-Reference" required>
+		</label>
+	</div>
+
+	<div class="row providerData PayPal-Reference">
+		<table class="table-test-data">
+			<thead><tr><th>Note:</th></tr></thead>
+			<tbody>
+			<tr><td>The combination of BillingPeriod and BillingFrequency cannot exceed one year.</td></tr>
+			<tr><td>
+					PayPal has some extra[REFERENCE][field]. See documentation:
+					<a href="https://developer.paypal.com/docs/classic/api/merchant/CreateRecurringPaymentsProfile_API_Operation_NVP/" target="_blank">CreateRecurringPaymentsProfile</a>
+				</td></tr>
+			</tbody>
+		</table>
+	</div>
+
 	<label class="label-chkbox providerData MKBSZEP OTP2">
 		<span>Add your card data on merchant's page:</span>
 	</label>

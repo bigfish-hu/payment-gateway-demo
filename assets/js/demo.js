@@ -34,3 +34,20 @@ function setInputsEnabled(providerName) {
 		elem[i].disabled = false;
 	}			
 }
+
+function showPayPalReference(data) {
+	var display = 'block',
+		disabled = false,
+		elemDiv = document.getElementsByClassName('PayPal-Reference'),
+		elemInput = document.getElementsByClassName('input PayPal-Reference');
+	if (typeof data != 'undefined' && data === false) {
+		display = 'none';
+		disabled = true;
+	}
+	for(var i = 0; i < elemDiv.length; i++) {
+		elemDiv[i].style.display = display;
+	}
+	for(var i = 0; i < elemInput.length; i++) {
+		elemInput[i].disabled = disabled;
+	}
+}
