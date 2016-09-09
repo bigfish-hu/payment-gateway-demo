@@ -1,6 +1,6 @@
 <form name="startForm" action="/controllers/?action=start" method="post" target="_blank">
 	<label>
-		<span>Provider * :</span>
+		<span>Provider *:</span>
 	</label>
 	<ul>
 		<li><label><input type="radio" name="providerName" value="Barion"><span><span></span></span>Barion</label></li>
@@ -8,6 +8,7 @@
 		<li><label><input type="radio" name="providerName" value="CIB"><span><span></span></span>CIB Bank</label></li>
 		<li><label><input type="radio" name="providerName" value="Escalion"><span><span></span></span>Escalion</label></li>
 		<li><label><input type="radio" name="providerName" value="FHB"><span><span></span></span>FHB Bank</label></li>
+		<li><label><input type="radio" name="providerName" value="IPG"><span><span></span></span>Intelligent Payments</label></li>
 		<li><label><input type="radio" name="providerName" value="KHB"><span><span></span></span>K&H Bank</label></li>
 		<li><label><input type="radio" name="providerName" value="KHBSZEP"><span><span></span></span>K&H SZÉP Card</label></li>
 		<li><label><input type="radio" name="providerName" value="MKBSZEP"><span><span></span></span>MKB SZÉP Card</label></li>
@@ -74,6 +75,17 @@
 			<tbody>
 				<tr><td>To success payment:</td><td>4314 2299 9999 9913</td><td>Expired date:</td><td>01/18</td><td>CVC:</td><td>123</td></tr>
 				<tr><td>To failed payment:</td><td>4314 2299 9999 9913</td><td>Expired date:</td><td>01/20</td><td>CVC:</td><td>123</td></tr>
+			</tbody>
+		</table>
+	</div>
+	
+
+	<div class="providerData IPG">
+		<table class="table-test-data">
+			<thead><tr><th colspan="6">Test data:</th></tr></thead>
+			<tbody>
+				<tr><td>To success payment:</td><td>5454545454545454</td><td>Expired date:</td><td>12/18</td><td>CVC:</td><td>123</td></tr>
+				<tr><td>To failed payment:</td><td colspan="5">20.12 EUR amount transaction</td></tr>
 			</tbody>
 		</table>
 	</div>
@@ -255,18 +267,18 @@
 	</div>
 
 	<label>
-		<span>Response URL (It must be available publicly) * :</span>
+		<span>Response URL (It must be available publicly) *:</span>
 		<input class="full-width" type="text" name="responseUrl" value="<?=$this->responseUrl;?>">
 	</label>
 
 	<div class="row">
 		<label class="col-2">
-			<span>Amount * :</span>
+			<span>Amount *:</span>
 			<input type="text" name="amount" value="">
 		</label>
 		
 		<label class="col-2">
-			<span>Currency :</span>
+			<span>Currency:</span>
 			<select name="currency">
 				<option value="HUF">HUF</option>
 				<option value="EUR">EUR</option>
@@ -279,19 +291,19 @@
 
 	<div class="row">
 		<label class="col-2">
-			<span>Order ID * :</span>
+			<span>Order ID *:</span>
 			<input type="text" name="orderId" value="">
 		</label>
 
 		<label class="col-2">
-			<span>User ID * :</span>
+			<span>User ID *:</span>
 			<input type="text" name="userId" value="">
 		</label>
 	</div>
 
 	<div class="row">
 		<label class="col-2">
-			<span>Language :</span>
+			<span>Language:</span>
 			<select name="language">
 				<option value="HU">HU</option>
 				<option value="EN">EN</option>
@@ -299,9 +311,9 @@
 			</select>
 		</label>
 		
-		<label class="col-2 providerData FHB OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
-			<span>Authorization :</span>
-			<select name="autoCommit" class="input FHB OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
+		<label class="col-2 providerData FHB IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
+			<span>Authorization:</span>
+			<select name="autoCommit" class="input FHB IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
 				<option value="true">Immediate</option>
 				<option value="false">Later</option>
 			</select>
@@ -309,7 +321,7 @@
 	</div>
 
 	<label class="providerData KHBSZEP MKBSZEP OTP">
-		<span>SZÉP Card pocket ID (cafeteria) :</span>
+		<span>SZÉP Card pocket ID (cafeteria):</span>
 		<select name="szepPocket" class="input KHBSZEP MKBSZEP OTP">
 			<option value=""></option>
 			<option value="accommodation">Accommodation</option>
@@ -319,12 +331,12 @@
 	</label>
 
 	<label class="providerData OTPay">
-		<span>Phone number :</span>
+		<span>Phone number:</span>
 		<input type="text" name="phoneNumber" value="" class="input OTPay">
 	</label>
 
 	<label class="providerData OTP OTP2">
-		<span>OTP consumer registration ID (One Click Payment) :</span>
+		<span>OTP consumer registration ID (One Click Payment):</span>
 		<input type="text" name="otpConsumerRegistrationId" value="" class="input OTP OTP2">
 	</label>
 
@@ -332,26 +344,79 @@
 		<span>One Click Payment (User registration or pay by a registered user on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Escalion OTPSimple Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
 
-	<label class="label-chkbox providerData PayPal">
-		<span>Buyer registration to Recurring Payment: <input type="checkbox" name="oneClickPayment" value="1" class="input PayPal"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
-	</label>
-	
+	<ul class="providerData PayPal">
+		<li><label><input type="radio" name="oneClickPayment" class="input PayPal" onclick="showPayPalReference(false);" checked><span><span></span></span>Normal Payment</label></li>
+		<li><label><input type="radio" name="oneClickPayment" value="1" class="input PayPal" onclick="showPayPalReference(false);"><span><span></span></span>Buyer registration to Reference Payment</label></li>
+		<li><label><input type="radio" name="oneClickPayment" value="1" class="input PayPal" onclick="showPayPalReference(true);"><span><span></span></span>Buyer registration to Recurring Payment</label></li>
+	</ul>
+
+	<div class="row providerData PayPal-Reference">
+		<label class="col-2 providerData PayPal">
+			<span>Initial amount:</span>
+			<input type="text" name="extra[REFERENCE][INITAMT]" value="0" class="input PayPal-Reference">
+		</label>
+
+		<label class="col-2 providerData PayPal">
+			<span>Billing date start, in UTC/GMT format *:</span>
+			<input type="text" name="extra[REFERENCE][PROFILESTARTDATE]" value="" class="input PayPal-Reference" required placeholder="<?php echo gmdate("Y-m-d\TH:i:s\Z", time()+3600);?>">
+		</label>
+	</div>
+
+	<div class="row providerData PayPal-Reference">
+		<label class="col-2 providerData PayPal">
+			<span>Frequency of charges *:</span>
+			<input type="text" name="extra[REFERENCE][BILLINGFREQUENCY]" value="" class="input PayPal-Reference" required>
+		</label>
+
+		<label class="col-2 providerData PayPal">
+			<span>Time period between billings *:</span>
+			<select name="extra[REFERENCE][BILLINGPERIOD]" class="input PayPal-Reference" required>
+				<option value="" selected>Setting by frequency</option>
+				<option value="Day">Day</option>
+				<option value="Week">Week</option>
+				<option value="SemiMonth">SemiMonth</option>
+				<option value="Month">Month</option>
+				<option value="Year">Year</option>
+			</select>
+		</label>
+	</div>
+
+	<div class="row providerData PayPal-Reference">
+		<label class="col-2 providerData PayPal">
+			<span>Description *:</span>
+			<input type="text" name="extra[REFERENCE][DESC]" value="" class="input PayPal-Reference" required>
+		</label>
+	</div>
+
+	<div class="row providerData PayPal-Reference">
+		<table class="table-test-data">
+			<thead><tr><th>Note:</th></tr></thead>
+			<tbody>
+			<tr><td>The combination of BillingPeriod and BillingFrequency cannot exceed one year.</td></tr>
+			<tr><td>
+					PayPal has some extra[REFERENCE][field]. See documentation:
+					<a href="https://developer.paypal.com/docs/classic/api/merchant/CreateRecurringPaymentsProfile_API_Operation_NVP/" target="_blank">CreateRecurringPaymentsProfile</a>
+				</td></tr>
+			</tbody>
+		</table>
+	</div>
+
 	<label class="label-chkbox providerData MKBSZEP OTP2">
 		<span>Add your card data on merchant's page:</span>
 	</label>
 
 	<label class="providerData MKBSZEP OTP2">
-		<span>Card number :</span>
+		<span>Card number:</span>
 		<input type="text" name="cardNumber" value="" class="input MKBSZEP OTP2" size="17">
 	</label>
 
 	<label class="providerData OTP2">
-		<span>Expired date (mmyy) :</span>
+		<span>Expired date (mmyy):</span>
 		<input type="text" name="cardExpiration" value="" class="input OTP2">
 	</label>
 
 	<label class="providerData MKBSZEP OTP2">
-		<span>CVC/CVV :</span>
+		<span>CVC/CVV:</span>
 		<input type="text" name="cardCvc" value="" class="input MKBSZEP OTP2">
 	</label>
 
@@ -360,7 +425,7 @@
 	</label>
 
 	<label class="providerData Saferpay">
-		<span>Payment methods by card :</span>
+		<span>Payment methods by card:</span>
 	</label>
 
 	<div class="row providerData Saferpay">
@@ -372,7 +437,7 @@
 	</div>
 
 	<label class="providerData Saferpay">
-		<span>Payment methods by wallet :</span>
+		<span>Payment methods by wallet:</span>
 	</label>
 
 	<div class="row providerData Saferpay">
@@ -384,7 +449,7 @@
 	</div>
 
 	<label class="providerData QPAY">
-		<span>Payment type :</span>
+		<span>Payment type:</span>
 	</label>
 
 	<div class="row providerData QPAY">
