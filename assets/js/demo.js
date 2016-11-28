@@ -18,8 +18,17 @@ function setProviderDataHide() {
 function setProviderDataShow(providerName) {
 	var elem = document.getElementsByClassName('providerData ' + providerName);
 	for(var i = 0; i < elem.length; i++) {
-		elem[i].style.display = 'block';
-	}			
+		if ((' ' + elem[i].className + ' ').indexOf(' code ') > -1) {
+			elem[i].style.display = 'inline';
+		} else {
+			elem[i].style.display = 'block';
+		}
+	}
+	
+	var showProviderNameElem = document.getElementsByClassName('showProviderName');
+	for(var i = 0; i < showProviderNameElem.length; i++) {
+		showProviderNameElem[i].innerHTML = providerName;
+	}
 }
 
 function setInputsDisabled() {
