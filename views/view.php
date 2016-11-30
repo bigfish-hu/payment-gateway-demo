@@ -127,7 +127,7 @@ class View
 	public function __construct(Controller $controller)
 	{
 		$this->controller = $controller;
-		$this->include = $this->controller->action . '.html';
+		$this->include = $this->controller->action . '.php';
 		$this->responseUrl = (($_SERVER['HTTPS'] == 'on') ? 'https' : 'http') . '://' . $_SERVER["HTTP_HOST"] . '/response.php';
 		$this->call();
 	}
@@ -159,39 +159,6 @@ class View
 	{
 		require_once(PROJECT_PATH . DS . 'views' . DS . 'frame.php');
 	}
-	
-	/**
-	 * Start
-	 *
-	 * @return void
-	 * @access protected
-	 */
-	protected function start()
-	{
-		$this->setPhpInclude();
-	}
-	
-	/**
-	 * StartOCP
-	 *
-	 * @return void
-	 * @access protected
-	 */
-	protected function startOcp()
-	{
-		$this->setPhpInclude();
-	}
-	
-	/**
-	 * StartRP
-	 *
-	 * @return void
-	 * @access protected
-	 */
-	protected function startRP()
-	{
-		$this->setPhpInclude();
-	}
 
 	/**
 	 * Invoice
@@ -202,19 +169,8 @@ class View
 	protected function invoice()
 	{
 		if (!empty($this->controller->data)) {
-			$this->setPhpInclude();
+			$this->include = 'get' . ucfirst($this->controller->action) . '.php';
 			require_once(PROJECT_PATH . DS . 'views' . DS . $this->include);
 		}	
-	}
-	
-	/**
-	 * SetPhpInclude
-	 *
-	 * @return void
-	 * @access protected
-	 */
-	protected function setPhpInclude()
-	{
-		$this->include = $this->controller->action . '.php';
 	}
 }

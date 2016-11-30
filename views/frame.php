@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-	<title>BIG FISH Payment Gateway - Demo  (<?=$this->controller->action;?>)</title>
+	<title>BIG FISH Payment Gateway - Demo (<?=$this->controller->action;?>)</title>
 
 	<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700italic|Open+Sans:400,600,700'>
 	<link rel="stylesheet" href="/assets/css/demo.css">
@@ -115,7 +115,7 @@
 					</a>
 				</div>
 				<div class="title-demo">
-					demo
+					<a href="https://github.com/bigfish-hu/payment-gateway-demo" target="_blank">demo</a>
 				</div>
 			</div>
 		</div><!-- /.pmgw-header -->
@@ -132,6 +132,20 @@
 						var_dump($this->controller->result);
 					} else {
 						require_once(PROJECT_PATH . DS . 'views' . DS . $this->include);
+						require_once('sample' . DS . 'phpsdk.php');
+						require_once('sample' . DS . 'restapi.php');
+
+						if ($this->controller->action == 'start') { ?>
+							<script type="text/javascript">
+								var providers = document.startForm.providerName;
+								var providerData = document.getElementsByClassName("providerData");
+								var inputs = document.getElementsByClassName("input");
+
+								inputController();
+								setProviderDataHide();
+								setInputsDisabled();
+							</script>
+						<? }
 					}
 				echo '</div><!-- /.cont -->';
 			?>
