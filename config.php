@@ -18,7 +18,7 @@ if (is_file($vendorAutoload)) {
 	require_once($vendorAutoload);
 } else {
 	require_once($sdkAutoload);
-	BigFish\PaymentGateway\Autoload::register();
+	\BigFish\PaymentGateway\Autoload::register();
 }
 
 require_once(PROJECT_PATH . DS . 'demo.php');

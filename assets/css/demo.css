@@ -170,7 +170,7 @@ li label span{
 	margin: 0;
 }
 
-pre{
+pre, div.xdebug-var-dump{
 	margin: 0;
 	padding: 14px 12px;
 	border-radius: 2px;
@@ -180,11 +180,17 @@ pre{
 	background-color: #5c6a77;
 	overflow: auto;
 }
-pre.xdebug-var-dump i{
+pre.xdebug-var-dump i, div.xdebug-var-dump i{
 	font-style: normal;
 }
-pre.xdebug-var-dump font{
+pre.xdebug-var-dump font, div.xdebug-var-dump font{
 	color: #ff8e4a;
+}
+
+div.xdebug-var-dump blockquote {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
 }
 
 .container::after{
@@ -294,7 +300,8 @@ pre.xdebug-var-dump font{
 .table-test-data td:last-child{
 	padding-right: 0;
 }
-.table-test-data td a{
+.table-test-data td a,
+.description a{
 	color: #25aae3;
 }
 
@@ -359,4 +366,13 @@ pre.xdebug-var-dump font{
 }
 .PayPal-Reference {
 	display: none;
+}
+
+.description {
+	padding-top: 20px;
+}
+
+.description .text {
+	font-size: 14px;
+	overflow: auto;
 }

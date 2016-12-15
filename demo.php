@@ -47,7 +47,7 @@ abstract class Demo
 		$config->testMode = $data['testMode'];
 		$config->encryptPublicKey = $data['encryptPublicKey'];
 		
-		BigFish\PaymentGateway::setConfig($config);
+		\BigFish\PaymentGateway::setConfig($config);
 	}
 	
 	/**
@@ -137,7 +137,7 @@ abstract class Demo
 				/**
 				 * Save TransactionId into database before call start().
 				 */
-				$startResponse = \BigFish\PaymentGateway::start(new BigFish\PaymentGateway\Request\Start($initResponse->TransactionId));
+				$startResponse = \BigFish\PaymentGateway::start(new \BigFish\PaymentGateway\Request\Start($initResponse->TransactionId));
 				return $startResponse;
 			}
 
@@ -158,7 +158,7 @@ abstract class Demo
 	public static function result(array $data = array())
 	{
 		try {
-			$resultResponse = \BigFish\PaymentGateway::result(new BigFish\PaymentGateway\Request\Result($data['TransactionId']));
+			$resultResponse = \BigFish\PaymentGateway::result(new \BigFish\PaymentGateway\Request\Result($data['TransactionId']));
 
 			return $resultResponse;
 		} catch (\BigFish\PaymentGateway\Exception $e) {
@@ -177,7 +177,7 @@ abstract class Demo
 	public static function close(array $data = array())
 	{
 		try {
-			$closeResponse = \BigFish\PaymentGateway::close(new BigFish\PaymentGateway\Request\Close($data['TransactionId'], $data['Approved']));
+			$closeResponse = \BigFish\PaymentGateway::close(new \BigFish\PaymentGateway\Request\Close($data['TransactionId'], $data['Approved']));
 
 			return $closeResponse;
 		} catch (\BigFish\PaymentGateway\Exception $e) {
@@ -196,7 +196,7 @@ abstract class Demo
 	public static function details(array $data = array())
 	{
 		try {
-			$detailsResponse = \BigFish\PaymentGateway::details(new BigFish\PaymentGateway\Request\Details($data['TransactionId']));
+			$detailsResponse = \BigFish\PaymentGateway::details(new \BigFish\PaymentGateway\Request\Details($data['TransactionId']));
 
 			return $detailsResponse;
 		} catch (\BigFish\PaymentGateway\Exception $e) {
@@ -215,7 +215,7 @@ abstract class Demo
 	public static function refund(array $data = array())
 	{
 		try {
-			$refundResponse = \BigFish\PaymentGateway::refund(new BigFish\PaymentGateway\Request\Refund($data['TransactionId'], $data['amount']));
+			$refundResponse = \BigFish\PaymentGateway::refund(new \BigFish\PaymentGateway\Request\Refund($data['TransactionId'], $data['amount']));
 
 			return $refundResponse;
 		} catch (\BigFish\PaymentGateway\Exception $e) {
@@ -246,7 +246,7 @@ abstract class Demo
 			$initRPResponse = \BigFish\PaymentGateway::initRP($initRPRequest);
 			
 			if ($initRPResponse->ResultCode == "SUCCESSFUL" && $initRPResponse->TransactionId) {
-				$startRPResponse = \BigFish\PaymentGateway::startRP(new BigFish\PaymentGateway\Request\StartRP($initRPResponse->TransactionId));
+				$startRPResponse = \BigFish\PaymentGateway::startRP(new \BigFish\PaymentGateway\Request\StartRP($initRPResponse->TransactionId));
 				return $startRPResponse;
 			}
 
@@ -267,7 +267,7 @@ abstract class Demo
 	public static function invoice(array $data = array())
 	{
 		try {
-			$invoiceResponse = \BigFish\PaymentGateway::invoice(new BigFish\PaymentGateway\Request\Invoice($data['TransactionId'], $data['data']));
+			$invoiceResponse = \BigFish\PaymentGateway::invoice(new \BigFish\PaymentGateway\Request\Invoice($data['TransactionId'], $data['data']));
 
 			return $invoiceResponse;
 		} catch (\BigFish\PaymentGateway\Exception $e) {
@@ -286,7 +286,7 @@ abstract class Demo
 	public static function oneClickOptions(array $data = array())
 	{
 		try {
-			$oneClickOptionsResponse = \BigFish\PaymentGateway::oneClickOptions(new BigFish\PaymentGateway\Request\OneClickOptions($data['providerName'], $data['userId']));
+			$oneClickOptionsResponse = \BigFish\PaymentGateway::oneClickOptions(new \BigFish\PaymentGateway\Request\OneClickOptions($data['providerName'], $data['userId']));
 
 			return $oneClickOptionsResponse;
 		} catch (\BigFish\PaymentGateway\Exception $e) {
@@ -305,7 +305,7 @@ abstract class Demo
 	public static function oneClickTokenCancel(array $data = array())
 	{
 		try {
-			$oneClickTokenCancelResponse = \BigFish\PaymentGateway::oneClickTokenCancel(new BigFish\PaymentGateway\Request\OneClickTokenCancel($data['TransactionId']));
+			$oneClickTokenCancelResponse = \BigFish\PaymentGateway::oneClickTokenCancel(new \BigFish\PaymentGateway\Request\OneClickTokenCancel($data['TransactionId']));
 
 			return $oneClickTokenCancelResponse;
 		} catch (\BigFish\PaymentGateway\Exception $e) {
