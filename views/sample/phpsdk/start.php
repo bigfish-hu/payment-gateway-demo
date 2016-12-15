@@ -76,13 +76,16 @@
 				</blockquote>
 			}<br />
 		</span>
-		<span class="providerData code OTP OTP2">
+		<span class="providerData code OTP">
 			<br />
 			if (isset($data['otpConsumerRegistrationId']) && !empty($data['otpConsumerRegistrationId'])) {
 				<blockquote>
 					<font>
 						/**<br />
-						&nbsp;* If you want to start OTP One Click Payment<br />
+						&nbsp;* If you want to start OTP One Click Payment you will need to register the customer<br />
+						&nbsp;* It's possible to use the following functions for the further One Click Payment:<br />
+						&nbsp;* <blockquote style="display: inline-block">- <a href="/views/?action=startRP">Recurring Payment</a> or</blockquote><br />
+						&nbsp;* <blockquote style="display: inline-block">- Pay by OTP Bank (two-party) with OTP consumer registration ID</blockquote><br />
 						&nbsp;*/
 					</font><br />
 					$initRequest->setOtpConsumerRegistrationId($data['otpConsumerRegistrationId']);
@@ -90,6 +93,19 @@
 			}<br />
 		</span>
 		<span class="providerData code OTP2">
+			<br />
+			if (isset($data['otpConsumerRegistrationId']) && !empty($data['otpConsumerRegistrationId'])) {
+				<blockquote>
+					<font>
+						/**<br />
+						&nbsp;* It's possible to use the following functions for the further One Click Payment:<br />
+						&nbsp;* <blockquote style="display: inline-block">- <a href="/views/?action=startRP">Recurring Payment</a> or</blockquote><br />
+						&nbsp;* <blockquote style="display: inline-block">- Pay by OTP Bank (two-party) with OTP consumer registration ID</blockquote><br />
+						&nbsp;*/
+					</font><br />
+					$initRequest->setOtpConsumerRegistrationId($data['otpConsumerRegistrationId']);
+				</blockquote>
+			}<br />
 			<br />
 			<font>
 				/**<br />
