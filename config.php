@@ -3,6 +3,16 @@
 define('PROJECT_PATH', realpath(dirname(__FILE__)));
 define('DS', DIRECTORY_SEPARATOR);
 
+function var_dump_custom($data) {
+	if (function_exists('xdebug_disable')) {
+		var_dump($data);
+	} else {
+		echo '<pre>';
+			var_dump($data);
+		echo '</pre>';
+	}
+}
+
 /**
  * Autoload
  */
