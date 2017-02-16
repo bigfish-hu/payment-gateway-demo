@@ -130,7 +130,7 @@
 				</blockquote>
 			}<br />
 		</span>
-		<span class="providerData code Escalion OTPSimple Saferpay">
+		<span class="providerData code Barion2 Escalion OTPSimple Saferpay">
 			<br />
 			<font>
 				/**<br />
