@@ -127,9 +127,9 @@
 
 				echo '<div class="cont">';
 					echo '<h1>' . self::$header[$this->controller->action] . '</h1>';
-
+					
 					if (!empty($this->controller->result)) {
-						var_dump($this->controller->result);
+						var_dump_custom($this->controller->result);
 					} else {
 						require_once(PROJECT_PATH . DS . 'views' . DS . $this->include);
 						require_once('sample' . DS . 'phpsdk.php');
