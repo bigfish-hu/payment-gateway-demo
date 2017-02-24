@@ -292,6 +292,19 @@
 				</blockquote>
 			}<br />
 		</span>
+		<span class="providerData code Barion2">
+			<br />
+			if (isset($data['Barion2']) && is_array($data['Barion2']) && !empty($data['Barion2'])) {
+				<blockquote>
+					<font>
+						/**<br />
+						&nbsp;* If you want to set custom data<br />
+						&nbsp;*/
+					</font><br />
+					$data['extra']['Barion2'] = $data['Barion2'];<br />
+				</blockquote>
+			}<br />
+		</span>
 		<br />
 		if (isset($data['extra']) && is_array($data['extra'])) {<br />
 			<blockquote>$initRequest->setExtra($data['extra']);</blockquote>

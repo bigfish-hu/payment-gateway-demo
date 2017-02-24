@@ -116,7 +116,7 @@ abstract class Demo
 					}
 				case \BigFish\PaymentGateway::PROVIDER_BARION2:
 					if (isset($_POST['useExtra']) && (int)$_POST['useExtra'] && !empty($_POST['extra']['Barion2'])) {
-						eval("\$data['extra'] = ".$_POST['extra']['Barion2'].";");
+						$data['extra']['Barion2'] = json_decode($_POST['extra']['Barion2'], true);
 					} else {
 						unset($data['extra']);
 					}

@@ -346,67 +346,70 @@
 	<label class="label-chkbox providerData Barion2">
 		<span>Check to use extra data: <input type="checkbox" name="useExtra" value="1" class="input Barion2"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
-	
+
 	<label class="providerData Barion2">
 		<span>Extra data:</span>
 		<textarea name="extra[Barion2]">
-array(
-	'Barion2' => array(
-		'PaymentRequest' => array(
-			'ReservationPeriod' => '7:00:00:00',
-			'PaymentWindow' => '00:20:00',
-			'GuestCheckout' => true,
-			'FundingSources' => array(
-				'All'
-			),
-			'PaymentRequestId' => 'PaymentIdInShop',
-			'PayerHint' => [payer's Barion username (optional)],
-			'OrderNumber' => 'OrderNumberInShop',
-			'ShippingAddress' => '1110 Budapest, Test street 1.',
-			'Transactions' => array(
-				array(
-					'POSTransactionId' => 'TransactionId',
-					'Payee' => [1. payee's Barion username],
-					'Comment' => 'Test payment',
-					'Items' => array(
-						array(
-							'Name' => 'Orange',
-							'Description' => 'Sweet orange',
-							'Quantity' => '1',
-							'Unit' => 'kg',
-							'UnitPrice' => '2',
-							'ItemTotal' => '2',
-							'SKU' => 'ID1',
-						),
-						array(
-							'Name' => 'Banana',
-							'Description' => 'Ripe banana',
-							'Quantity' => '2',
-							'Unit' => 'kg',
-							'UnitPrice' => '4',
-							'ItemTotal' => '8',
-							'SKU' => 'ID2',
-						),
-					),
-					'PayeeTransactions' => array(
-						array(
-							'POSTransactionId' => 'TransactionId-01',
-							'Payee' => [2. payee's Barion username],
-							'Total' => 2,
-							'Comment' => 'Marketplace fee',
-						),
-						array(
-							'POSTransactionId' => 'TransactionId-02',
-							'Payee' => [3. payee's Barion username],
-							'Total' => 1,
-							'Comment' => 'Marketplace agent price',
-						),
-					),
-				),
-			),
-		),
-	),
-)
+{
+	"PaymentRequest":
+	{
+		"ReservationPeriod":"7:00:00:00",
+		"PaymentWindow":"00:20:00",
+		"GuestCheckout":true,
+		"FundingSources":
+		[
+			"All"
+		],
+		"PaymentRequestId":"PaymentIdInShop",
+		"PayerHint":"Payer's Barion username (optional)",
+		"OrderNumber":"OrderNumberInShop",
+		"ShippingAddress":"1110 Budapest, Test street 1.",
+		"Transactions":
+		[
+			{
+				"POSTransactionId":"TransactionId",
+				"Payee":"1. payee's Barion username",
+				"Comment":"Test payment",
+				"Items":
+				[
+					{
+						"Name":"Orange",
+						"Description":"Sweet orange",
+						"Quantity":"1",
+						"Unit":"kg",
+						"UnitPrice":"2",
+						"ItemTotal":"2",
+						"SKU":"ID1"
+					},
+					{
+						"Name":"Banana",
+						"Description":"Ripe banana",
+						"Quantity":"2",
+						"Unit":"kg",
+						"UnitPrice":"4",
+						"ItemTotal":"8",
+						"SKU":"ID2"
+					}
+				],
+				"PayeeTransactions":
+				[
+					{
+						"POSTransactionId":"TransactionId-01",
+						"Payee":"2. payee's Barion username",
+						"Total":2,
+						"Comment":"Marketplace fee"
+					},
+					{
+						"POSTransactionId":"TransactionId-02",
+						"Payee":"3. payee's Barion username",
+						"Total":1,
+						"Comment":"Marketplace agent price"
+					}
+				]
+			}
+		]
+	}
+}
 		</textarea>
 	</label>
 
