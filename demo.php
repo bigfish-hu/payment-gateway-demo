@@ -114,6 +114,12 @@ abstract class Demo
 					if (!empty($data['phoneNumber'])) {
 						$initRequest->setMppPhoneNumber($data['phoneNumber']);
 					}
+				case \BigFish\PaymentGateway::PROVIDER_BARION2:
+					if (isset($_POST['useExtra']) && (int)$_POST['useExtra'] && !empty($_POST['extra']['Barion2'])) {
+						$data['extra']['Barion2'] = json_decode($_POST['extra']['Barion2'], true);
+					} else {
+						unset($data['extra']);
+					}
 				case \BigFish\PaymentGateway::PROVIDER_ESCALION:
 				case \BigFish\PaymentGateway::PROVIDER_OTP_SIMPLE:
 				case \BigFish\PaymentGateway::PROVIDER_SAFERPAY:

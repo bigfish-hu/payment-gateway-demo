@@ -187,7 +187,7 @@ class Controller
 		 * Only for testing!
 		 */
 		if (!empty($_POST['testData'])) {
-			eval("\$_POST['data'] = ".$_POST['testData'].";");
+			$_POST['data'] = json_decode($_POST['testData'], true);
 		}
 
 		$invoice = Demo::invoice($_POST);
