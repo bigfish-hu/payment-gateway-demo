@@ -5,6 +5,7 @@ function inputController() {
 			setProviderDataHide();
 			setInputsEnabled(this.value);
 			setProviderDataShow(this.value);
+			jumpTo('testData');
 		};
 	}			
 }
@@ -59,4 +60,8 @@ function showPayPalReference(data) {
 	for(var i = 0; i < elemInput.length; i++) {
 		elemInput[i].disabled = disabled;
 	}
+}
+
+function jumpTo(id) {
+	window.scrollTo(0, document.getElementById(id).offsetTop);
 }

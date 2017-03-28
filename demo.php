@@ -114,6 +114,7 @@ abstract class Demo
 					if (!empty($data['phoneNumber'])) {
 						$initRequest->setMppPhoneNumber($data['phoneNumber']);
 					}
+				case \BigFish\PaymentGateway::PROVIDER_BORGUN2:
 				case \BigFish\PaymentGateway::PROVIDER_ESCALION:
 				case \BigFish\PaymentGateway::PROVIDER_OTP_SIMPLE:
 				case \BigFish\PaymentGateway::PROVIDER_SAFERPAY:
