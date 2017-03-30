@@ -9,6 +9,8 @@
 
 	<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700italic|Open+Sans:400,600,700'>
 	<link rel="stylesheet" href="/assets/css/demo.css">
+	<link rel="SHORTCUT ICON" href="/assets/images/pmgw_favicon.png" >
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script src="/assets/js/demo.js"></script>
 </head>
 <body>
@@ -132,8 +134,11 @@
 						var_dump_custom($this->controller->result);
 					} else {
 						require_once(PROJECT_PATH . DS . 'views' . DS . $this->include);
-						require_once('sample' . DS . 'phpsdk.php');
-						require_once('sample' . DS . 'restapi.php');
+						
+						if (isset($_GET['action']) && !empty($_GET['action'])) {
+							require_once('sample' . DS . 'phpsdk.php');
+							require_once('sample' . DS . 'restapi.php');
+						}
 
 						if ($this->controller->action == 'start') { ?>
 							<script type="text/javascript">
