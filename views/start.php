@@ -349,7 +349,7 @@
 
 	<label class="providerData Barion2">
 		<span>Extra data:</span>
-		<textarea name="extra[Barion2]">
+		<textarea name="extra[Barion2]" class="input Barion2">
 {
 	"PaymentRequest":
 	{
