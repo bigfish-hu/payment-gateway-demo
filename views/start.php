@@ -42,12 +42,24 @@
 		</table>
 	</div>
 
-	<div class="providerData Borgun Borgun2">
+	<div class="providerData Borgun">
 		<table class="table-test-data">
 			<thead><tr><th colspan="6">Test data:</th></tr></thead>
 			<tbody>
 				<tr><td>To success payment:</td><td>4741520000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 				<tr><td>To failed payment:</td><td>4155520000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="providerData Borgun2">
+		<table class="table-test-data">
+			<thead><tr><th colspan="6">Test data:</th></tr></thead>
+			<tbody>
+				<tr><td>To success payment (MasterCard, 3DSecure):</td><td>5587402000012011</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>To success payment (VISA, 3DSecure):</td><td>4741520000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>To failed payment (VISA, 3DSecure):</td><td>4242424242424242</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>To failed payment (VISA):</td><td>4155520000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 			</tbody>
 		</table>
 	</div>
@@ -159,6 +171,12 @@
 		</table>
 	</div>
 
+	<div class="providerData OTPSimple">
+		<label>
+			<span>If you chose EUR currency authorization must be set "Later". (Only required for the default store.)</span>
+		</label>
+	</div>
+
 	<div class="providerData OTPay">
 		<table class="table-test-data">
 			<thead><tr><th colspan="2">Test data:</th></tr></thead>
@@ -184,7 +202,7 @@
 				<tr><td>mCard name:</td><td>any</td></tr>
 				<tr><td>Name on card:</td><td>TESZT 84</td></tr>
 				<tr><td>Card number:</td><td>5437 5884 9990 0468</td></tr>
-				<tr><td>Expiration date (mm/yy):</td><td>1216</td></tr>
+				<tr><td>Expiration date (mm/yy):</td><td>1220</td></tr>
 				<tr><td>CVC:</td><td>578</td></tr>
 				<tr><td>Card activation number:</td><td>0000</td></tr>
 			</tbody>
@@ -203,8 +221,8 @@
 		<table class="table-test-data">
 			<thead><tr><th colspan="2">Test data:</th></tr></thead>
 			<tbody>
-				<tr><td>Buyer e-mail:</td><td>buyer_1264842853_per@bigfish.hu</td></tr>
-				<tr><td>Password:</td><td>bfppbuyer</td></tr>
+				<tr><td>Buyer e-mail:</td><td>paymentgateway+paypalbuyer@bigfish.hu</td></tr>
+				<tr><td>Password:</td><td>bfppbuyer@</td></tr>
 			</tbody>
 		</table>
 	</div>
