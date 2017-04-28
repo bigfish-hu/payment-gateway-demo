@@ -2,7 +2,7 @@
 	"name": "bigfish/paymentgateway-demo",
 	"description": "BIG FISH Payment Gateway Demo",
 	"require": {
-		"bigfish/paymentgateway": "dev-master"
+		"bigfish/paymentgateway": "dev-testing"
 	},
 	"authors": [
 		{

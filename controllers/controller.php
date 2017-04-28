@@ -46,6 +46,7 @@ class Controller
 		'startRP',
 		'invoice',
 		'oneClickTokenCancel',
+		'featureMatrix',
 	);
 
 	/**
@@ -56,7 +57,13 @@ class Controller
 	 */
 	public function __construct()
 	{
-		$this->setAction($_GET['action']);
+		if (isset($_GET['guide']) && !empty($_GET['guide'])) {
+			$action = $_GET['guide'];
+		} else {
+			$action = $_GET['action'];
+		}
+		
+		$this->setAction($action);
 	}
 	
 	/**
@@ -187,7 +194,7 @@ class Controller
 		 * Only for testing!
 		 */
 		if (!empty($_POST['testData'])) {
-			eval("\$_POST['data'] = ".$_POST['testData'].";");
+			$_POST['data'] = json_decode($_POST['testData'], true);
 		}
 
 		$invoice = Demo::invoice($_POST);

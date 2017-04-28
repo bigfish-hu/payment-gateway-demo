@@ -39,6 +39,7 @@ class View
 		'startRP' => 'Start recurring payment (initRP, startRP)',
 		'invoice' => 'Invoice (invoice)',
 		'oneClickTokenCancel' => 'One Click Token Cancel (oneClickTokenCancel)',
+		'featureMatrix' => 'Feature matrix',
 	);
 	
 	/**

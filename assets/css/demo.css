@@ -314,6 +314,110 @@ div.xdebug-var-dump blockquote {
 	font-weight: 700;
 	color: #fff;
 }
+.PayPal-Reference {
+	display: none;
+}
+.description {
+	padding-top: 20px;
+}
+.description .text {
+	font-size: 14px;
+	overflow: auto;
+}
+.packageTable {
+	color: #959595;
+	font-size: 14px;
+	display: table;
+	position: relative;
+	width: 724px;
+	overflow: hidden;
+}
+.packageTable thead {
+	position: relative;
+	display: block;
+	width: 724px;
+	overflow: visible;
+}
+.packageTable thead th:nth-child(1) {
+	position: relative;
+	display: block;
+	background-color: #ffffff;
+}
+.packageTable th {
+	padding: 12px;
+	background-color: #25aae3;
+	color: white;
+	font-weight: normal;
+	text-align: center;
+	border-right: 1px solid #a9def9;
+	border-bottom: 1px solid #a9def9;
+}
+.packageTable th.first {
+	background-color: transparent;
+}
+.packageTable tbody {
+	position: relative;
+	display: block;
+	width: 724px;
+	height: 500px;
+	overflow: scroll;
+}
+.packageTable tbody tr td:nth-child(1) {
+	position: relative;
+	display: block;
+	z-index: 1;
+}
+.packageTable .datarow td {
+	position: relative;
+	padding: 12px 20px;
+	border-right: 1px solid #a9def9;
+	border-bottom: 1px solid #a9def9;
+	text-align: center;
+	border-top: none !important;
+	transition: background-color .3s;
+	white-space: nowrap;
+}
+.packageTable .datarow td:first-child {
+	text-align: left;
+}
+.packageTable .odd td {
+	background-color: #ffffff;
+}
+.packageTable .even td {
+	background-color: #e7f9ff;
+}
+.packageTable .datarow td.check {
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.packageTable .datarow td.check .info {
+	padding-left: 30px;
+}
+.packageTable .datarow td.yes {
+	background-image: url("../images/check_green.png");
+}
+.packageTable .datarow td.no {
+	background-image: url("../images/check_not.png");
+}
+.packageTable .datarow td .info {
+	cursor: pointer;
+}
+.packageTable .datarow td span {
+	position: absolute;
+	left: 0px;
+	height: auto;
+	background: #fff;
+	margin: 15px;
+	padding: 10px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+	pointer-events: none;
+	opacity: 0;
+	transition: all .2s;
+	z-index: 10;
+}
+.packageTable .datarow td .info:hover + span {
+	opacity: 1;
+}
 
 @media (min-width: 1024px){
 	.container{
@@ -363,16 +467,4 @@ div.xdebug-var-dump blockquote {
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 	}
-}
-.PayPal-Reference {
-	display: none;
-}
-
-.description {
-	padding-top: 20px;
-}
-
-.description .text {
-	font-size: 14px;
-	overflow: auto;
 }

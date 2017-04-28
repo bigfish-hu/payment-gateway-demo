@@ -130,7 +130,7 @@
 				</blockquote>
 			}<br />
 		</span>
-		<span class="providerData code Borgun2 Escalion OTPSimple Saferpay">
+		<span class="providerData code Barion2 Borgun2 Escalion OTPSimple Saferpay">
 			<br />
 			<font>
 				/**<br />
@@ -289,6 +289,19 @@
 						&nbsp;*/
 					</font><br />
 					$data['extra']['QpayPaymentType'] = $data['QpayPaymentType'];<br />
+				</blockquote>
+			}<br />
+		</span>
+		<span class="providerData code Barion2">
+			<br />
+			if (isset($data['Barion2']) && is_array($data['Barion2']) && !empty($data['Barion2'])) {
+				<blockquote>
+					<font>
+						/**<br />
+						&nbsp;* If you want to set custom data<br />
+						&nbsp;*/
+					</font><br />
+					$data['extra']['Barion2'] = $data['Barion2'];<br />
 				</blockquote>
 			}<br />
 		</span>
