@@ -432,7 +432,6 @@
 	}
 }
 		</textarea>
->>>>>>> master
 	</label>
 
 	<ul class="providerData PayPal">
