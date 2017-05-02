@@ -8,7 +8,7 @@
 			<blockquote>->setOrderId($data['orderId'])</blockquote>
 			<blockquote>->setUserId($data['userId'])</blockquote>
 			<blockquote>->setLanguage($data['language']);</blockquote>
-		<span class="providerData code Borgun2 FHB IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
+		<span class="providerData code Barion2 Borgun2 FHB IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
 			<br />
 			<font>
 				/**<br />
