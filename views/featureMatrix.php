@@ -66,7 +66,7 @@
 			<td>Barion2</td>
 		</tr>
 		<tr class="datarow odd">
-			<td>Borgun</td>
+			<td>Borgun SecurePay</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
 				<span>GBP, DKK, NOK, SEK, CHF, CAD, JPY, ISK, RON, HRK, CZK, PLN</span>
@@ -96,6 +96,36 @@
 			<td>Borgun</td>
 		</tr>
 		<tr class="datarow even">
+			<td>Borgun RPG</td>
+			<td>
+				<div class="info">HUF, EUR, USD, ...</div>
+				<span>GBP, DKK, NOK, SEK, CHF, CAD, JPY, ISK, RON, HRK, CZK, PLN</span>
+			</td>
+			<td>
+				<div class="info">hu, en, de, ...</div>
+				<span>is, fr, ru, es, it, pt, se, cz, si, pl, ro, hr, sk</span>
+			</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">
+				<div class="info ">*</div>
+				<span>For clients with a non-Hungarian seat</span>
+			</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td>Borgun2</td>
+		</tr>
+		<tr class="datarow odd">
 			<td>CIB Bank</td>
 			<td>HUF, EUR</td>
 			<td>
@@ -119,7 +149,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>CIB</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>Escalion</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -146,7 +176,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>Escalion</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>FHB Bank</td>
 			<td>HUF, EUR, USD</td>
 			<td>
@@ -170,7 +200,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>FHB</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>Intelligent Payments</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -197,7 +227,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>IPG</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>K&H Bank</td>
 			<td>HUF, EUR, USD</td>
 			<td>hu, en, de</td>
@@ -218,7 +248,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>KHB</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>K&H SZÉP Card</td>
 			<td>HUF</td>
 			<td>hu</td>
@@ -239,7 +269,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>KHBSZEP</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>MKB SZÉP Card</td>
 			<td>HUF</td>
 			<td>hu</td>
@@ -260,7 +290,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>MKBSZEP</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>OTP Bank</td>
 			<td>HUF, EUR, USD</td>
 			<td>hu, en, de</td>
