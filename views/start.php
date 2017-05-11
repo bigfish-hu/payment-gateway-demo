@@ -4,7 +4,8 @@
 	</label>
 	<ul>
 		<li><label><input type="radio" name="providerName" value="Barion2"><span><span></span></span>Barion</label></li>
-		<li><label><input type="radio" name="providerName" value="Borgun"><span><span></span></span>Borgun</label></li>
+		<li><label><input type="radio" name="providerName" value="Borgun"><span><span></span></span>Borgun SecurePay</label></li>
+		<li><label><input type="radio" name="providerName" value="Borgun2"><span><span></span></span>Borgun RPG</label></li>
 		<li><label><input type="radio" name="providerName" value="CIB"><span><span></span></span>CIB Bank</label></li>
 		<li><label><input type="radio" name="providerName" value="Escalion"><span><span></span></span>Escalion</label></li>
 		<li><label><input type="radio" name="providerName" value="FHB"><span><span></span></span>FHB Bank</label></li>
@@ -29,6 +30,8 @@
 		<li><label><input type="radio" name="providerName" value="QPAY"><span><span></span></span>Wirecard QPAY</label></li>
 	</ul>
 	
+	<div id="testData"></div>
+	
 	<div class="providerData Barion2">
 		<table class="table-test-data">
 			<thead><tr><th colspan="2">Test data:</th></tr></thead>
@@ -42,8 +45,20 @@
 		<table class="table-test-data">
 			<thead><tr><th colspan="6">Test data:</th></tr></thead>
 			<tbody>
-				<tr><td>To success payment:</td><td>4741520000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>000</td></tr>
-				<tr><td>To failed payment:</td><td>4155520000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>121</td></tr>
+				<tr><td>To success payment:</td><td>4741520000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>To failed payment:</td><td>4155520000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="providerData Borgun2">
+		<table class="table-test-data">
+			<thead><tr><th colspan="6">Test data:</th></tr></thead>
+			<tbody>
+				<tr><td>To success payment (MasterCard, 3DSecure):</td><td>5587402000012011</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>To success payment (VISA, 3DSecure):</td><td>4741520000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>To failed payment (VISA, 3DSecure):</td><td>4242424242424242</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td>To failed payment (VISA):</td><td>4155520000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 			</tbody>
 		</table>
 	</div>
@@ -155,6 +170,12 @@
 		</table>
 	</div>
 
+	<div class="providerData OTPSimple">
+		<label>
+			<span>If you chose EUR currency authorization must be set "Later". (Only required for the default store.)</span>
+		</label>
+	</div>
+
 	<div class="providerData OTPay">
 		<table class="table-test-data">
 			<thead><tr><th colspan="2">Test data:</th></tr></thead>
@@ -199,8 +220,8 @@
 		<table class="table-test-data">
 			<thead><tr><th colspan="2">Test data:</th></tr></thead>
 			<tbody>
-				<tr><td>Buyer e-mail:</td><td>buyer_1264842853_per@bigfish.hu</td></tr>
-				<tr><td>Password:</td><td>bfppbuyer</td></tr>
+				<tr><td>Buyer e-mail:</td><td>paymentgateway+paypalbuyer@bigfish.hu</td></tr>
+				<tr><td>Password:</td><td>bfppbuyer@</td></tr>
 			</tbody>
 		</table>
 	</div>
@@ -310,9 +331,9 @@
 			</select>
 		</label>
 		
-		<label class="col-2 providerData Barion2 FHB IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
+		<label class="col-2 providerData Barion2 Borgun2 FHB IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
 			<span>Authorization:</span>
-			<select name="autoCommit" class="input Barion2 FHB IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
+			<select name="autoCommit" class="input Barion2 Borgun2 FHB IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
 				<option value="true">Immediate</option>
 				<option value="false">Later</option>
 			</select>
@@ -339,8 +360,8 @@
 		<input type="text" name="otpConsumerRegistrationId" value="" class="input OTP OTP2">
 	</label>
 
-	<label class="label-chkbox providerData Barion2 Escalion OTPSimple Saferpay">
-		<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Escalion OTPSimple Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+	<label class="label-chkbox providerData Barion2 Borgun2 Escalion OTPSimple Saferpay">
+		<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 Escalion OTPSimple Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
 	
 	<label class="label-chkbox providerData Barion2">
