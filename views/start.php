@@ -1,4 +1,4 @@
-<form name="startForm" action="/controllers/?action=start" method="post" target="_blank">
+<form name="startForm" action="/controllers/?action=<?=$this->controller->action;?>" method="post" target="_blank">
 	<label>
 		<span>Provider *:</span>
 	</label>
@@ -31,265 +31,268 @@
 	</ul>
 	
 	<div id="testData"></div>
-	
-	<div class="providerData Barion2">
-		<table class="table-test-data">
-			<thead><tr><th colspan="2">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>To success payment:</td><td>4908366099900425</td><td>Expiration date:</td><td>any</td><td>CVC2:</td><td>any</td></tr>
-			</tbody>
-		</table>
-	</div>
 
-	<div class="providerData Borgun">
-		<table class="table-test-data">
-			<thead><tr><th colspan="6">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>To success payment:</td><td>4741520000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>To failed payment:</td><td>4155520000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-			</tbody>
-		</table>
-	</div>
+	<? if ($this->controller->action == "start") { ?>
 
-	<div class="providerData Borgun2">
-		<table class="table-test-data">
-			<thead><tr><th colspan="6">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>To success payment (MasterCard, 3DSecure):</td><td>5587402000012011</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>To success payment (VISA, 3DSecure):</td><td>4741520000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>To failed payment (VISA, 3DSecure):</td><td>4242424242424242</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>To failed payment (VISA):</td><td>4155520000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-			</tbody>
-		</table>
-	</div>
+		<div class="providerData Barion2">
+			<table class="table-test-data">
+				<thead><tr><th colspan="2">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment:</td><td>4908366099900425</td><td>Expiration date:</td><td>any</td><td>CVC2:</td><td>any</td></tr>
+				</tbody>
+			</table>
+		</div>
 
-	<div class="providerData CIB">
-		<table class="table-test-data">
-			<thead><tr><th colspan="6">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>To success payment:</td><td>5111 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
-				<tr><td>To failed payment:</td><td>4999 9999 9999 9999</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
-			</tbody>
-		</table>
-	</div>
+		<div class="providerData Borgun">
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment:</td><td>4741520000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>To failed payment:</td><td>4155520000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				</tbody>
+			</table>
+		</div>
 
-	<div class="providerData Escalion">
-		<table class="table-test-data">
-			<thead><tr><th colspan="6">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>To success payment:</td><td>5431 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
-				<tr><td>To failed payment:</td><td>4111 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
-			</tbody>
-		</table>
-	</div>
+		<div class="providerData Borgun2">
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment (MasterCard, 3DSecure):</td><td>5587402000012011</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>To success payment (VISA, 3DSecure):</td><td>4741520000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>To failed payment (VISA, 3DSecure):</td><td>4242424242424242</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>To failed payment (VISA):</td><td>4155520000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				</tbody>
+			</table>
+		</div>
 
-	<div class="providerData FHB">
-		<table class="table-test-data">
-			<thead><tr><th colspan="6">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>To success payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/18</td><td>CVC:</td><td>123</td></tr>
-				<tr><td>To failed payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/20</td><td>CVC:</td><td>123</td></tr>
-			</tbody>
-		</table>
-	</div>
-	
+		<div class="providerData CIB">
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment:</td><td>5111 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
+					<tr><td>To failed payment:</td><td>4999 9999 9999 9999</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
+				</tbody>
+			</table>
+		</div>
 
-	<div class="providerData IPG">
-		<table class="table-test-data">
-			<thead><tr><th colspan="6">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>To success payment:</td><td>5454545454545454</td><td>Expiration date:</td><td>12/18</td><td>CVC:</td><td>123</td></tr>
-				<tr><td>To failed payment:</td><td colspan="5">20.12 EUR amount transaction</td></tr>
-			</tbody>
-		</table>
-	</div>
+		<div class="providerData Escalion">
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment:</td><td>5431 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
+					<tr><td>To failed payment:</td><td>4111 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
+				</tbody>
+			</table>
+		</div>
 
-	<div class="providerData KHB">
-		<table class="table-test-data">
-			<thead><tr><th colspan="6">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>To success payment:</td><td>4550 5225 9830 5372</td><td>Expiration date:</td><td>2003/11</td><td>CVV2:</td><td>271</td></tr>
-				<tr><td>To failed payment:</td><td>4205 7925 0786 4590</td><td>Expiration date:</td><td>2006/10</td><td>CVV2:</td><td>106</td></tr>
-			</tbody>
-		</table>
-	</div>
+		<div class="providerData FHB">
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/18</td><td>CVC:</td><td>123</td></tr>
+					<tr><td>To failed payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/20</td><td>CVC:</td><td>123</td></tr>
+				</tbody>
+			</table>
+		</div>
 
-	<div class="providerData KHBSZEP">
-		<table class="table-test-data">
-			<thead><tr><th colspan="3">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>To success payment:</td><td>Card number:</td><td>64719254</td></tr>
-				<tr><td></td><td>Expiration date:</td><td>2019.12.31</td></tr>
-				<tr><td></td><td>Controlling value:</td><td>213</td></tr>
-				<tr><td></td><td>Password:</td><td>PGtest01</td></tr>
-				<tr><td>To failed payment:</td><td>Card number:</td><td>05101182</td></tr>
-				<tr><td></td><td>Expiration date:</td><td>2019.12.31</td></tr>
-				<tr><td></td><td>Controlling value:</td><td>508</td></tr>
-				<tr><td></td><td>Password:</td><td>Aa123456</td></tr>
-			</tbody>
-		</table>
-	</div>
 
-	<div class="providerData MKBSZEP">
-		<table class="table-test-data">
-			<thead><tr><th colspan="4">Test data:</th></tr></thead>
-			<tbody><tr><td>Card number:</td><td>6101317000000128</td><td>CVV:</td><td>497</td></tr></tbody>
-		</table>
-	</div>
+		<div class="providerData IPG">
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment:</td><td>5454545454545454</td><td>Expiration date:</td><td>12/18</td><td>CVC:</td><td>123</td></tr>
+					<tr><td>To failed payment:</td><td colspan="5">20.12 EUR amount transaction</td></tr>
+				</tbody>
+			</table>
+		</div>
 
-	<div class="providerData OTP">
-		<table class="table-test-data">
-			<thead><tr><th colspan="6">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>To success payment:</td><td>4908366099900425</td><td>Expiration date:</td><td>any</td><td>CVC2:</td><td>any</td></tr>
-				<tr><td>To failed payment:</td><td>1111111111111117</td><td>Expiration date:</td><td>2004/04</td><td>CVC2:</td><td>111</td></tr>
-			</tbody>
-		</table>
+		<div class="providerData KHB">
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment:</td><td>4550 5225 9830 5372</td><td>Expiration date:</td><td>2003/11</td><td>CVV2:</td><td>271</td></tr>
+					<tr><td>To failed payment:</td><td>4205 7925 0786 4590</td><td>Expiration date:</td><td>2006/10</td><td>CVV2:</td><td>106</td></tr>
+				</tbody>
+			</table>
+		</div>
 
-		<table class="table-test-data">
-			<thead><tr><th colspan="6">SZÉP Card test data:</th></tr></thead>
-			<tbody><tr><td>To success payment:</td><td>6101324299992718</td><td>Expiration date:</td><td>09/19</td><td>CVC2:</td><td>282</td></tr></tbody>
-		</table>
-	</div>
-	
-	<div class="providerData OTP2">
-		<table class="table-test-data">
-			<thead><tr><th colspan="2">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>Card number:</td><td>4908366099900425</td></tr>
-				<tr><td>Expiration date (mmyy):</td><td>1014</td></tr>
-				<tr><td>CVC/CVV:</td><td>823</td></tr>
-			</tbody>
-		</table>
-	</div>
+		<div class="providerData KHBSZEP">
+			<table class="table-test-data">
+				<thead><tr><th colspan="3">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment:</td><td>Card number:</td><td>64719254</td></tr>
+					<tr><td></td><td>Expiration date:</td><td>2019.12.31</td></tr>
+					<tr><td></td><td>Controlling value:</td><td>213</td></tr>
+					<tr><td></td><td>Password:</td><td>PGtest01</td></tr>
+					<tr><td>To failed payment:</td><td>Card number:</td><td>05101182</td></tr>
+					<tr><td></td><td>Expiration date:</td><td>2019.12.31</td></tr>
+					<tr><td></td><td>Controlling value:</td><td>508</td></tr>
+					<tr><td></td><td>Password:</td><td>Aa123456</td></tr>
+				</tbody>
+			</table>
+		</div>
 
-	<div class="providerData OTPMultipont">
-		<table class="table-test-data">
-			<thead><tr><th colspan="2">Test data:</th></tr></thead>
-			<tbody><tr><td>To success payment:</td><td>6369471300001646</td></tr></tbody>
-		</table>
-	</div>
+		<div class="providerData MKBSZEP">
+			<table class="table-test-data">
+				<thead><tr><th colspan="4">Test data:</th></tr></thead>
+				<tbody><tr><td>Card number:</td><td>6101317000000128</td><td>CVV:</td><td>497</td></tr></tbody>
+			</table>
+		</div>
 
-	<div class="providerData OTPSimple">
+		<div class="providerData OTP">
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment:</td><td>4908366099900425</td><td>Expiration date:</td><td>any</td><td>CVC2:</td><td>any</td></tr>
+					<tr><td>To failed payment:</td><td>1111111111111117</td><td>Expiration date:</td><td>2004/04</td><td>CVC2:</td><td>111</td></tr>
+				</tbody>
+			</table>
+
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">SZÉP Card test data:</th></tr></thead>
+				<tbody><tr><td>To success payment:</td><td>6101324299992718</td><td>Expiration date:</td><td>09/19</td><td>CVC2:</td><td>282</td></tr></tbody>
+			</table>
+		</div>
+
+		<div class="providerData OTP2">
+			<table class="table-test-data">
+				<thead><tr><th colspan="2">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>Card number:</td><td>4908366099900425</td></tr>
+					<tr><td>Expiration date (mmyy):</td><td>1014</td></tr>
+					<tr><td>CVC/CVV:</td><td>823</td></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="providerData OTPMultipont">
+			<table class="table-test-data">
+				<thead><tr><th colspan="2">Test data:</th></tr></thead>
+				<tbody><tr><td>To success payment:</td><td>6369471300001646</td></tr></tbody>
+			</table>
+		</div>
+
+		<div class="providerData OTPSimple">
+			<label>
+				<span>If you chose EUR currency authorization must be set "Later". (Only required for the default store.)</span>
+			</label>
+		</div>
+
+		<div class="providerData OTPay">
+			<table class="table-test-data">
+				<thead><tr><th colspan="2">Test data:</th></tr></thead>
+				<tbody><tr><td>Phone number:</td><td>36101022001</td></tr></tbody>
+			</table>
+		</div>
+
+		<div class="providerData OTPayMP">
+			<table class="table-test-data">
+				<thead><tr><th colspan="2">Test data to register mCard in app:</th></tr></thead>
+				<tbody>
+					<tr>
+						<td colspan="2">
+							<p>
+								<strong>Android test application: </strong>
+								<br><a href="https://rink.hockeyapp.net/apps/fb0e2cb7852d2e61cf1101aa29852510/app_versions/131" target="_blank">https://rink.hockeyapp.net/apps/fb0e2cb7852d2e61cf1101aa29852510/app_versions/131</a>
+								<br>It is necessary to intall the application on a device which live OTPay is not installed.
+								<br>Do not update the test application!
+								<br>During the registration you have to receive a code in SMS. Send a reply to get the 5-digit code.
+							</p>
+						</td>
+					</tr>
+					<tr><td>mCard name:</td><td>any</td></tr>
+					<tr><td>Name on card:</td><td>TESZT 84</td></tr>
+					<tr><td>Card number:</td><td>5437 5884 9990 0468</td></tr>
+					<tr><td>Expiration date (mm/yy):</td><td>1220</td></tr>
+					<tr><td>CVC:</td><td>578</td></tr>
+					<tr><td>Card activation number:</td><td>0000</td></tr>
+				</tbody>
+			</table>
+
+			<table class="table-test-data">
+				<thead><tr><th colspan="2">Choose next on MasterPass:</th></tr></thead>
+				<tbody>
+					<tr><td>Country:</td><td>Magyarország</td></tr>
+					<tr><td>Wallet:</td><td>test OTPay</td></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="providerData PayPal">
+			<table class="table-test-data">
+				<thead><tr><th colspan="2">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>Buyer e-mail:</td><td>paymentgateway+paypalbuyer@bigfish.hu</td></tr>
+					<tr><td>Password:</td><td>bfppbuyer@</td></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="providerData PSC">
+			<table class="table-test-data">
+				<thead><tr><th colspan="2">Test data:</th></tr></thead>
+				<tbody><tr><td>Test PIN <em>(to buy without my paysafecard account)</em>:</td><td>7130 2866 8390 5171</td></tr></tbody>
+			</table>
+		</div>
+
+		<div class="providerData Saferpay">
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment (VISA):</td><td>9010101052000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>To failed payment (VISA):</td><td>9010100152000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>To success payment (MASTERCARD):</td><td>9030101052000008</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>To failed payment (MASTERCARD):</td><td>9030100152000009</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="providerData Sofort">
+			<table class="table-test-data">
+				<thead><tr><th colspan="2">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td colspan="2"><em>(Tracking only in EUR. Germany should be selected.)</em></td></tr>
+					<tr><td>Sort code:</td><td>88888888</td></tr>
+					<tr><td>Kontonummer:</td><td>123456789</td></tr>
+					<tr><td>PIN:</td><td>00000</td></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="providerData UniCredit">
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/18</td><td>CVC:</td><td>123</td></tr>
+					<tr><td>To failed payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/20</td><td>CVC:</td><td>123</td></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="providerData QPAY">
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>MasterCard without MasterCard SecureCode (SSL only):</td><td>9500000000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>MasterCard with MasterCard SecureCode:</td><td>9500000000000001</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>Visa without Verified by Visa (SSL only):</td><td>9400000000000004</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>Visa with Verified by Visa:</td><td>9400000000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>Maestro with Maestro SecureCode:</td><td>9600000000000005</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>American Express (SSL only):</td><td>9100000000000006</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>American Express with American Express SafeKey:</td><td>9100000000000005</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>Diners Club (SSL only):</td><td>9200000000000007</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>JCB (SSL only):</td><td>9300000000000008</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>UATP (SSL only):</td><td>9110000000000010</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>Discover (SSL only):</td><td>9090000000000011</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				</tbody>
+			</table>
+		</div>
+
 		<label>
-			<span>If you chose EUR currency authorization must be set "Later". (Only required for the default store.)</span>
+			<span>Response URL (It must be available publicly) *:</span>
+			<input class="full-width" type="text" name="responseUrl" value="<?=$this->responseUrl;?>">
 		</label>
-	</div>
-
-	<div class="providerData OTPay">
-		<table class="table-test-data">
-			<thead><tr><th colspan="2">Test data:</th></tr></thead>
-			<tbody><tr><td>Phone number:</td><td>36101022001</td></tr></tbody>
-		</table>
-	</div>
-
-	<div class="providerData OTPayMP">
-		<table class="table-test-data">
-			<thead><tr><th colspan="2">Test data to register mCard in app:</th></tr></thead>
-			<tbody>
-				<tr>
-					<td colspan="2">
-						<p>
-							<strong>Android test application: </strong>
-							<br><a href="https://rink.hockeyapp.net/apps/fb0e2cb7852d2e61cf1101aa29852510/app_versions/131" target="_blank">https://rink.hockeyapp.net/apps/fb0e2cb7852d2e61cf1101aa29852510/app_versions/131</a>
-							<br>It is necessary to intall the application on a device which live OTPay is not installed.
-							<br>Do not update the test application!
-							<br>During the registration you have to receive a code in SMS. Send a reply to get the 5-digit code.
-						</p>
-					</td>
-				</tr>
-				<tr><td>mCard name:</td><td>any</td></tr>
-				<tr><td>Name on card:</td><td>TESZT 84</td></tr>
-				<tr><td>Card number:</td><td>5437 5884 9990 0468</td></tr>
-				<tr><td>Expiration date (mm/yy):</td><td>1220</td></tr>
-				<tr><td>CVC:</td><td>578</td></tr>
-				<tr><td>Card activation number:</td><td>0000</td></tr>
-			</tbody>
-		</table>
-
-		<table class="table-test-data">
-			<thead><tr><th colspan="2">Choose next on MasterPass:</th></tr></thead>
-			<tbody>
-				<tr><td>Country:</td><td>Magyarország</td></tr>
-				<tr><td>Wallet:</td><td>test OTPay</td></tr>
-			</tbody>
-		</table>
-	</div>
-
-	<div class="providerData PayPal">
-		<table class="table-test-data">
-			<thead><tr><th colspan="2">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>Buyer e-mail:</td><td>paymentgateway+paypalbuyer@bigfish.hu</td></tr>
-				<tr><td>Password:</td><td>bfppbuyer@</td></tr>
-			</tbody>
-		</table>
-	</div>
-
-	<div class="providerData PSC">
-		<table class="table-test-data">
-			<thead><tr><th colspan="2">Test data:</th></tr></thead>
-			<tbody><tr><td>Test PIN <em>(to buy without my paysafecard account)</em>:</td><td>7130 2866 8390 5171</td></tr></tbody>
-		</table>
-	</div>
-
-	<div class="providerData Saferpay">
-		<table class="table-test-data">
-			<thead><tr><th colspan="6">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>To success payment (VISA):</td><td>9010101052000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>To failed payment (VISA):</td><td>9010100152000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>To success payment (MASTERCARD):</td><td>9030101052000008</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>To failed payment (MASTERCARD):</td><td>9030100152000009</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-			</tbody>
-		</table>
-	</div>
-
-	<div class="providerData Sofort">
-		<table class="table-test-data">
-			<thead><tr><th colspan="2">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td colspan="2"><em>(Tracking only in EUR. Germany should be selected.)</em></td></tr>
-				<tr><td>Sort code:</td><td>88888888</td></tr>
-				<tr><td>Kontonummer:</td><td>123456789</td></tr>
-				<tr><td>PIN:</td><td>00000</td></tr>
-			</tbody>
-		</table>
-	</div>
-
-	<div class="providerData UniCredit">
-		<table class="table-test-data">
-			<thead><tr><th colspan="6">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>To success payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/18</td><td>CVC:</td><td>123</td></tr>
-				<tr><td>To failed payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/20</td><td>CVC:</td><td>123</td></tr>
-			</tbody>
-		</table>
-	</div>
-
-	<div class="providerData QPAY">
-		<table class="table-test-data">
-			<thead><tr><th colspan="6">Test data:</th></tr></thead>
-			<tbody>
-				<tr><td>MasterCard without MasterCard SecureCode (SSL only):</td><td>9500000000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>MasterCard with MasterCard SecureCode:</td><td>9500000000000001</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>Visa without Verified by Visa (SSL only):</td><td>9400000000000004</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>Visa with Verified by Visa:</td><td>9400000000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>Maestro with Maestro SecureCode:</td><td>9600000000000005</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>American Express (SSL only):</td><td>9100000000000006</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>American Express with American Express SafeKey:</td><td>9100000000000005</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>Diners Club (SSL only):</td><td>9200000000000007</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>JCB (SSL only):</td><td>9300000000000008</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>UATP (SSL only):</td><td>9110000000000010</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-				<tr><td>Discover (SSL only):</td><td>9090000000000011</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-			</tbody>
-		</table>
-	</div>
-
-	<label>
-		<span>Response URL (It must be available publicly) *:</span>
-		<input class="full-width" type="text" name="responseUrl" value="<?=$this->responseUrl;?>">
-	</label>
+	<? } ?>
 
 	<div class="row">
 		<label class="col-2">
@@ -350,20 +353,24 @@
 		</select>
 	</label>
 
-	<label class="providerData OTPay">
-		<span>Phone number:</span>
-		<input type="text" name="phoneNumber" value="" class="input OTPay">
-	</label>
+	<? if ($this->controller->action == "start") { ?>
 
-	<label class="providerData OTP OTP2">
-		<span>OTP consumer registration ID (One Click Payment):</span>
-		<input type="text" name="otpConsumerRegistrationId" value="" class="input OTP OTP2">
-	</label>
+		<label class="providerData OTPay">
+			<span>Phone number:</span>
+			<input type="text" name="phoneNumber" value="" class="input OTPay">
+		</label>
 
-	<label class="label-chkbox providerData Barion2 Borgun2 Escalion OTPSimple Saferpay">
-		<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 Escalion OTPSimple Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
-	</label>
-	
+		<label class="providerData OTP OTP2">
+			<span>OTP consumer registration ID (One Click Payment):</span>
+			<input type="text" name="otpConsumerRegistrationId" value="" class="input OTP OTP2">
+		</label>
+
+		<label class="label-chkbox providerData Barion2 Borgun2 Escalion OTPSimple Saferpay">
+			<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 Escalion OTPSimple Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		</label>
+
+	<? } ?>
+
 	<label class="label-chkbox providerData Barion2">
 		<span>Check to use extra data: <input type="checkbox" name="useExtra" value="1" class="input Barion2"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
@@ -434,85 +441,89 @@
 		</textarea>
 	</label>
 
-	<ul class="providerData PayPal">
-		<li><label><input type="radio" name="oneClickPayment" class="input PayPal" onclick="showPayPalReference(false);" checked><span><span></span></span>Normal Payment</label></li>
-		<li><label><input type="radio" name="oneClickPayment" value="1" class="input PayPal" onclick="showPayPalReference(false);"><span><span></span></span>Buyer registration to Reference Payment</label></li>
-		<li><label><input type="radio" name="oneClickPayment" value="1" class="input PayPal" onclick="showPayPalReference(true);"><span><span></span></span>Buyer registration to Recurring Payment</label></li>
-	</ul>
+	<? if ($this->controller->action == "start") { ?>
 
-	<div class="row providerData PayPal-Reference">
-		<label class="col-2 providerData PayPal">
-			<span>Initial amount:</span>
-			<input type="text" name="extra[REFERENCE][INITAMT]" value="0" class="input PayPal-Reference">
+		<ul class="providerData PayPal">
+			<li><label><input type="radio" name="oneClickPayment" class="input PayPal" onclick="showPayPalReference(false);" checked><span><span></span></span>Normal Payment</label></li>
+			<li><label><input type="radio" name="oneClickPayment" value="1" class="input PayPal" onclick="showPayPalReference(false);"><span><span></span></span>Buyer registration to Reference Payment</label></li>
+			<li><label><input type="radio" name="oneClickPayment" value="1" class="input PayPal" onclick="showPayPalReference(true);"><span><span></span></span>Buyer registration to Recurring Payment</label></li>
+		</ul>
+
+		<div class="row providerData PayPal-Reference">
+			<label class="col-2 providerData PayPal">
+				<span>Initial amount:</span>
+				<input type="text" name="extra[REFERENCE][INITAMT]" value="0" class="input PayPal-Reference">
+			</label>
+
+			<label class="col-2 providerData PayPal">
+				<span>Billing date start, in UTC/GMT format *:</span>
+				<input type="text" name="extra[REFERENCE][PROFILESTARTDATE]" value="" class="input PayPal-Reference" required placeholder="<?php echo gmdate("Y-m-d\TH:i:s\Z", time()+3600);?>">
+			</label>
+		</div>
+
+		<div class="row providerData PayPal-Reference">
+			<label class="col-2 providerData PayPal">
+				<span>Frequency of charges *:</span>
+				<input type="text" name="extra[REFERENCE][BILLINGFREQUENCY]" value="" class="input PayPal-Reference" required>
+			</label>
+
+			<label class="col-2 providerData PayPal">
+				<span>Time period between billings *:</span>
+				<select name="extra[REFERENCE][BILLINGPERIOD]" class="input PayPal-Reference" required>
+					<option value="" selected>Setting by frequency</option>
+					<option value="Day">Day</option>
+					<option value="Week">Week</option>
+					<option value="SemiMonth">SemiMonth</option>
+					<option value="Month">Month</option>
+					<option value="Year">Year</option>
+				</select>
+			</label>
+		</div>
+
+		<div class="row providerData PayPal-Reference">
+			<label class="col-2 providerData PayPal">
+				<span>Description *:</span>
+				<input type="text" name="extra[REFERENCE][DESC]" value="" class="input PayPal-Reference" required>
+			</label>
+		</div>
+
+		<div class="row providerData PayPal-Reference">
+			<table class="table-test-data">
+				<thead><tr><th>Note:</th></tr></thead>
+				<tbody>
+				<tr><td>The combination of BillingPeriod and BillingFrequency cannot exceed one year.</td></tr>
+				<tr><td>
+						PayPal has some extra[REFERENCE][field]. See documentation:
+						<a href="https://developer.paypal.com/docs/classic/api/merchant/CreateRecurringPaymentsProfile_API_Operation_NVP/" target="_blank">CreateRecurringPaymentsProfile</a>
+					</td></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<label class="label-chkbox providerData MKBSZEP OTP2">
+			<span>Add your card data on merchant's page:</span>
 		</label>
 
-		<label class="col-2 providerData PayPal">
-			<span>Billing date start, in UTC/GMT format *:</span>
-			<input type="text" name="extra[REFERENCE][PROFILESTARTDATE]" value="" class="input PayPal-Reference" required placeholder="<?php echo gmdate("Y-m-d\TH:i:s\Z", time()+3600);?>">
-		</label>
-	</div>
-
-	<div class="row providerData PayPal-Reference">
-		<label class="col-2 providerData PayPal">
-			<span>Frequency of charges *:</span>
-			<input type="text" name="extra[REFERENCE][BILLINGFREQUENCY]" value="" class="input PayPal-Reference" required>
+		<label class="providerData MKBSZEP OTP2">
+			<span>Card number:</span>
+			<input type="text" name="cardNumber" value="" class="input MKBSZEP OTP2" size="17">
 		</label>
 
-		<label class="col-2 providerData PayPal">
-			<span>Time period between billings *:</span>
-			<select name="extra[REFERENCE][BILLINGPERIOD]" class="input PayPal-Reference" required>
-				<option value="" selected>Setting by frequency</option>
-				<option value="Day">Day</option>
-				<option value="Week">Week</option>
-				<option value="SemiMonth">SemiMonth</option>
-				<option value="Month">Month</option>
-				<option value="Year">Year</option>
-			</select>
+		<label class="providerData OTP2">
+			<span>Expiration date (mmyy):</span>
+			<input type="text" name="cardExpiration" value="" class="input OTP2">
 		</label>
-	</div>
 
-	<div class="row providerData PayPal-Reference">
-		<label class="col-2 providerData PayPal">
-			<span>Description *:</span>
-			<input type="text" name="extra[REFERENCE][DESC]" value="" class="input PayPal-Reference" required>
+		<label class="providerData MKBSZEP OTP2">
+			<span>CVC/CVV:</span>
+			<input type="text" name="cardCvc" value="" class="input MKBSZEP OTP2">
 		</label>
-	</div>
 
-	<div class="row providerData PayPal-Reference">
-		<table class="table-test-data">
-			<thead><tr><th>Note:</th></tr></thead>
-			<tbody>
-			<tr><td>The combination of BillingPeriod and BillingFrequency cannot exceed one year.</td></tr>
-			<tr><td>
-					PayPal has some extra[REFERENCE][field]. See documentation:
-					<a href="https://developer.paypal.com/docs/classic/api/merchant/CreateRecurringPaymentsProfile_API_Operation_NVP/" target="_blank">CreateRecurringPaymentsProfile</a>
-				</td></tr>
-			</tbody>
-		</table>
-	</div>
+		<label class="label-chkbox providerData MKBSZEP">
+			<span>Add your card data on Payment Gateway page: <input type="checkbox" name="gatewayPaymentPage" value="1" class="input MKBSZEP"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		</label>
 
-	<label class="label-chkbox providerData MKBSZEP OTP2">
-		<span>Add your card data on merchant's page:</span>
-	</label>
-
-	<label class="providerData MKBSZEP OTP2">
-		<span>Card number:</span>
-		<input type="text" name="cardNumber" value="" class="input MKBSZEP OTP2" size="17">
-	</label>
-
-	<label class="providerData OTP2">
-		<span>Expiration date (mmyy):</span>
-		<input type="text" name="cardExpiration" value="" class="input OTP2">
-	</label>
-
-	<label class="providerData MKBSZEP OTP2">
-		<span>CVC/CVV:</span>
-		<input type="text" name="cardCvc" value="" class="input MKBSZEP OTP2">
-	</label>
-
-	<label class="label-chkbox providerData MKBSZEP">
-		<span>Add your card data on Payment Gateway page: <input type="checkbox" name="gatewayPaymentPage" value="1" class="input MKBSZEP"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
-	</label>
+	<? } ?>
 
 	<label class="providerData Saferpay">
 		<span>Payment methods by card:</span>
@@ -550,6 +561,26 @@
 			<?}?>
 		</select>
 	</div>
+
+	<? if ($this->controller->action == "paymentLinkCreate") { ?>
+
+		<div class="row">
+			<label class="col-2">
+				<span>Merchant notification email *:</span>
+				<input type="text" name="notificationEmail" value="">
+			</label>
+
+			<label class="col-2">
+				<span>Expiration time (YYYY-MM-DD HH:MM:SS):</span>
+				<input type="text" name="expirationTime" value="">
+			</label>
+		</div>
+
+		<label class="label-chkbox">
+			<span>Email notification only if the transaction is successful: <input type="checkbox" name="emailNotificationOnlySuccess" value="1" class="input All"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		</label>
+
+	<? } ?>
 
 	<input type="submit" name="submit" value="Next">
 </form>

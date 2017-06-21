@@ -34,7 +34,9 @@ function setProviderDataShow(providerName) {
 
 function setInputsDisabled() {
 	for(var i = 0; i < inputs.length; i++) {
-		inputs[i].disabled = true;
+		if ((' ' + inputs[i].className + ' ').indexOf(' All ') < 0) {
+			inputs[i].disabled = true;
+		}
 	}
 }
 
@@ -42,7 +44,7 @@ function setInputsEnabled(providerName) {
 	var elem = document.getElementsByClassName('input ' + providerName);
 	for(var i = 0; i < elem.length; i++) {
 		elem[i].disabled = false;
-	}			
+	}
 }
 
 function showPayPalReference(data) {

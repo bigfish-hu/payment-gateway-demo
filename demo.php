@@ -204,7 +204,7 @@ abstract class Demo
 	public static function details(array $data = array())
 	{
 		try {
-			$detailsResponse = \BigFish\PaymentGateway::details(new \BigFish\PaymentGateway\Request\Details($data['TransactionId']));
+			$detailsResponse = \BigFish\PaymentGateway::details(new \BigFish\PaymentGateway\Request\Details($data['TransactionId'], false));
 
 			return $detailsResponse;
 		} catch (\BigFish\PaymentGateway\Exception $e) {
@@ -316,6 +316,100 @@ abstract class Demo
 			$oneClickTokenCancelResponse = \BigFish\PaymentGateway::oneClickTokenCancel(new \BigFish\PaymentGateway\Request\OneClickTokenCancel($data['TransactionId']));
 
 			return $oneClickTokenCancelResponse;
+		} catch (\BigFish\PaymentGateway\Exception $e) {
+			return $e->getMessage();
+		}
+	}
+	
+	/**
+	 * Create payment link
+	 * 
+	 * @param array $data
+	 * @return object|string
+	 * @access public
+	 * @static
+	 */
+	public static function paymentLinkCreate(array $data = array())
+	{
+		try {
+			$paymentLinkCreateRequest = new \BigFish\PaymentGateway\Request\PaymentLinkCreate();
+
+			$paymentLinkCreateRequest->setProviderName($data['providerName'])
+				->setAmount($data['amount'])
+				->setCurrency($data['currency'])
+				->setOrderId($data['orderId'])
+				->setUserId($data['userId'])
+				->setExpirationTime($data['expirationTime'])
+				->setNotificationEmail($data['notificationEmail'])
+				->setEmailNotificationOnlySuccess($data['emailNotificationOnlySuccess']);
+
+			if (!empty($data["language"])) {
+				$paymentLinkCreateRequest->setLanguage($data["language"]);
+			}
+
+			if (isset($data["autoCommit"]) && ($data["autoCommit"] === 'false' || $data["autoCommit"] === false)) {
+				$paymentLinkCreateRequest->setAutoCommit(false);
+			}
+
+			switch ($data['providerName']) {
+				case \BigFish\PaymentGateway::PROVIDER_MKB_SZEP:
+					$data['extra']['MkbSzepCafeteriaId'] = self::$szepCardId[$data['providerName']][$data["szepPocket"]];
+					break;
+				case \BigFish\PaymentGateway::PROVIDER_KHB_SZEP:
+					$data['extra']['KhbCardPocketId'] = self::$szepCardId[$data['providerName']][$data["szepPocket"]];
+					break;
+				case \BigFish\PaymentGateway::PROVIDER_OTP:
+					if (!empty($data["szepPocket"])) {
+						$data['extra']['OtpCardPocketId'] = self::$szepCardId[$data['providerName']][$data["szepPocket"]];
+					}
+					break;
+			}
+
+			if (isset($data['extra']) && is_array($data['extra'])) {
+				$paymentLinkCreateRequest->setExtra($data['extra']);
+			}
+
+			$paymentLinkCreateResponse = \BigFish\PaymentGateway::paymentLinkCreate($paymentLinkCreateRequest);
+
+			return $paymentLinkCreateResponse;
+		} catch (\BigFish\PaymentGateway\Exception $e) {
+			return $e->getMessage();
+		}
+	}
+
+	/**
+	 * Get payment link details
+	 * 
+	 * @param array $data
+	 * @return object|string
+	 * @access public
+	 * @static
+	 */
+	public static function paymentLinkDetails(array $data = array())
+	{
+		try {
+			$paymentLinkDetailsResponse = \BigFish\PaymentGateway::paymentLinkDetails(new \BigFish\PaymentGateway\Request\PaymentLinkDetails($data['PaymentLinkName']));
+
+			return $paymentLinkDetailsResponse;
+		} catch (\BigFish\PaymentGateway\Exception $e) {
+			return $e->getMessage();
+		}
+	}
+
+	/**
+	 * Cancel payment link
+	 * 
+	 * @param array $data
+	 * @return object|string
+	 * @access public
+	 * @static
+	 */
+	public static function paymentLinkCancel(array $data = array())
+	{
+		try {
+			$paymentLinkCancelResponse = \BigFish\PaymentGateway::paymentLinkCancel(new \BigFish\PaymentGateway\Request\PaymentLinkCancel($data['PaymentLinkName']));
+
+			return $paymentLinkCancelResponse;
 		} catch (\BigFish\PaymentGateway\Exception $e) {
 			return $e->getMessage();
 		}

@@ -40,6 +40,9 @@ class View
 		'invoice' => 'Invoice (invoice)',
 		'oneClickTokenCancel' => 'One Click Token Cancel (oneClickTokenCancel)',
 		'featureMatrix' => 'Feature matrix',
+		'paymentLinkCreate' => 'Create payment link (paymentLinkCreate)',
+		'paymentLinkDetails' => 'Get payment link details (paymentLinkDetails)',
+		'paymentLinkCancel' => 'Cancel payment link (paymentLinkCancel)',
 	);
 	
 	/**
@@ -128,7 +131,7 @@ class View
 	public function __construct(Controller $controller)
 	{
 		$this->controller = $controller;
-		$this->include = $this->controller->action . '.php';
+		$this->include = ($this->controller->action == 'paymentLinkCreate' ? 'start' : $this->controller->action) . '.php';
 		$this->responseUrl = (($_SERVER['HTTPS'] == 'on') ? 'https' : 'http') . '://' . $_SERVER["HTTP_HOST"] . '/response.php';
 		$this->call();
 	}
