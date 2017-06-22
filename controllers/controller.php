@@ -47,6 +47,9 @@ class Controller
 		'invoice',
 		'oneClickTokenCancel',
 		'featureMatrix',
+		'paymentLinkCreate',
+		'paymentLinkDetails',
+		'paymentLinkCancel',
 	);
 
 	/**
@@ -215,5 +218,38 @@ class Controller
 	protected function oneClickTokenCancel() 
 	{
 		$this->result = Demo::oneClickTokenCancel($_POST);
+	}
+
+	/**
+	 * Create payment link
+	 *
+	 * @return void
+	 * @access protected
+	 */
+	protected function paymentLinkCreate()
+	{
+		$this->result = Demo::paymentLinkCreate($_POST);
+	}
+
+	/**
+	 * Payment link details
+	 *
+	 * @return void
+	 * @access protected
+	 */
+	protected function paymentLinkDetails()
+	{
+		$this->result = Demo::paymentLinkDetails($_POST);
+	}
+
+	/**
+	 * Cancel payment link
+	 *
+	 * @return void
+	 * @access protected
+	 */
+	protected function paymentLinkCancel()
+	{
+		$this->result = Demo::paymentLinkCancel($_POST);
 	}
 }

@@ -140,7 +140,7 @@
 							require_once('sample' . DS . 'restapi.php');
 						}
 
-						if ($this->controller->action == 'start') { ?>
+						if (in_array($this->controller->action, array('start', 'paymentLinkCreate'))) { ?>
 							<script type="text/javascript">
 								var providers = document.startForm.providerName;
 								var providerData = document.getElementsByClassName("providerData");
