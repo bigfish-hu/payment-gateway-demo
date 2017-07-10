@@ -46,6 +46,7 @@ class Controller
 		'startRP',
 		'invoice',
 		'oneClickTokenCancel',
+		'oneClickTokenCancelAll',
 		'featureMatrix',
 		'paymentLinkCreate',
 		'paymentLinkDetails',
@@ -218,6 +219,17 @@ class Controller
 	protected function oneClickTokenCancel() 
 	{
 		$this->result = Demo::oneClickTokenCancel($_POST);
+	}
+
+	/**
+	 * OneClickTokenCancelAll
+	 *
+	 * @return void
+	 * @access protected
+	 */
+	protected function oneClickTokenCancelAll() 
+	{
+		$this->result = Demo::oneClickTokenCancelAll($_POST);
 	}
 
 	/**

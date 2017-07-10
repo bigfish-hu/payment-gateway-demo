@@ -19,7 +19,7 @@
 		<br />
 		Example:<br />
 		<br />
-		method=Init&json={"StoreName":"sdk_test","ReferenceTransactionId":"[One Click Payment registered transaction ID]","ResponseUrl":"<?=json_encode($this->responseUrl);?>","Amount":"100","Currency":"HUF","OrderId":"DEMO_ORDER","UserId":"DEMO_USER"}<br />
+		method=InitRP&json={"StoreName":"sdk_test","ReferenceTransactionId":"[One Click Payment registered transaction ID]","ResponseUrl":"<?=json_encode($this->responseUrl);?>","Amount":"100","Currency":"HUF","OrderId":"DEMO_ORDER","UserId":"DEMO_USER"}<br />
 		<br />
 		Response data (JSON format):<br />
 		<br />

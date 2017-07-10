@@ -322,6 +322,25 @@ abstract class Demo
 	}
 	
 	/**
+	 * One Click Token Cancel All
+	 * 
+	 * @param array $data
+	 * @return object|string
+	 * @access public
+	 * @static
+	 */
+	public static function oneClickTokenCancelAll(array $data = array())
+	{
+		try {
+			$oneClickTokenCancelAllResponse = \BigFish\PaymentGateway::oneClickTokenCancelAll(new \BigFish\PaymentGateway\Request\OneClickTokenCancelAll($data['providerName'], $data['userId']));
+
+			return $oneClickTokenCancelAllResponse;
+		} catch (\BigFish\PaymentGateway\Exception $e) {
+			return $e->getMessage();
+		}
+	}
+	
+	/**
 	 * Create payment link
 	 * 
 	 * @param array $data
