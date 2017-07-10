@@ -1,4 +1,4 @@
-		<b>Cancel One Click Token (OTP Simple):</b><br />
+		<b>Cancel One Click Token (Borgun2, OTPSimple):</b><br />
 		<br />
 		Required data (HTTP POST):<br />
 		<br />
