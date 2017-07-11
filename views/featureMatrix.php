@@ -47,7 +47,10 @@
 		<tr class="datarow even">
 			<td>Barion Smart Gateway</td>
 			<td>HUF, EUR, USD</td>
-			<td>hu, en</td>
+			<td>
+				<div class="info">hu, en, de, ...</div>
+				<span>fr, es, si, sk</span>
+			</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
@@ -55,7 +58,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
-			<td class="check no">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>

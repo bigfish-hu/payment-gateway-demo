@@ -32,19 +32,27 @@
 
 	<div class="row">
 		<label class="col-2">
-			<span>Order ID * :</span>
+			<span>Order ID *:</span>
 			<input type="text" name="orderId" value="">
 		</label>
 		
 		<label class="col-2">
-			<span>Registered card * :</span>
+			<span>Registered card *:</span>
 			<select name="cardReferenceId">
 				<? foreach ($this->controller->data as $data) { ?>
-					<option value="<?=$data->card_reference_id;?>"><?=strlen($data->card_pan) == 4 ? '**** **** **** ' : '';?><?=$data->card_pan;?> (<?=$data->card_type;?>)</option>
+					<option value="<?=$data->card_reference_id;?>"><?=$data->currency;?>: <?=strlen($data->card_pan) == 4 ? '**** **** **** ' : '';?><?=$data->card_pan;?> (<?=$data->card_type;?>)</option>
 				<? } ?>
 			</select>
 		</label>
 	</div>
+
+	<label>
+		<span>Authorization:</span>
+		<select name="autoCommit">
+			<option value="true">Immediate</option>
+			<option value="false">Later</option>
+		</select>
+	</label>
 
 	<input type="submit" name="submit" value="Next">
 </form>
