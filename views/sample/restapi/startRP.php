@@ -10,10 +10,10 @@
 		StoreName*<br />
 		ReferenceTransactionId*<br />
 		ResponseUrl*<br />
-		Amount*<br />
-		Currency*<br />
-		OrderId*<br />
-		UserId*<br />
+		Amount<br />
+		Currency<br />
+		OrderId<br />
+		UserId<br />
 		ModuleName<br />
 		ModuleVersion<br />
 		<br />
@@ -30,17 +30,28 @@
 		<br />
 		<b>Start recurring transaction:</b><br />
 		<br />
-		HTTP Redirect<br />
+		Required data (HTTP POST):<br />
 		<br />
-		Test URL: <a>https://test.paymentgateway.hu/StartRP</a><br />
+		method = StartRP<br />
+		json = {json encoded variables}<br />
 		<br />
-		Production URL: <a>https://www.paymentgateway.hu/StartRP</a><br />
+		Parameters (* if necessary):<br />
 		<br />
-		Required data (HTTP GET):<br />
-		<br />
-		TransactionId<br />
+		TransactionId*<br />
 		<br />
 		Example:<br />
 		<br />
-		<a>https://test.paymentgateway.hu/StartRP?TransactionId=[TransactionId received by InitRP]</a><br />
+		method=StartRP&json={"TransactionId":"[TransactionId received by InitRP]"}<br />
+		<br />
+		Response data (JSON format):<br />
+		<br />
+		TransactionId<br />
+		ResultCode<br />
+		ResultMessage<br />
+		Anum<br />
+		OrderId<br />
+		UserId<br />
+		ProviderTransactionId<br />
+		AutoCommit<br />
+		CommitState<br />
 		<br />
