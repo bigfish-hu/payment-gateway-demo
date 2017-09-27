@@ -9,6 +9,7 @@
 		<li><label><input type="radio" name="providerName" value="CIB"><span><span></span></span>CIB Bank</label></li>
 		<li><label><input type="radio" name="providerName" value="Escalion"><span><span></span></span>Escalion</label></li>
 		<li><label><input type="radio" name="providerName" value="FHB"><span><span></span></span>FHB Bank</label></li>
+		<li><label><input type="radio" name="providerName" value="GP"><span><span></span></span>Global Payments</label></li>
 		<li><label><input type="radio" name="providerName" value="IPG"><span><span></span></span>Intelligent Payments</label></li>
 		<li><label><input type="radio" name="providerName" value="KHB"><span><span></span></span>K&H Bank</label></li>
 		<li><label><input type="radio" name="providerName" value="KHBSZEP"><span><span></span></span>K&H SZÉP Card</label></li>
@@ -95,6 +96,14 @@
 			</table>
 		</div>
 
+	<div class="providerData GP">
+			<table class="table-test-data">
+				<thead><tr><th colspan="2">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment:</td><td>4056070000000008</td><td>Expiration date:</td><td>12/20</td><td>CVC2:</td><td>200</td></tr>
+				</tbody>
+			</table>
+		</div>
 
 		<div class="providerData IPG">
 			<table class="table-test-data">
@@ -334,9 +343,9 @@
 			</select>
 		</label>
 		
-		<label class="col-2 providerData Barion2 Borgun2 FHB IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
+		<label class="col-2 providerData Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
 			<span>Authorization:</span>
-			<select name="autoCommit" class="input Barion2 Borgun2 FHB IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
+			<select name="autoCommit" class="input Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
 				<option value="true">Immediate</option>
 				<option value="false">Later</option>
 			</select>
@@ -353,6 +362,11 @@
 		</select>
 	</label>
 
+	<label class="providerData GP">
+		<span>Fastpay ID (previous provider transaction ID):</span>
+		<input type="text" name="extra[FASTPAYID]" value="" class="input GP">
+	</label>
+
 	<? if ($this->controller->action == "start") { ?>
 
 		<label class="providerData OTPay">
@@ -365,8 +379,8 @@
 			<input type="text" name="otpConsumerRegistrationId" value="" class="input OTP OTP2">
 		</label>
 
-		<label class="label-chkbox providerData Barion2 Borgun2 Escalion OTPSimple Saferpay">
-			<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 Escalion OTPSimple Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		<label class="label-chkbox providerData Barion2 Borgun2 Escalion GP OTPSimple Saferpay">
+			<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 Escalion GP OTPSimple Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 		</label>
 
 	<? } ?>
