@@ -10,7 +10,7 @@
 	</label>
 
 	<label class="col-2">
-		<span>Amount * :</span>
+		<span>Amount :</span>
 		<input type="text" name="amount" value="">
 	</label>
 
@@ -24,12 +24,12 @@
 	</label>
 
 	<label class="col-2">
-		<span>Order ID * :</span>
+		<span>Order ID :</span>
 		<input type="text" name="orderId" value="">
 	</label>
 
 	<label class="col-2">
-		<span>User ID * :</span>
+		<span>User ID :</span>
 		<input type="text" name="userId" value="">
 	</label>
 	<input type="submit" name="submit" value="Next">

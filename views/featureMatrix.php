@@ -204,6 +204,33 @@
 			<td>FHB</td>
 		</tr>
 		<tr class="datarow even">
+			<td>Global Payments</td>
+			<td>HUF, EUR, CZK</td>
+			<td>
+				<div class="info">hu, en, de, ...</div>
+				<span>ar, cs, da, nl, fi, fr, it, ja, lv, no, pl, pt, ro, ru, sk, es, sv, uk, vi</span>
+			</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">
+				<div class="info ">*</div>
+				<span>For clients with a non-Hungarian seat</span>
+			</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td>GP</td>
+		</tr>
+		<tr class="datarow even">
 			<td>Intelligent Payments</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>

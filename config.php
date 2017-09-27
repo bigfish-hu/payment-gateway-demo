@@ -41,6 +41,10 @@ $config = array(
 	'testMode' => true,
 );
 
+if (getenv('APPLICATION_ENV') == 'development-docker') {
+	$config['gatewayUrlTest'] = "http://paymentgateway.dev.big.hu";
+}
+
 switch ($_POST['providerName']) {
 	case 'OTP':
 	case 'OTP2':

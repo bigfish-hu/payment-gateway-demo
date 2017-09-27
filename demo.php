@@ -46,7 +46,11 @@ abstract class Demo
 		$config->apiKey = $data['apiKey'];
 		$config->testMode = $data['testMode'];
 		$config->encryptPublicKey = $data['encryptPublicKey'];
-		
+
+		if (isset($data['gatewayUrlTest']) && !empty($data['gatewayUrlTest'])) {
+			$config->gatewayUrlTest = $data['gatewayUrlTest'];
+		}
+
 		\BigFish\PaymentGateway::setConfig($config);
 	}
 	
@@ -123,6 +127,7 @@ abstract class Demo
 					}
 				case \BigFish\PaymentGateway::PROVIDER_BORGUN2:
 				case \BigFish\PaymentGateway::PROVIDER_ESCALION:
+				case \BigFish\PaymentGateway::PROVIDER_GP:
 				case \BigFish\PaymentGateway::PROVIDER_OTP_SIMPLE:
 				case \BigFish\PaymentGateway::PROVIDER_SAFERPAY:
 				case \BigFish\PaymentGateway::PROVIDER_PAYPAL:
