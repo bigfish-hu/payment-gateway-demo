@@ -1,7 +1,7 @@
 #
 # Web node
 #
-FROM docker.big.hu/development/nginx-php:5.6.26
+FROM docker.big.hu/development/nginx-php:5.6.30
 MAINTAINER BIG FISH <cafe@bigfish.hu>
 
 #
@@ -13,6 +13,11 @@ RUN apt-get install -t jessie-bigfish -y \
     php5-memcached \
     php5-xsl=${PHP5_VERSION} \
     php5-xmlrpc=${PHP5_VERSION}
+
+#
+# PHP-FPM config
+#
+ADD ./src/php/www.conf /etc/php5/fpm/pool.d/www.conf
 
 #
 # PHP settings

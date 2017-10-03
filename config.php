@@ -41,8 +41,8 @@ $config = array(
 	'testMode' => true,
 );
 
-if (getenv('APPLICATION_ENV') == 'development-docker') {
-	$config['gatewayUrlTest'] = "http://paymentgateway.dev.big.hu";
+if (getenv('APPLICATION_ENV') == 'development-docker' && getenv('PMGW_URL_TEST') !== false) {
+	$config['gatewayUrlTest'] = getenv('PMGW_URL_TEST');
 }
 
 switch ($_POST['providerName']) {
