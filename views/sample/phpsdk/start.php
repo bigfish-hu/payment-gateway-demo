@@ -153,7 +153,7 @@
 			$data['extra'] = array(<br />
 				<blockquote>'ORDER_PNAME' => 'Product name',</blockquote>
 				<blockquote>'ORDER_PCODE' => 'Product unique id',</blockquote>
-				<blockquote>'ORDER_PINFO' => Product description'',</blockquote>
+				<blockquote>'ORDER_PINFO' => 'Product description',</blockquote>
 				<blockquote>'BILL_FNAME' => 'Customer first name',</blockquote>
 				<blockquote>'BILL_LNAME' => 'Customer last name',</blockquote>
 				<blockquote>'BILL_PHONE' => 'Customer phone number',</blockquote>
@@ -304,6 +304,25 @@
 					$data['extra']['Barion2'] = $data['Barion2'];<br />
 				</blockquote>
 			}<br />
+		</span>
+		<span class="providerData code Paysafecash">
+			<br />
+			<font>
+				/**<br />
+				&nbsp;* Send customer data to prefill the registration form (optional)<br />
+				&nbsp;*/
+			</font><br />
+			$data['extra']['Paysafecash'] = array(<br />
+				<blockquote>'salutation' => 'salutation',</blockquote>
+				<blockquote>'firstName' => 'First name',</blockquote>
+				<blockquote>'lastName' => 'Last name',</blockquote>
+				<blockquote>'birthDate' => 'Birth date',</blockquote>
+				<blockquote>'phoneNumber' => 'Phone number',</blockquote>
+				<blockquote>'email' => 'email',</blockquote>
+				<blockquote>'address1' => 'Address',</blockquote>
+				<blockquote>'city' => 'city',</blockquote>
+				<blockquote>'postalCode' => 'Postal code'</blockquote>
+			);<br />
 		</span>
 		<br />
 		if (isset($data['extra']) && is_array($data['extra'])) {<br />

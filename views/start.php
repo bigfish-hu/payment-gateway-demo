@@ -23,6 +23,7 @@
 		<li><label><input type="radio" name="providerName" value="OTPayMP"><span><span></span></span>OTPay MasterPass</label></li>
 		<li><label><input type="radio" name="providerName" value="PayPal"><span><span></span></span>PayPal</label></li>
 		<li><label><input type="radio" name="providerName" value="PSC"><span><span></span></span>Paysafecard</label></li>
+		<li><label><input type="radio" name="providerName" value="Paysafecash"><span><span></span></span>Paysafecash</label></li>
 		<li><label><input type="radio" name="providerName" value="PayU2"><span><span></span></span>PayU (Polish)</label></li>
 		<li><label><input type="radio" name="providerName" value="Saferpay"><span><span></span></span>Saferpay (SIX Payment)</label></li>
 		<li><label><input type="radio" name="providerName" value="SMS"><span><span></span></span>SMS</label></li>
@@ -244,6 +245,17 @@
 			</table>
 		</div>
 
+		<div class="providerData Paysafecash">
+			<table class="table-test-data">
+				<thead><tr><th colspan="2">Test user:</th></tr></thead>
+				<tbody>
+					<tr><td>E-mail address:</td><td>FWjkMvnwXS@JwRypsogma.sVO</td></tr>
+					<tr><td>Password:</td><td>8zcIYjFXVCXEnaA1</td></tr>
+					<tr><td colspan="2"><em>(Please set the "paysafecash_test_user" User ID when using the above user.)</em></td></tr>
+				</tbody>
+			</table>
+		</div>
+
 		<div class="providerData Saferpay">
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
@@ -334,9 +346,9 @@
 	</div>
 
 	<div class="row">
-		<label class="col-2">
+		<label class="col-2 providerData Barion2 Borgun Borgun2 CIB Escalion FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPMultipont OTPSimple OTPSimpleWire OTPay OTPayMP PayPal PSC PayU2 Saferpay SMS Sofort UniCredit QPAY">
 			<span>Language:</span>
-			<select name="language">
+			<select name="language" class="input Barion2 Borgun Borgun2 CIB Escalion FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPMultipont OTPSimple OTPSimpleWire OTPay OTPayMP PayPal PSC PayU2 Saferpay SMS Sofort UniCredit QPAY">
 				<option value="HU">HU</option>
 				<option value="EN">EN</option>
 				<option value="DE">DE</option>
@@ -385,8 +397,8 @@
 
 	<? } ?>
 
-	<label class="label-chkbox providerData Barion2">
-		<span>Check to use extra data: <input type="checkbox" name="useExtra" value="1" class="input Barion2"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+	<label class="label-chkbox providerData Barion2 Paysafecash">
+		<span>Check to use extra data: <input type="checkbox" name="useExtra" value="1" class="input Barion2 Paysafecash"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
 
 	<label class="providerData Barion2">
@@ -451,6 +463,23 @@
 			}
 		]
 	}
+}
+		</textarea>
+	</label>
+
+	<label class="providerData Paysafecash">
+		<span>Extra data:</span>
+		<textarea name="extra[Paysafecash]" class="input Paysafecash">
+{
+	"salutation":"mr",
+	"firstName":"John",
+	"lastName":"Doe",
+	"birthDate":"31/01/1970",
+	"phoneNumber":"+36201234567",
+	"email":"test@psctest.hu",
+	"address1":"Test street 1.",
+	"city":"Budapest",
+	"postalCode":"9999"
 }
 		</textarea>
 	</label>

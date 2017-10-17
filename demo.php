@@ -53,7 +53,24 @@ abstract class Demo
 
 		\BigFish\PaymentGateway::setConfig($config);
 	}
-	
+
+	/**
+	 * Set provider extra
+	 * 
+	 * @param array $data reference
+	 * @return void
+	 * @access private
+	 * @static
+	 */
+	private static function setProviderExtra(&$data)
+	{
+		if (isset($_POST['useExtra']) && (int)$_POST['useExtra'] && isset($_POST['extra'][$data['providerName']]) && !empty($_POST['extra'][$data['providerName']])) {
+			$data['extra'][$data['providerName']] = json_decode($_POST['extra'][$data['providerName']], true);
+		} else {
+			unset($data['extra']);
+		}
+	}
+
 	/**
 	 * Init and start transaction
 	 * 
@@ -120,11 +137,7 @@ abstract class Demo
 					}
 					break;
 				case \BigFish\PaymentGateway::PROVIDER_BARION2:
-					if (isset($_POST['useExtra']) && (int)$_POST['useExtra'] && !empty($_POST['extra']['Barion2'])) {
-						$data['extra']['Barion2'] = json_decode($_POST['extra']['Barion2'], true);
-					} else {
-						unset($data['extra']);
-					}
+					self::setProviderExtra($data);
 				case \BigFish\PaymentGateway::PROVIDER_BORGUN2:
 				case \BigFish\PaymentGateway::PROVIDER_ESCALION:
 				case \BigFish\PaymentGateway::PROVIDER_GP:
@@ -137,6 +150,9 @@ abstract class Demo
 					if (isset($data['cardReferenceId']) && strlen($data['cardReferenceId'])) {
 						$initRequest->setOneClickReferenceId($data['cardReferenceId']);
 					}
+					break;
+				case \BigFish\PaymentGateway::PROVIDER_PAYSAFECASH:
+					self::setProviderExtra($data);
 					break;
 			}
 			

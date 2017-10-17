@@ -230,7 +230,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>GP</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>Intelligent Payments</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -257,7 +257,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>IPG</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>K&H Bank</td>
 			<td>HUF, EUR, USD</td>
 			<td>hu, en, de</td>
@@ -278,7 +278,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>KHB</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>K&H SZÉP Card</td>
 			<td>HUF</td>
 			<td>hu</td>
@@ -299,7 +299,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>KHBSZEP</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>MKB SZÉP Card</td>
 			<td>HUF</td>
 			<td>hu</td>
@@ -320,7 +320,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>MKBSZEP</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>OTP Bank</td>
 			<td>HUF, EUR, USD</td>
 			<td>hu, en, de</td>
@@ -341,7 +341,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>OTP, OTP2</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>OTPay MasterPass</td>
 			<td>HUF</td>
 			<td>hu, en, de</td>
@@ -362,7 +362,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>OTPayMP</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>PayPal</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -389,8 +389,8 @@
 			<td class="check no">&nbsp;</td>
 			<td>PayPal</td>
 		</tr>
-		<tr class="datarow odd">
-			<td>PaySafeCard</td>
+		<tr class="datarow even">
+			<td>Paysafecard</td>
 			<td>HUF, EUR, USD</td>
 			<td>hu, en, de</td>
 			<td class="check yes">&nbsp;</td>
@@ -415,6 +415,33 @@
 			<td class="check no">&nbsp;</td>
 			<td class="check no">&nbsp;</td>
 			<td>PSC</td>
+		</tr>
+		<tr class="datarow odd">
+			<td>Paysafecash</td>
+			<td>HUF, EUR</td>
+			<td>hu, de</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check yes">
+				<div class="info ">*</div>
+				<span>To Paysafecard account</span>
+			</td>
+			<td class="check yes">
+				<div class="info ">*</div>
+				<span>To Paysafecard account</span>
+			</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td>Paysafecash</td>
 		</tr>
 		<tr class="datarow even">
 			<td>PayU (Polish)</td>
