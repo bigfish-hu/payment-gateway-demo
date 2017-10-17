@@ -6,7 +6,7 @@ services:
     domainname: dev.big.hu
     environment:
       - DEVELOPMENT_USER=${USER}
-      - PMGW_URL_TEST=http://paymentgateway.vkrisztian.dev.big.hu
+      - PMGW_URL_TEST=http://paymentgateway.dev.big.hu
     volumes:
       - ./:/var/www/dev/paymentgateway-demo
     labels:
