@@ -40,7 +40,7 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="2">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>4908366099900425</td><td>Expiration date:</td><td>any</td><td>CVC2:</td><td>any</td></tr>
+					<tr><td>To success payment:</td><td>4908366099900425</td><td>Expiration date:</td><td>any</td><td>CVC2:</td><td>823</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -81,8 +81,8 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>5431 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
-					<tr><td>To failed payment:</td><td>4111 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
+					<tr><td>To success payment:</td><td>5431111111111111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>To failed payment:</td><td>4111111111111111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -120,8 +120,8 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>4550 5225 9830 5372</td><td>Expiration date:</td><td>2003/11</td><td>CVV2:</td><td>271</td></tr>
-					<tr><td>To failed payment:</td><td>4205 7925 0786 4590</td><td>Expiration date:</td><td>2006/10</td><td>CVV2:</td><td>106</td></tr>
+					<tr><td>To success payment:</td><td>4550522598305372</td><td>Expiration date:</td><td>11/2003</td><td>CVV2:</td><td>271</td></tr>
+					<tr><td>To failed payment:</td><td>4205792507864590</td><td>Expiration date:</td><td>10/2006</td><td>CVV2:</td><td>106</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -131,11 +131,11 @@
 				<thead><tr><th colspan="3">Test data:</th></tr></thead>
 				<tbody>
 					<tr><td>To success payment:</td><td>Card number:</td><td>64719254</td></tr>
-					<tr><td></td><td>Expiration date:</td><td>2019.12.31</td></tr>
+					<tr><td></td><td>Expiration date:</td><td>12/2019</td></tr>
 					<tr><td></td><td>Controlling value:</td><td>213</td></tr>
 					<tr><td></td><td>Password:</td><td>PGtest01</td></tr>
 					<tr><td>To failed payment:</td><td>Card number:</td><td>05101182</td></tr>
-					<tr><td></td><td>Expiration date:</td><td>2019.12.31</td></tr>
+					<tr><td></td><td>Expiration date:</td><td>12/2019</td></tr>
 					<tr><td></td><td>Controlling value:</td><td>508</td></tr>
 					<tr><td></td><td>Password:</td><td>Aa123456</td></tr>
 				</tbody>
@@ -145,7 +145,7 @@
 		<div class="providerData MKBSZEP">
 			<table class="table-test-data">
 				<thead><tr><th colspan="4">Test data:</th></tr></thead>
-				<tbody><tr><td>Card number:</td><td>6101317000000128</td><td>CVV:</td><td>497</td></tr></tbody>
+				<tbody><tr><td>Card number:</td><td>6101 3170 0000 0128</td><td>CVV:</td><td>497</td></tr></tbody>
 			</table>
 		</div>
 
@@ -153,8 +153,8 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>4908366099900425</td><td>Expiration date:</td><td>any</td><td>CVC2:</td><td>any</td></tr>
-					<tr><td>To failed payment:</td><td>1111111111111117</td><td>Expiration date:</td><td>2004/04</td><td>CVC2:</td><td>111</td></tr>
+					<tr><td>To success payment:</td><td>4908366099900425</td><td>Expiration date:</td><td>10/14</td><td>CVC2:</td><td>823</td></tr>
+					<tr><td>To failed payment:</td><td>1111111111111117</td><td>Expiration date:</td><td>04/04</td><td>CVC2:</td><td>111</td></tr>
 				</tbody>
 			</table>
 
@@ -241,7 +241,7 @@
 		<div class="providerData PSC">
 			<table class="table-test-data">
 				<thead><tr><th colspan="2">Test data:</th></tr></thead>
-				<tbody><tr><td>Test PIN <em>(to buy without my paysafecard account)</em>:</td><td>7130 2866 8390 5171</td></tr></tbody>
+				<tbody><tr><td>Test PIN <em>(to buy without my paysafecard account)</em>:</td><td>7130286683905171</td></tr></tbody>
 			</table>
 		</div>
 
@@ -563,7 +563,7 @@
 		</label>
 
 		<label class="label-chkbox providerData MKBSZEP">
-			<span>Add your card data on Payment Gateway page: <input type="checkbox" name="gatewayPaymentPage" value="1" class="input MKBSZEP"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+			<span>Add your card data on Payment Gateway page: <input type="checkbox" name="gatewayPaymentPage" value="1" class="input MKBSZEP" checked="checked"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 		</label>
 
 	<? } ?>
