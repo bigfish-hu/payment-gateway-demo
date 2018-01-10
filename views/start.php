@@ -40,7 +40,7 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="2">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>4908366099900425</td><td>Expiration date:</td><td>any</td><td>CVC2:</td><td>823</td></tr>
+					<tr><td>To success payment:</td><td>4444888888885559</td><td>Expiration date:</td><td>any</td><td>CVC2:</td><td>any</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -203,7 +203,7 @@
 						<td colspan="2">
 							<p>
 								<strong>Android test application: </strong>
-								<br><a href="https://rink.hockeyapp.net/apps/fb0e2cb7852d2e61cf1101aa29852510/app_versions/131" target="_blank">https://rink.hockeyapp.net/apps/fb0e2cb7852d2e61cf1101aa29852510/app_versions/131</a>
+								<br><a href="https://rink.hockeyapp.net/apps/fb0e2cb7852d2e61cf1101aa29852510" target="_blank">https://rink.hockeyapp.net/apps/fb0e2cb7852d2e61cf1101aa29852510</a>
 								<br>It is necessary to intall the application on a device which live OTPay is not installed.
 								<br>Do not update the test application!
 								<br>During the registration you have to receive a code in SMS. Send a reply to get the 5-digit code.
@@ -212,9 +212,9 @@
 					</tr>
 					<tr><td>mCard name:</td><td>any</td></tr>
 					<tr><td>Name on card:</td><td>TESZT 84</td></tr>
-					<tr><td>Card number:</td><td>5437 5884 9990 0468</td></tr>
-					<tr><td>Expiration date (mm/yy):</td><td>1220</td></tr>
-					<tr><td>CVC:</td><td>578</td></tr>
+					<tr><td>Card number:</td><td>5417 0491 0062 2029</td></tr>
+					<tr><td>Expiration date (mm/yy):</td><td>1020</td></tr>
+					<tr><td>CVC:</td><td>111</td></tr>
 					<tr><td>Card activation number:</td><td>0000</td></tr>
 				</tbody>
 			</table>
