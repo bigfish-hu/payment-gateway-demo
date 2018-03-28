@@ -1,0 +1,36 @@
+.bfpmgw-payment-layer {
+	display: none;
+	position: fixed;
+	z-index: 900;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgb(0,0,0);
+	background: rgba(0,0,0,.6);
+	overflow: auto;
+}
+
+.bfpmgw-payment-layer > div {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    width: 55%;
+    height: 400px;
+    max-width: 100%;
+    max-height: 100%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bfpmgw-payment-layer > div > div {
+	padding: 5px;
+	background: #ECEFF1;
+}
+
+.bfpmgw-payment-layer > div > div > iframe {
+	border: 0;
+	width: 100%;
+	height: 550px;
+}

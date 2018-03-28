@@ -40,7 +40,8 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="2">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>4444888888885559</td><td>Expiration date:</td><td>any</td><td>CVC2:</td><td>any</td></tr>
+					<tr><td>To success payment:</td><td>4444888888885559</td><td>Expiration date:</td><td>any future date</td><td>CVC2:</td><td>any</td></tr>
+					<tr><td>To failed payment:</td><td>4444888888884446</td><td>Expiration date:</td><td>any future date</td><td>CVC2:</td><td>any</td></tr>
 				</tbody>
 			</table>
 		</div>
