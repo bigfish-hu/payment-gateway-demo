@@ -10,7 +10,7 @@
 			<blockquote>->setExpirationTime($data['expirationTime']);</blockquote>
 			<blockquote>->setNotificationEmail($data['notificationEmail']);</blockquote>
 			<blockquote>->setEmailNotificationOnlySuccess($data['emailNotificationOnlySuccess']);</blockquote>
-		<span class="providerData code Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
+		<span class="providerData code Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay Virpay">
 			<br />
 			<font>
 				/**<br />

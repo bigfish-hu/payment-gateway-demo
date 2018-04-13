@@ -1,6 +1,6 @@
 		<font>
 			/**<br />
-			&nbsp;* Cancel One Click token (Borgun2, OTPSimple):<br />
+			&nbsp;* Cancel One Click token (Borgun2, OTPSimple, Virpay):<br />
 			&nbsp;* set that transaction ID which you received the first registered payment<br />
 			&nbsp;*/
 		</font><br />

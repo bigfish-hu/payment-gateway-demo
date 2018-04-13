@@ -144,6 +144,7 @@ abstract class Demo
 				case \BigFish\PaymentGateway::PROVIDER_OTP_SIMPLE:
 				case \BigFish\PaymentGateway::PROVIDER_SAFERPAY:
 				case \BigFish\PaymentGateway::PROVIDER_PAYPAL:
+				case \BigFish\PaymentGateway::PROVIDER_VIRPAY:
 					if ((int)$data['oneClickPayment']) {
 						$initRequest->setOneClickPayment(true);
 					}

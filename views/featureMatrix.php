@@ -623,6 +623,36 @@
 			<td class="check no">&nbsp;</td>
 			<td>UniCredit</td>
 		</tr>
+		<tr class="datarow even">
+			<td>VirPAY</td>
+			<td>
+				<div class="info">HUF, EUR, USD, ...</div>
+				<span>GBP, DKK, NOK, SEK, CHF, CAD, JPY, ISK, RON, HRK, CZK, PLN</span>
+			</td>
+			<td>
+				<div class="info">hu, en, de, ...</div>
+				<span>is, fr, ru, es, it, pt, se, cz, si, pl, ro, hr, sk</span>
+			</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">
+				<div class="info ">*</div>
+				<span>For clients with a non-Hungarian seat</span>
+			</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td>Virpay</td>
+		</tr>
 		<tr class="datarow odd">
 			<td>Wirecard QPAY</td>
 			<td>HUF, EUR, USD</td>

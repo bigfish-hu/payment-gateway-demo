@@ -29,6 +29,7 @@
 		<li><label><input type="radio" name="providerName" value="SMS"><span><span></span></span>SMS</label></li>
 		<li><label><input type="radio" name="providerName" value="Sofort"><span><span></span></span>Sofort Banking</label></li>
 		<li><label><input type="radio" name="providerName" value="UniCredit"><span><span></span></span>UniCredit Bank</label></li>
+		<li><label><input type="radio" name="providerName" value="Virpay"><span><span></span></span>VirPAY</label></li>
 		<li><label><input type="radio" name="providerName" value="QPAY"><span><span></span></span>Wirecard QPAY</label></li>
 	</ul>
 	
@@ -56,11 +57,11 @@
 			</table>
 		</div>
 
-		<div class="providerData Borgun2">
+		<div class="providerData Borgun2 Virpay">
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment (MasterCard, 3DSecure):</td><td>5587402000012011</td><td>Expiration date:</td><td>09/18</td><td>CVC:</td><td>415</td></tr>
+					<tr><td>To success payment (MasterCard, 3DSecure):</td><td>5587402000012011</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 					<tr><td>To success payment (VISA, 3DSecure):</td><td>4741520000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 					<tr><td>To failed payment (VISA, 3DSecure):</td><td>4242424242424242</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 					<tr><td>To failed payment (VISA):</td><td>4155520000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
@@ -347,18 +348,18 @@
 	</div>
 
 	<div class="row">
-		<label class="col-2 providerData Barion2 Borgun Borgun2 CIB Escalion FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPMultipont OTPSimple OTPSimpleWire OTPay OTPayMP PayPal PSC PayU2 Saferpay SMS Sofort UniCredit QPAY">
+		<label class="col-2 providerData Barion2 Borgun Borgun2 CIB Escalion FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPMultipont OTPSimple OTPSimpleWire OTPay OTPayMP PayPal PSC PayU2 Saferpay SMS Sofort UniCredit Virpay QPAY">
 			<span>Language:</span>
-			<select name="language" class="input Barion2 Borgun Borgun2 CIB Escalion FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPMultipont OTPSimple OTPSimpleWire OTPay OTPayMP PayPal PSC PayU2 Saferpay SMS Sofort UniCredit QPAY">
+			<select name="language" class="input Barion2 Borgun Borgun2 CIB Escalion FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPMultipont OTPSimple OTPSimpleWire OTPay OTPayMP PayPal PSC PayU2 Saferpay SMS Sofort UniCredit Virpay QPAY">
 				<option value="HU">HU</option>
 				<option value="EN">EN</option>
 				<option value="DE">DE</option>
 			</select>
 		</label>
 		
-		<label class="col-2 providerData Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
+		<label class="col-2 providerData Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay Virpay">
 			<span>Authorization:</span>
-			<select name="autoCommit" class="input Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay">
+			<select name="autoCommit" class="input Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay Virpay">
 				<option value="true">Immediate</option>
 				<option value="false">Later</option>
 			</select>
@@ -392,8 +393,8 @@
 			<input type="text" name="otpConsumerRegistrationId" value="" class="input OTP OTP2">
 		</label>
 
-		<label class="label-chkbox providerData Barion2 Borgun2 Escalion GP OTPSimple Saferpay">
-			<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 Escalion GP OTPSimple Saferpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		<label class="label-chkbox providerData Barion2 Borgun2 Escalion GP OTPSimple Saferpay Virpay">
+			<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 Escalion GP OTPSimple Saferpay Virpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 		</label>
 
 	<? } ?>
