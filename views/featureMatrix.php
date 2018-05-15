@@ -623,7 +623,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>UniCredit</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>VirPAY</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -653,7 +653,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>Virpay</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>Wirecard QPAY</td>
 			<td>HUF, EUR, USD</td>
 			<td>
