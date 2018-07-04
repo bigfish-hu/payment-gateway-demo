@@ -112,7 +112,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
-			<td class="check no">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check no">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
