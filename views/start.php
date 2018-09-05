@@ -103,7 +103,8 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="2">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>4056070000000008</td><td>Expiration date:</td><td>12/20</td><td>CVC2:</td><td>200</td></tr>
+					<tr><td>To success card payment:</td><td>4056070000000008</td><td>Expiration date:</td><td>12/20</td><td>CVC2:</td><td>200</td></tr>
+					<tr><td colspan="6"><br />Google Pay:<br />You can securely use your own production Google Pay account to test payment. The test terminal will replace your valid card data with its own test card in the background and no charge will happen on your Google-stored card.</td></tr>
 				</tbody>
 			</table>
 		</div>
