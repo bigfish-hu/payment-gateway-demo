@@ -330,8 +330,19 @@
 				<option value="HUF">HUF</option>
 				<option value="EUR">EUR</option>
 				<option value="USD">USD</option>
+				<option value="AED">AED</option>
+				<option value="CAD">CAD</option>
+				<option value="CHF">CHF</option>
+				<option value="CZK">CZK</option>
+				<option value="DKK">DKK</option>
 				<option value="GBP">GBP</option>
+				<option value="HRK">HRK</option>
+				<option value="ISK">ISK</option>
+				<option value="JPY">JPY</option>
+				<option value="NOK">NOK</option>
+				<option value="PLN">PLN</option>
 				<option value="RON">RON</option>
+				<option value="SEK">SEK</option>
 			</select>
 		</label>
 	</div>
@@ -355,6 +366,19 @@
 				<option value="HU">HU</option>
 				<option value="EN">EN</option>
 				<option value="DE">DE</option>
+				<option value="CZ">CZ</option>
+				<option value="ES">ES</option>
+				<option value="FR">FR</option>
+				<option value="HR">HR</option>
+				<option value="IS">IS</option>
+				<option value="IT">IT</option>
+				<option value="PL">PL</option>
+				<option value="PT">PT</option>
+				<option value="RO">RO</option>
+				<option value="RU">RU</option>
+				<option value="SE">SE</option>
+				<option value="SI">SI</option>
+				<option value="SK">SK</option>
 			</select>
 		</label>
 		
