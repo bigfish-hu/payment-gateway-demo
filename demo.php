@@ -404,6 +404,10 @@ abstract class Demo
 						$data['extra']['OtpCardPocketId'] = self::$szepCardId[$data['providerName']][$data["szepPocket"]];
 					}
 					break;
+				case \BigFish\PaymentGateway::PROVIDER_BARION2:
+				case \BigFish\PaymentGateway::PROVIDER_PAYSAFECASH:
+					self::setProviderExtra($data);
+					break;
 			}
 
 			if (isset($data['extra']) && is_array($data['extra'])) {
