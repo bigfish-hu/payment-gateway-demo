@@ -307,22 +307,41 @@
 		</span>
 		<span class="providerData code Paysafecash">
 			<br />
-			<font>
-				/**<br />
-				&nbsp;* Send customer data to prefill the registration form (optional)<br />
-				&nbsp;*/
-			</font><br />
-			$data['extra']['Paysafecash'] = array(<br />
-				<blockquote>'salutation' => 'salutation',</blockquote>
-				<blockquote>'firstName' => 'First name',</blockquote>
-				<blockquote>'lastName' => 'Last name',</blockquote>
-				<blockquote>'birthDate' => 'Birth date',</blockquote>
-				<blockquote>'phoneNumber' => 'Phone number',</blockquote>
-				<blockquote>'email' => 'email',</blockquote>
-				<blockquote>'address1' => 'Address',</blockquote>
-				<blockquote>'city' => 'city',</blockquote>
-				<blockquote>'postalCode' => 'Postal code'</blockquote>
-			);<br />
+			if (isset($data['Paysafecash']) && is_array($data['Paysafecash']) && !empty($data['Paysafecash'])) {
+				<font>
+					/**<br />
+					&nbsp;* Send customer data to prefill the registration form (optional)<br />
+					&nbsp;*/
+				</font><br />
+				$data['extra']['Paysafecash'] = array(<br />
+					<blockquote>'salutation' => 'salutation',</blockquote>
+					<blockquote>'firstName' => 'First name',</blockquote>
+					<blockquote>'lastName' => 'Last name',</blockquote>
+					<blockquote>'birthDate' => 'Birth date',</blockquote>
+					<blockquote>'phoneNumber' => 'Phone number',</blockquote>
+					<blockquote>'email' => 'email',</blockquote>
+					<blockquote>'address1' => 'Address',</blockquote>
+					<blockquote>'city' => 'city',</blockquote>
+					<blockquote>'postalCode' => 'Postal code'</blockquote>
+				);
+			}<br />
+		</span>
+		<span class="providerData code BBAruhitel">
+			<br />
+			if (isset($data['BBAruhitel']) && is_array($data['BBAruhitel']) && !empty($data['BBAruhitel'])) {
+				<font>
+					/**<br />
+					&nbsp;* If you want to set custom data<br />
+					&nbsp;*/
+				</font><br />
+				$data['extra']['BBAruhitel'] = array(<br />
+					<blockquote>'firstName' => 'John',</blockquote>
+					<blockquote>'lastName' => 'Doe',</blockquote>
+					<blockquote>'e-mail' => 'test@bbaruhiteltest.hu',</blockquote>
+					<blockquote>'term' => '10',</blockquote>
+					<blockquote>'offerId' => 'tesztkonstrukcio1'</blockquote>
+				);
+			}<br />
 		</span>
 		<br />
 		if (isset($data['extra']) && is_array($data['extra'])) {<br />
