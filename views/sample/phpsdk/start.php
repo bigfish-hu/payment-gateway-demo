@@ -147,10 +147,10 @@
 			<br />
 			<font>
 				/**<br />
-				&nbsp;* If you want to start One Click Payment without registered card selector<br />
+				&nbsp;* If you want to use normal payment with card registration <br />
 				&nbsp;*/
 			</font><br />
-			$initRequest->setOneClickNormalPayment(true);<br />
+			$initRequest->setOneClickForcedRegistration(true);<br />
 		</span>
 		<span class="providerData code OTPSimple">
 			<br />

@@ -148,8 +148,8 @@ abstract class Demo
 					if ((int)$data['oneClickPayment']) {
 						$initRequest->setOneClickPayment(true);
 					}
-					if ((int)$data['normalOneClickPayment']) {
-					    $initRequest->setOneClickNormalPayment(true);
+					if ((int)$data['oneClickForcedRegistration']) {
+						$initRequest->setOneClickForcedRegistration(true);
                     }
 					if (isset($data['cardReferenceId']) && strlen($data['cardReferenceId'])) {
 						$initRequest->setOneClickReferenceId($data['cardReferenceId']);
