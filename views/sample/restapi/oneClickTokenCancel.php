@@ -1,4 +1,4 @@
-		<b>Cancel One Click Token (Borgun2, OTPSimple, Virpay):</b><br />
+		<b>Cancel One Click Token (Borgun2, OTPSimple, PayURest, Virpay):</b><br />
 		<br />
 		Required data (HTTP POST):<br />
 		<br />

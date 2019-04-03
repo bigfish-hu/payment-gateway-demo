@@ -10,7 +10,7 @@
 			<blockquote>->setExpirationTime($data['expirationTime'])</blockquote>
 			<blockquote>->setNotificationEmail($data['notificationEmail'])</blockquote>
 			<blockquote>->setEmailNotificationOnlySuccess($data['emailNotificationOnlySuccess']);</blockquote>
-		<span class="providerData code Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay Virpay">
+		<span class="providerData code Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
 			<br />
 			<font>
 				/**<br />
@@ -197,6 +197,52 @@
 					$data['extra']['Barion2'] = $data['Barion2'];<br />
 				</blockquote>
 			}<br />
+		</span>
+		<span class="providerData code PayURest">
+			<br />
+			<font>
+				/**<br />
+				&nbsp;* If you want to set custom data<br />
+				&nbsp;*/
+			</font><br />
+			$data['extra'] = array(<br />
+				<blockquote>'timeout' => 'Timeout in minutes',</blockquote>
+				<blockquote>'payMethods' => array(</blockquote>
+				<blockquote><blockquote>'payMethod' => array(</blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'type' => 'Payment method type (PBL, CARD_TOKEN, PAYMENT_WALL)',</blockquote></blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'value' => 'Payment method value'</blockquote></blockquote></blockquote>
+				<blockquote><blockquote>),</blockquote></blockquote>
+				<blockquote>),</blockquote>
+				<blockquote>'buyer' => array(</blockquote>
+				<blockquote><blockquote>'customerIp' => 'Buyer's IP address',</blockquote></blockquote>
+				<blockquote><blockquote>'email' => 'Buyer's email address',</blockquote></blockquote>
+				<blockquote><blockquote>'phone' => 'Buyer's telephone number',</blockquote></blockquote>
+				<blockquote><blockquote>'firstName' => 'Buyer's first name',</blockquote></blockquote>
+				<blockquote><blockquote>'lastName' => 'Buyer's last name',</blockquote></blockquote>
+				<blockquote><blockquote>'nin' => 'National Identification Number',</blockquote></blockquote>
+				<blockquote><blockquote>'language' => 'Denotes the language version of e-mail messages sent from PayU to the payer',</blockquote></blockquote>
+				<blockquote><blockquote>'delivery' => array(</blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'street' => 'Street',</blockquote></blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'postalBox' => 'Postal box',</blockquote></blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'postalCode' => 'Postal code',</blockquote></blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'city' => 'City',</blockquote></blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'state' => 'State',</blockquote></blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'countryCode' => 'Two-letter country code compliant with ISO-3166',</blockquote></blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'name' => 'Address description',</blockquote></blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'recipientName' => 'Recipient name',</blockquote></blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'recipientEmail' => 'Recipient email',</blockquote></blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'recipientPhone' => 'Recipient phone number'</blockquote></blockquote></blockquote>
+				<blockquote><blockquote>)</blockquote></blockquote>
+				<blockquote>),</blockquote>
+				<blockquote>'products' => array(</blockquote>
+				<blockquote><blockquote>array(</blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'name' => 'Name of the product',</blockquote></blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'unitPrice' => 'Unit price',</blockquote></blockquote></blockquote>
+				<blockquote><blockquote><blockquote>'quantity' => 'Quantity'</blockquote></blockquote></blockquote>
+				<blockquote><blockquote>),</blockquote></blockquote>
+				<blockquote><blockquote>...</blockquote></blockquote>
+				<blockquote>)</blockquote>
+			);<br />
 		</span>
 		<br />
 		if (isset($data['extra']) && is_array($data['extra'])) {<br />

@@ -24,7 +24,8 @@
 		<li><label><input type="radio" name="providerName" value="PayPal"><span><span></span></span>PayPal</label></li>
 		<li><label><input type="radio" name="providerName" value="PSC"><span><span></span></span>paysafecard</label></li>
 		<li><label><input type="radio" name="providerName" value="Paysafecash"><span><span></span></span>Paysafecash</label></li>
-		<li><label><input type="radio" name="providerName" value="PayU2"><span><span></span></span>PayU (Polish)</label></li>
+		<li><label><input type="radio" name="providerName" value="PayU2"><span><span></span></span>PayU Classic</label></li>
+		<li><label><input type="radio" name="providerName" value="PayURest"><span><span></span></span>PayU REST</label></li>
 		<li><label><input type="radio" name="providerName" value="Saferpay"><span><span></span></span>Saferpay (SIX Payment)</label></li>
 		<li><label><input type="radio" name="providerName" value="SMS"><span><span></span></span>SMS</label></li>
 		<li><label><input type="radio" name="providerName" value="Sofort"><span><span></span></span>Sofort Banking</label></li>
@@ -259,6 +260,19 @@
 			</table>
 		</div>
 
+		<div class="providerData PayURest">
+			<table class="table-test-data">
+				<thead><tr><th colspan="6">Test data:</th></tr></thead>
+				<tbody>
+					<tr><td>To success payment (VISA):</td><td>4444333322221111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>To success payment (VISA, 3DS):</td><td>4012001037141112</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>To success payment (MASTERCARD):</td><td>5434021016824014</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td>To failed payment (MASTERCARD):</td><td>5000105018126595</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td colspan="6"><br />Google Pay:<br />You can securely use your own production Google Pay account to test payment. The test terminal will replace your valid card data with its own test card in the background and no charge will happen on your Google-stored card.</td></tr>
+				</tbody>
+			</table>
+		</div>
+
 		<div class="providerData Saferpay">
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
@@ -360,9 +374,9 @@
 	</div>
 
 	<div class="row">
-		<label class="col-2 providerData Barion2 Borgun Borgun2 CIB Escalion FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPMultipont OTPSimple OTPSimpleWire OTPay OTPayMP PayPal PSC PayU2 Saferpay SMS Sofort UniCredit Virpay QPAY">
+		<label class="col-2 providerData Barion2 Borgun Borgun2 CIB Escalion FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPMultipont OTPSimple OTPSimpleWire OTPay OTPayMP PayPal PSC PayU2 PayURest Saferpay SMS Sofort UniCredit Virpay QPAY">
 			<span>Language:</span>
-			<select name="language" class="input Barion2 Borgun Borgun2 CIB Escalion FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPMultipont OTPSimple OTPSimpleWire OTPay OTPayMP PayPal PSC PayU2 Saferpay SMS Sofort UniCredit Virpay QPAY">
+			<select name="language" class="input Barion2 Borgun Borgun2 CIB Escalion FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPMultipont OTPSimple OTPSimpleWire OTPay OTPayMP PayPal PSC PayU2 PayURest Saferpay SMS Sofort UniCredit Virpay QPAY">
 				<option value="HU">HU</option>
 				<option value="EN">EN</option>
 				<option value="DE">DE</option>
@@ -382,9 +396,9 @@
 			</select>
 		</label>
 		
-		<label class="col-2 providerData Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay Virpay">
+		<label class="col-2 providerData Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
 			<span>Authorization:</span>
-			<select name="autoCommit" class="input Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 UniCredit QPAY Saferpay Virpay">
+			<select name="autoCommit" class="input Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
 				<option value="true">Immediate</option>
 				<option value="false">Later</option>
 			</select>
@@ -418,14 +432,14 @@
 			<input type="text" name="otpConsumerRegistrationId" value="" class="input OTP OTP2">
 		</label>
 
-		<label class="label-chkbox providerData Barion2 Borgun2 Escalion GP OTPSimple Saferpay Virpay">
-			<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 Escalion GP OTPSimple Saferpay Virpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		<label class="label-chkbox providerData Barion2 Borgun2 Escalion GP OTPSimple PayURest Saferpay Virpay">
+			<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 Escalion GP OTPSimple PayURest Saferpay Virpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 		</label>
 
 	<? } ?>
 
-	<label class="label-chkbox providerData Barion2 Paysafecash">
-		<span>Check to use extra data: <input type="checkbox" name="useExtra" value="1" class="input Barion2 Paysafecash"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+	<label class="label-chkbox providerData Barion2 Paysafecash PayURest">
+		<span>Check to use extra data: <input type="checkbox" name="useExtra" value="1" class="input Barion2 Paysafecash PayURest"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
 
 	<label class="providerData Barion2">
@@ -507,6 +521,59 @@
 	"address1":"Test street 1.",
 	"city":"Budapest",
 	"postalCode":"9999"
+}
+		</textarea>
+	</label>
+
+	<label class="providerData PayURest">
+		<span>Extra data:</span>
+		<textarea name="extra[PayURest]" class="input PayURest">
+{
+	"timeout": 20,
+	"payMethods":
+	{
+		"payMethod":
+		{
+			"type": "PBL",
+			"value": "c"
+		}
+	},
+	"buyer":
+	{
+		"customerIp":"127.0.0.1",
+		"email":"test@payutest.com",
+		"phone":"+36201234567",
+		"firstName":"John",
+		"lastName":"Doe",
+		"nin":"National Identification Number",
+		"language":"hu",
+		"delivery":
+		{
+			"street": "Test street 1.",
+			"postalBox": "",
+			"postalCode": "1066",
+			"city": "Budapest",
+			"state": "Hungary",
+			"countryCode": "HU",
+			"name": "John Doe",
+			"recipientName": "John Doe",
+			"recipientEmail": "test@payutest.com",
+			"recipientPhone": "+36201234567"
+		}
+	},
+	"products":
+	[
+		{
+			"name": "Orange",
+			"unitPrice": "2",
+			"quantity": "1"
+		},
+		{
+			"name": "Banana",
+			"unitPrice": "4",
+			"quantity": "2"
+		}
+	]
 }
 		</textarea>
 	</label>

@@ -1,6 +1,6 @@
 		<font>
 			/**<br />
-			&nbsp;* Cancel all One Click token (Borgun2, OTPSimple, Virpay):<br />
+			&nbsp;* Cancel all One Click token (Borgun2, OTPSimple, PayURest, Virpay):<br />
 			&nbsp;* set provider name and registered user ID<br />
 			&nbsp;*/
 		</font><br />

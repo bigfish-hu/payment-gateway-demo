@@ -8,6 +8,7 @@
 		<li><label><input type="radio" name="providerName" value="Escalion"><span><span></span></span>Escalion</label></li>
 		<li><label><input type="radio" name="providerName" value="GP"><span><span></span></span>Global Payments</label></li>
 		<li><label><input type="radio" name="providerName" value="OTPSimple"><span><span></span></span>OTP Simple</label></li>
+		<li><label><input type="radio" name="providerName" value="PayURest"><span><span></span></span>PayU REST</label></li>
 		<li><label><input type="radio" name="providerName" value="Saferpay"><span><span></span></span>Saferpay</label></li>
 		<li><label><input type="radio" name="providerName" value="Virpay"><span><span></span></span>VirPAY</label></li>
 	</ul>
