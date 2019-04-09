@@ -2,7 +2,7 @@
 
 ## Version
 
-1.8.6
+1.9.0
 
 ## Required modules
 
