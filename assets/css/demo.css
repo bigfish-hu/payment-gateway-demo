@@ -65,6 +65,9 @@ input[type=radio]:checked + span span{
 .label-chkbox{
 	padding-top: 46px;
 }
+.label-chkbox-second{
+	padding-top: 0px;
+}
 span.chkbox{
 	display: inline-block;
 	width: 24px;
