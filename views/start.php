@@ -73,7 +73,7 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>5111 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
+					<tr><td>To success payment:</td><td>4111 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
 					<tr><td>To failed payment:</td><td>4999 9999 9999 9999</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
 				</tbody>
 			</table>
@@ -287,8 +287,8 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/18</td><td>CVC:</td><td>123</td></tr>
-					<tr><td>To failed payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/20</td><td>CVC:</td><td>123</td></tr>
+					<tr><td>To success payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/20</td><td>CVV2:</td><td>123</td></tr>
+					<tr><td>To failed payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/22</td><td>CVV2:</td><td>123</td></tr>
 				</tbody>
 			</table>
 		</div>
