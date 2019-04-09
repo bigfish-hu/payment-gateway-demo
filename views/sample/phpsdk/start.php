@@ -143,7 +143,7 @@
 			</font><br />
 			$initRequest->setOneClickPayment(true);<br />
 		</span>
-		<span class="providerData code Barion2 Borgun2 Escalion GP OTPSimple Saferpay Virpay">
+		<span class="providerData code Barion2 Borgun2 Escalion GP OTPSimple PayURest Saferpay Virpay">
 			<br />
 			<font>
 				/**<br />
