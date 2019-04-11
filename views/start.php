@@ -187,9 +187,9 @@
 		</div>
 
 		<div class="providerData OTPSimple">
-			<label>
-				<span>If you chose EUR currency authorization must be set "Later". (Only required for the default store.)</span>
-			</label>
+			<table class="table-test-data">
+				<tbody><tr><td><em>If you chose EUR currency authorization must be set "Later". (Only required for the default store.)</em></td></tr></tbody>
+			</table>
 		</div>
 
 		<div class="providerData OTPay">
@@ -269,6 +269,7 @@
 					<tr><td>To success payment (MASTERCARD):</td><td>5434021016824014</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 					<tr><td>To failed payment (MASTERCARD):</td><td>5000105018126595</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 					<tr><td colspan="6"><br />Google Pay:<br />You can securely use your own production Google Pay account to test payment. The test terminal will replace your valid card data with its own test card in the background and no charge will happen on your Google-stored card.</td></tr>
+					<tr><td colspan="6"><br /><em>(For card tokenization you must pass an email address through the extra data.)</em></td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -281,6 +282,7 @@
 					<tr><td>To failed payment (VISA):</td><td>9010100152000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 					<tr><td>To success payment (MASTERCARD):</td><td>9030101052000008</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 					<tr><td>To failed payment (MASTERCARD):</td><td>9030100152000009</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+					<tr><td colspan="6"><br /><em>(The test payment is only available in EUR currency.)</em></td></tr>
 				</tbody>
 			</table>
 		</div>
