@@ -143,6 +143,15 @@
 			</font><br />
 			$initRequest->setOneClickPayment(true);<br />
 		</span>
+		<span class="providerData code Barion2 Borgun2 Escalion GP OTPSimple Saferpay Virpay">
+			<br />
+			<font>
+				/**<br />
+				&nbsp;* If you want to use normal payment with card registration <br />
+				&nbsp;*/
+			</font><br />
+			$initRequest->setOneClickForcedRegistration(true);<br />
+		</span>
 		<span class="providerData code OTPSimple">
 			<br />
 			<font>

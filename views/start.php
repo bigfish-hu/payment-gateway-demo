@@ -74,7 +74,7 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>5111 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
+					<tr><td>To success payment:</td><td>4111 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
 					<tr><td>To failed payment:</td><td>4999 9999 9999 9999</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
 				</tbody>
 			</table>
@@ -288,8 +288,8 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/18</td><td>CVC:</td><td>123</td></tr>
-					<tr><td>To failed payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/20</td><td>CVC:</td><td>123</td></tr>
+					<tr><td>To success payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/20</td><td>CVV2:</td><td>123</td></tr>
+					<tr><td>To failed payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/22</td><td>CVV2:</td><td>123</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -421,6 +421,10 @@
 
 		<label class="label-chkbox providerData Barion2 Borgun2 Escalion GP OTPSimple Saferpay Virpay">
 			<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 Escalion GP OTPSimple Saferpay Virpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		</label>
+
+		<label class="label-chkbox-second providerData Barion2 Borgun2 Escalion GP OTPSimple Saferpay Virpay">
+			<span>One Click Payment with forced registration (Normal payment with card registration): <input type="checkbox" name="oneClickForcedRegistration" value="1" class="input Barion2 Borgun2 Escalion GP OTPSimple Saferpay Virpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 		</label>
 
 	<? } ?>
