@@ -331,8 +331,7 @@
 				<blockquote>'address1' => 'Address',</blockquote>
 				<blockquote>'city' => 'city',</blockquote>
 				<blockquote>'postalCode' => 'Postal code'</blockquote>
-			);
-			<br />
+			);<br />
 		</span>
 		<span class="providerData code BBAruhitel">
 			<br />
