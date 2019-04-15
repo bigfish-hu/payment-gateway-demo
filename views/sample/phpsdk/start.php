@@ -316,22 +316,22 @@
 		</span>
 		<span class="providerData code Paysafecash">
 			<br />
-				<font>
-					/**<br />
-					&nbsp;* Send customer data to prefill the registration form (optional)<br />
-					&nbsp;*/
-				</font><br />
-				$data['extra']['Paysafecash'] = array(<br />
-					<blockquote>'salutation' => 'salutation',</blockquote>
-					<blockquote>'firstName' => 'First name',</blockquote>
-					<blockquote>'lastName' => 'Last name',</blockquote>
-					<blockquote>'birthDate' => 'Birth date',</blockquote>
-					<blockquote>'phoneNumber' => 'Phone number',</blockquote>
-					<blockquote>'email' => 'email',</blockquote>
-					<blockquote>'address1' => 'Address',</blockquote>
-					<blockquote>'city' => 'city',</blockquote>
-					<blockquote>'postalCode' => 'Postal code'</blockquote>
-				);
+			<font>
+				/**<br />
+				&nbsp;* Send customer data to prefill the registration form (optional)<br />
+				&nbsp;*/
+			</font><br />
+			$data['extra']['Paysafecash'] = array(<br />
+				<blockquote>'salutation' => 'salutation',</blockquote>
+				<blockquote>'firstName' => 'First name',</blockquote>
+				<blockquote>'lastName' => 'Last name',</blockquote>
+				<blockquote>'birthDate' => 'Birth date',</blockquote>
+				<blockquote>'phoneNumber' => 'Phone number',</blockquote>
+				<blockquote>'email' => 'email',</blockquote>
+				<blockquote>'address1' => 'Address',</blockquote>
+				<blockquote>'city' => 'city',</blockquote>
+				<blockquote>'postalCode' => 'Postal code'</blockquote>
+			);
 			<br />
 		</span>
 		<span class="providerData code BBAruhitel">
