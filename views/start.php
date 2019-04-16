@@ -57,7 +57,16 @@
 							<br />
 							195.56.141.154 onlinet.bbrt.hu netbank-uat-tim.bbrt.hu netbank-uat-akm.bbrt.hu netbank-uat-tkm.bbrt.hu netbank-uat-dkm.bbrt.hu netbank-uat-szkm.bbrt.hu<br />
 							<br />
-							The amount must be 50000 HUF.
+							The amount must be 50000 HUF.<br />
+							<br />
+							Entry data to initiate a loan request:<br />
+							<br />
+							User: automata420<br />
+							Password: password<br />
+							SMS code: 00000000<br />
+							E-pin (if necessary): 112233<br />
+							<br />
+							To request status change, please write a letter to peter.bakti@budapestbank.hu by specifying the transaction ID.
 						</td>
 					</tr>
 				</tbody>
