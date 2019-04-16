@@ -48,6 +48,22 @@
 			</table>
 		</div>
 
+		<div class="providerData BBAruhitel">
+			<table class="table-test-data">
+				<tbody>
+					<tr>
+						<td>
+							To test, you must record the following line in your hosts file:<br />
+							<br />
+							195.56.141.154 onlinet.bbrt.hu netbank-uat-tim.bbrt.hu netbank-uat-akm.bbrt.hu netbank-uat-tkm.bbrt.hu netbank-uat-dkm.bbrt.hu netbank-uat-szkm.bbrt.hu<br />
+							<br />
+							The amount must be 50000 HUF.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
 		<div class="providerData Borgun">
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
@@ -100,7 +116,7 @@
 			</table>
 		</div>
 
-	<div class="providerData GP">
+		<div class="providerData GP">
 			<table class="table-test-data">
 				<thead><tr><th colspan="2">Test data:</th></tr></thead>
 				<tbody>
