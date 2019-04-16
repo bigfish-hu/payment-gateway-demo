@@ -333,6 +333,21 @@
 				<blockquote>'postalCode' => 'Postal code'</blockquote>
 			);<br />
 		</span>
+		<span class="providerData code BBAruhitel">
+			<br />
+			<font>
+				/**<br />
+				&nbsp;* If you want to set custom data<br />
+				&nbsp;*/
+			</font><br />
+			$data['extra'] = array(<br />
+				<blockquote>'firstName' => 'John',</blockquote>
+				<blockquote>'lastName' => 'Doe',</blockquote>
+				<blockquote>'e-mail' => 'test@bbaruhiteltest.hu',</blockquote>
+				<blockquote>'term' => '10',</blockquote>
+				<blockquote>'offerId' => 'tesztkonstrukcio1'</blockquote>
+			);<br />
+		</span>
 		<br />
 		if (isset($data['extra']) && is_array($data['extra'])) {<br />
 			<blockquote>$initRequest->setExtra($data['extra']);</blockquote>

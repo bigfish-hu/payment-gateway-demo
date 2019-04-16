@@ -65,7 +65,11 @@ abstract class Demo
 	private static function setProviderExtra(&$data)
 	{
 		if (isset($_POST['useExtra']) && (int)$_POST['useExtra'] && isset($_POST['extra'][$data['providerName']]) && !empty($_POST['extra'][$data['providerName']])) {
-			$data['extra'][$data['providerName']] = json_decode($_POST['extra'][$data['providerName']], true);
+			if ($data['providerName'] == \BigFish\PaymentGateway::PROVIDER_BBARUHITEL) {
+				$data['extra'] = json_decode($_POST['extra'][$data['providerName']], true);
+			} else {
+				$data['extra'][$data['providerName']] = json_decode($_POST['extra'][$data['providerName']], true);
+			}
 		} else {
 			unset($data['extra']);
 		}
@@ -156,6 +160,9 @@ abstract class Demo
 					}
 					break;
 				case \BigFish\PaymentGateway::PROVIDER_PAYSAFECASH:
+					self::setProviderExtra($data);
+					break;
+				case \BigFish\PaymentGateway::PROVIDER_BBARUHITEL:
 					self::setProviderExtra($data);
 					break;
 			}
@@ -409,6 +416,7 @@ abstract class Demo
 					break;
 				case \BigFish\PaymentGateway::PROVIDER_BARION2:
 				case \BigFish\PaymentGateway::PROVIDER_PAYSAFECASH:
+				case \BigFish\PaymentGateway::PROVIDER_BBARUHITEL:
 					self::setProviderExtra($data);
 					break;
 			}
