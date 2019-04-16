@@ -129,6 +129,29 @@
 			<td>Borgun2</td>
 		</tr>
 		<tr class="datarow odd">
+			<td>Budapest Bank Áruhitel</td>
+			<td>HUF</td>
+			<td>
+				<div class="info">hu</div>
+			</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td>BBAruhitel</td>
+		</tr>
+		<tr class="datarow even">
 			<td>CIB Bank</td>
 			<td>HUF, EUR</td>
 			<td>
@@ -152,7 +175,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>CIB</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>Escalion</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -179,7 +202,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>Escalion</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>FHB Bank</td>
 			<td>HUF, EUR, USD</td>
 			<td>
@@ -203,7 +226,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>FHB</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>Global Payments</td>
 			<td>HUF, EUR, CZK</td>
 			<td>
@@ -230,7 +253,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>GP</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>Intelligent Payments</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -257,7 +280,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>IPG</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>K&H Bank</td>
 			<td>HUF, EUR, USD</td>
 			<td>hu, en, de</td>
@@ -278,7 +301,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>KHB</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>K&H SZÉP Card</td>
 			<td>HUF</td>
 			<td>hu</td>
@@ -299,7 +322,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>KHBSZEP</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>MKB SZÉP Card</td>
 			<td>HUF</td>
 			<td>hu</td>
@@ -320,7 +343,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>MKBSZEP</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>OTP Bank</td>
 			<td>HUF, EUR, USD</td>
 			<td>hu, en, de</td>
@@ -341,7 +364,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>OTP, OTP2</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>OTPay MasterPass</td>
 			<td>HUF</td>
 			<td>hu, en, de</td>
@@ -362,7 +385,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>OTPayMP</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>PayPal</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -389,7 +412,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>PayPal</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>Paysafecard</td>
 			<td>HUF, EUR, USD</td>
 			<td>hu, en, de</td>
@@ -416,7 +439,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>PSC</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>Paysafecash</td>
 			<td>HUF, EUR</td>
 			<td>hu, de</td>
@@ -443,7 +466,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>Paysafecash</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>PayU (Polish)</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -473,7 +496,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>PayU2</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>Simple</td>
 			<td>HUF, EUR, USD</td>
 			<td>
@@ -497,7 +520,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>OTPSimple</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>Simple wire</td>
 			<td>HUF, EUR, USD</td>
 			<td>
@@ -521,7 +544,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td>OTPSimpleWire</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>SIX Saferpay</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -551,7 +574,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>Saferpay</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>SMS</td>
 			<td>HUF</td>
 			<td>hu</td>
@@ -572,7 +595,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>SMS</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>Sofort Banking</td>
 			<td>
 				<div class="info">HUF, EUR, GBP, ...</div>
@@ -599,7 +622,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td>Sofort</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>UniCredit Bank</td>
 			<td>HUF, EUR, USD</td>
 			<td>
@@ -623,7 +646,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>UniCredit</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>VirPAY</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -653,7 +676,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>Virpay</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>Wirecard QPAY</td>
 			<td>HUF, EUR, USD</td>
 			<td>

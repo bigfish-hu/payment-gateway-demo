@@ -6,6 +6,7 @@
 		<li><label><input type="radio" name="providerName" value="Barion2"><span><span></span></span>Barion</label></li>
 		<li><label><input type="radio" name="providerName" value="Borgun"><span><span></span></span>Borgun SecurePay</label></li>
 		<li><label><input type="radio" name="providerName" value="Borgun2"><span><span></span></span>Borgun RPG</label></li>
+		<li><label><input type="radio" name="providerName" value="BBAruhitel"><span><span></span></span>Budapest Bank Áruhitel</label></li>
 		<li><label><input type="radio" name="providerName" value="CIB"><span><span></span></span>CIB Bank</label></li>
 		<li><label><input type="radio" name="providerName" value="Escalion"><span><span></span></span>Escalion</label></li>
 		<li><label><input type="radio" name="providerName" value="FHB"><span><span></span></span>FHB Bank</label></li>
@@ -43,6 +44,22 @@
 				<tbody>
 					<tr><td>To success payment:</td><td>4444888888885559</td><td>Expiration date:</td><td>any future date</td><td>CVC2:</td><td>any</td></tr>
 					<tr><td>To failed payment:</td><td>4444888888884446</td><td>Expiration date:</td><td>any future date</td><td>CVC2:</td><td>any</td></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="providerData BBAruhitel">
+			<table class="table-test-data">
+				<tbody>
+					<tr>
+						<td>
+							To test, you must record the following line in your hosts file:<br />
+							<br />
+							195.56.141.154 onlinet.bbrt.hu netbank-uat-tim.bbrt.hu netbank-uat-akm.bbrt.hu netbank-uat-tkm.bbrt.hu netbank-uat-dkm.bbrt.hu netbank-uat-szkm.bbrt.hu<br />
+							<br />
+							The amount must be 50000 HUF.
+						</td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
@@ -99,7 +116,7 @@
 			</table>
 		</div>
 
-	<div class="providerData GP">
+		<div class="providerData GP">
 			<table class="table-test-data">
 				<thead><tr><th colspan="2">Test data:</th></tr></thead>
 				<tbody>
@@ -428,8 +445,8 @@
 
 	<? } ?>
 
-	<label class="label-chkbox providerData Barion2 Paysafecash">
-		<span>Check to use extra data: <input type="checkbox" name="useExtra" value="1" class="input Barion2 Paysafecash"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+	<label class="label-chkbox providerData Barion2 Paysafecash BBAruhitel">
+		<span>Check to use extra data: <input type="checkbox" name="useExtra" value="1" class="input Barion2 Paysafecash BBAruhitel"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
 
 	<label class="providerData Barion2">
@@ -514,6 +531,19 @@
 }
 		</textarea>
 	</label>
+
+    <label class="providerData BBAruhitel">
+        <span>Extra data:</span>
+        <textarea name="extra[BBAruhitel]" class="input BBAruhitel">
+{
+	"firstName":"John",
+	"lastName":"Doe",
+	"e-mail":"test@bbaruhiteltest.hu",
+	"term":"10",
+	"offerId":"tesztkonstrukcio1"
+}
+		</textarea>
+    </label>
 
 	<? if ($this->controller->action == "start") { ?>
 
