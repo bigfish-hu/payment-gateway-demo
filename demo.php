@@ -163,6 +163,9 @@ abstract class Demo
 				case \BigFish\PaymentGateway::PROVIDER_PAYSAFECASH:
 					self::setProviderExtra($data);
 					break;
+				case \BigFish\PaymentGateway::PROVIDER_BBARUHITEL:
+					self::setProviderExtra($data);
+					break;
 			}
 			
 			if (isset($data['extra']) && is_array($data['extra'])) {
@@ -414,6 +417,7 @@ abstract class Demo
 					break;
 				case \BigFish\PaymentGateway::PROVIDER_BARION2:
 				case \BigFish\PaymentGateway::PROVIDER_PAYSAFECASH:
+				case \BigFish\PaymentGateway::PROVIDER_BBARUHITEL:
 				case \BigFish\PaymentGateway::PROVIDER_PAYUREST:
 					self::setProviderExtra($data);
 					break;

@@ -198,6 +198,40 @@
 				</blockquote>
 			}<br />
 		</span>
+		<span class="providerData code Paysafecash">
+			<br />
+			<font>
+				/**<br />
+				&nbsp;* Send customer data to prefill the registration form (optional)<br />
+				&nbsp;*/
+			</font><br />
+			$data['extra']['Paysafecash'] = array(<br />
+				<blockquote>'salutation' => 'salutation',</blockquote>
+				<blockquote>'firstName' => 'First name',</blockquote>
+				<blockquote>'lastName' => 'Last name',</blockquote>
+				<blockquote>'birthDate' => 'Birth date',</blockquote>
+				<blockquote>'phoneNumber' => 'Phone number',</blockquote>
+				<blockquote>'email' => 'email',</blockquote>
+				<blockquote>'address1' => 'Address',</blockquote>
+				<blockquote>'city' => 'city',</blockquote>
+				<blockquote>'postalCode' => 'Postal code'</blockquote>
+			);<br />
+		</span>
+		<span class="providerData code BBAruhitel">
+			<br />
+			<font>
+				/**<br />
+				&nbsp;* If you want to set custom data<br />
+				&nbsp;*/
+			</font><br />
+			$data['extra'] = array(<br />
+				<blockquote>'firstName' => 'The loan applicant's first name',</blockquote>
+				<blockquote>'lastName' => 'The loan applicant's last name',</blockquote>
+				<blockquote>'e-mail' => 'The loan applicant's email address',</blockquote>
+				<blockquote>'term' => 'The term of the loan',</blockquote>
+				<blockquote>'offerId' => 'Loan offer identifier'</blockquote>
+			);<br />
+		</span>
 		<span class="providerData code PayURest">
 			<br />
 			<font>
