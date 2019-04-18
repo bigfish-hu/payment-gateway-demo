@@ -386,9 +386,9 @@
 	</div>
 
 	<div class="row">
-		<label class="col-2 providerData Barion2 Borgun Borgun2 CIB Escalion FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPMultipont OTPSimple OTPSimpleWire OTPay OTPayMP PayPal PSC PayU2 Saferpay SMS Sofort UniCredit Virpay QPAY">
+		<label class="col-2">
 			<span>Language:</span>
-			<select name="language" class="input Barion2 Borgun Borgun2 CIB Escalion FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPMultipont OTPSimple OTPSimpleWire OTPay OTPayMP PayPal PSC PayU2 Saferpay SMS Sofort UniCredit Virpay QPAY">
+			<select name="language">
 				<option value="HU">HU</option>
 				<option value="EN">EN</option>
 				<option value="DE">DE</option>
