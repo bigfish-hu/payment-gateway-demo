@@ -191,6 +191,7 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">SZÉP Card test data:</th></tr></thead>
 				<tbody><tr><td>To success payment:</td><td>6101324299992718</td><td>Expiration date:</td><td>09/19</td><td>CVC2:</td><td>282</td></tr></tbody>
+				<tbody><tr><td>To success payment:</td><td>6101324010002441</td><td>Expiration date:</td><td>02/06</td><td>CVC2:</td><td>282</td></tr></tbody>
 			</table>
 		</div>
 
