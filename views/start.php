@@ -558,18 +558,17 @@
 		</textarea>
 	</label>
 
-    <label class="providerData BBAruhitel">
-        <span>Extra data:</span>
-        <textarea name="extra[BBAruhitel]" class="input BBAruhitel">
+	<label class="providerData BBAruhitel">
+		<span>Extra data:</span>
+		<textarea name="extra[BBAruhitel]" class="input BBAruhitel">
 {
 	"firstName":"John",
 	"lastName":"Doe",
 	"e-mail":"test@bbaruhiteltest.hu",
 	"term":"10",
 	"offerId":"tesztkonstrukcio1"
-}
-		</textarea>
-    </label>
+}</textarea>
+	</label>
 
 	<label class="providerData PayURest">
 		<span>Extra data:</span>
@@ -764,6 +763,10 @@
 		</label>
 
 	<? } ?>
+
+	<label class="label-chkbox2">
+		<span>Check to use info data: <input type="checkbox" name="useInfo" value="1" class="input All"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+	</label>
 
 	<input type="submit" name="submit" value="Next">
 </form>

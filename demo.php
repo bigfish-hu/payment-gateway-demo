@@ -155,7 +155,7 @@ abstract class Demo
 					}
 					if ((int)$data['oneClickForcedRegistration']) {
 						$initRequest->setOneClickForcedRegistration(true);
-                    }
+					}
 					if (isset($data['cardReferenceId']) && strlen($data['cardReferenceId'])) {
 						$initRequest->setOneClickReferenceId($data['cardReferenceId']);
 					}
@@ -167,7 +167,11 @@ abstract class Demo
 					self::setProviderExtra($data);
 					break;
 			}
-			
+
+			if (isset($data["useInfo"]) && $data["useInfo"]) {
+				$initRequest->setInfoObject(self::getGeneratedInfoObject());
+			}
+
 			if (isset($data['extra']) && is_array($data['extra'])) {
 				$initRequest->setExtra($data['extra']);
 			}
@@ -283,6 +287,10 @@ abstract class Demo
 				->setCurrency($data['currency'])
 				->setOrderId($data['orderId'])
 				->setUserId($data['userId']);
+
+			if (isset($data["useInfo"]) && $data["useInfo"]) {
+				$initRPRequest->setInfoObject(self::getGeneratedInfoObject());
+			}
 
 			$initRPResponse = \BigFish\PaymentGateway::initRP($initRPRequest);
 			
@@ -423,6 +431,10 @@ abstract class Demo
 					break;
 			}
 
+			if (isset($data["useInfo"]) && $data["useInfo"]) {
+				$paymentLinkCreateRequest->setInfoObject(self::getGeneratedInfoObject());
+			}
+
 			if (isset($data['extra']) && is_array($data['extra'])) {
 				$paymentLinkCreateRequest->setExtra($data['extra']);
 			}
@@ -471,5 +483,196 @@ abstract class Demo
 		} catch (\BigFish\PaymentGateway\Exception $e) {
 			return $e->getMessage();
 		}
+	}
+
+	/**
+	 * @return \BigFish\PaymentGateway\Data\Info
+	 */
+	public static function getGeneratedInfoObject()
+	{
+		$infoObject = new \BigFish\PaymentGateway\Data\Info();
+
+		$infoObject->setData(self::getCustomerBrowser());
+		$infoObject->setData(self::getCustomerGeneral());
+		$infoObject->setData(self::getCustomerStoreSpecific());
+		$infoObject->setData(self::getOrderGeneral());
+		$infoObject->setData(self::getOrderBillingData());
+		$infoObject->setData(self::getOrderShippingData());
+		$infoObject->setData(self::getOrderProductItem(1));
+		$infoObject->setData(self::getOrderProductItem(2));
+		$infoObject->setData(self::getOrderProductItem(3));
+		$infoObject->setData(self::getOrderRecurringPayment());
+
+		return $infoObject;
+	}
+
+	/**
+	 * @return \BigFish\PaymentGateway\Data\Info\InfoCustomerGeneral
+	 */
+	public static function getCustomerGeneral()
+	{
+		$infoCustomerGeneral = new \BigFish\PaymentGateway\Data\Info\InfoCustomerGeneral();
+		$infoCustomerGeneral
+			->setFirstName("John")
+			->setLastName("Doe")
+			->setEmail("test@testmail.com")
+			->setIp("10.0.0.1")
+			->setHomePhoneCc("36")
+			->setHomePhone("801231212")
+			->setMobilePhoneCc("36")
+			->setMobilePhone("801231212")
+			->setWorkPhoneCc("36")
+			->setWorkPhone("801231212");
+
+		return $infoCustomerGeneral;
+	}
+
+	/**
+	 * @return \BigFish\PaymentGateway\Data\Info\InfoCustomerStoreSpecific
+	 */
+	public static function getCustomerStoreSpecific()
+	{
+		$infoCustomerStoreSpecific = new \BigFish\PaymentGateway\Data\Info\InfoCustomerStoreSpecific();
+		$infoCustomerStoreSpecific
+			->setUpdateDate("2018-05-10")
+			->setUpdateDateIndicator("03")
+			->setCreationDate("2016-04-01")
+			->setCreationDateIndicator("05")
+			->setPasswordChangeDate("2016-04-01")
+			->setPasswordChangeDateIndicator("01")
+			->setAuthenticationTimestamp("2019-04-28 12:00:01")
+			->setAuthenticationMethod("05")
+			->setChallengeIndicator("01")
+			->setShippingAddressFirstUse("2016-05-05")
+			->setShippingAddressFirstUseIndicator("04")
+			->setCardTransactionsLastDay("5")
+			->setCardCreationDate("2018-08-05")
+			->setCardCreationDateIndicator("05")
+			->setTransactionsLastDay("2")
+			->setTransactionsLastYear("95")
+			->setPurchasesLastSixMonths("6")
+			->setSuspiciousActivity("01");
+
+		return $infoCustomerStoreSpecific;
+	}
+
+	/**
+	 * @return \BigFish\PaymentGateway\Data\Info\InfoCustomerBrowser
+	 */
+	public static function getCustomerBrowser()
+	{
+		$infoCustomerBrowser = new \BigFish\PaymentGateway\Data\Info\InfoCustomerBrowser();
+		$infoCustomerBrowser
+			->setAcceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,application/json")
+			->setJavaEnabled("1")
+			->setLanguage("en-US")
+			->setColorDepth("24")
+			->setScreenHeight("1024")
+			->setScreenWidth("768")
+			->setTimeZone("+60")
+			->setUserAgent("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36")
+			->setWindowSize("05");
+
+		return $infoCustomerBrowser;
+	}
+
+	/**
+	 * @return \BigFish\PaymentGateway\Data\Info\InfoOrderGeneral
+	 */
+	public static function getOrderGeneral()
+	{
+		$infoOrderGeneral = new \BigFish\PaymentGateway\Data\Info\InfoOrderGeneral();
+		$infoOrderGeneral
+			->setDeliveryEmail("test@testdomain.com")
+			->setDeliveryTimeFrame("04")
+			->setGiftCardAmount("100")
+			->setGiftCardCount("3")
+			->setGiftCardCurrency("HUF")
+			->setPreorderDate("2019-09-05")
+			->setAvailability("01")
+			->setReorderItems("02")
+			->setShippingMethod("02")
+			->setAddressMatchIndicator("1")
+			->setDifferentShippingName("01")
+			->setTransactionType("01");
+
+		return $infoOrderGeneral;
+	}
+
+	/**
+	 * @return \BigFish\PaymentGateway\Data\Info\InfoOrderShippingData
+	 */
+	public static function getOrderShippingData()
+	{
+		$infoOrderShipping = new \BigFish\PaymentGateway\Data\Info\InfoOrderShippingData();
+		$infoOrderShipping
+			->setFirstName("John")
+			->setLastName("Doe")
+			->setPhoneCc("36")
+			->setPhone("801234567")
+			->setCity("Budapest")
+			->setCountry("HUN")
+			->setLine1("Nyugati tér")
+			->setLine2("1-2")
+			->setLine3("7. emelet")
+			->setPostalCode("1066")
+			->setState("HU");
+
+		return $infoOrderShipping;
+	}
+
+	/**
+	 * @return \BigFish\PaymentGateway\Data\Info\InfoOrderBillingData
+	 */
+	public static function getOrderBillingData()
+	{
+		$infoOrderBilling = new \BigFish\PaymentGateway\Data\Info\InfoOrderBillingData();
+		$infoOrderBilling
+			->setFirstName("John")
+			->setLastName("Doe")
+			->setPhoneCc("36")
+			->setPhone("801234567")
+			->setCity("Budapest")
+			->setCountry("HUN")
+			->setLine1("Nyugati tér")
+			->setLine2("1-2")
+			->setLine3("7. emelet")
+			->setPostalCode("1066")
+			->setState("HU");
+
+		return $infoOrderBilling;
+	}
+
+	/**
+	 * @param string $suffix
+	 * @return \BigFish\PaymentGateway\Data\Info\InfoOrderProductItem
+	 */
+	public static function getOrderProductItem($suffix = '1')
+	{
+		$infoOrderProductItem = new \BigFish\PaymentGateway\Data\Info\InfoOrderProductItem();
+		$infoOrderProductItem
+			->setSku("PMG00010" . $suffix)
+			->setName("Termék" . $suffix)
+			->setQuantity("10")
+			->setUnitPrice("22")
+			->setPrice("220")
+			->setImageUrl("http://webhsop/termek" . $suffix . ".jpg")
+			->setDescription("Termék " . $suffix . " leírása");
+
+		return $infoOrderProductItem;
+	}
+
+	/**
+	 * @return \BigFish\PaymentGateway\Data\Info\InfoOrderRecurringPayment
+	 */
+	public static function getOrderRecurringPayment()
+	{
+		$infoOrderRecurringPayment = new \BigFish\PaymentGateway\Data\Info\InfoOrderRecurringPayment();
+
+		$infoOrderRecurringPayment
+			->setExpireDate("2030-02-05")
+			->setFrequency("14");
+
+		return $infoOrderRecurringPayment;
 	}
 }
