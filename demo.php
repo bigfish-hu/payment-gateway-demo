@@ -168,8 +168,8 @@ abstract class Demo
 					break;
 			}
 
-			if (isset($data["useInfo"]) && $data["useInfo"]) {
-				$initRequest->setInfoObject(self::getGeneratedInfoObject());
+			if (isset($data["useInfo"]) && $data["useInfo"] && isset($data["infoData"])) {
+				$initRequest->setInfo(json_decode($data["infoData"], true));
 			}
 
 			if (isset($data['extra']) && is_array($data['extra'])) {
@@ -288,8 +288,8 @@ abstract class Demo
 				->setOrderId($data['orderId'])
 				->setUserId($data['userId']);
 
-			if (isset($data["useInfo"]) && $data["useInfo"]) {
-				$initRPRequest->setInfoObject(self::getGeneratedInfoObject());
+			if (isset($data["useInfo"]) && $data["useInfo"] && isset($data["infoData"])) {
+				$initRPRequest->setInfo(json_decode($data["infoData"], true));
 			}
 
 			$initRPResponse = \BigFish\PaymentGateway::initRP($initRPRequest);
@@ -431,8 +431,8 @@ abstract class Demo
 					break;
 			}
 
-			if (isset($data["useInfo"]) && $data["useInfo"]) {
-				$paymentLinkCreateRequest->setInfoObject(self::getGeneratedInfoObject());
+			if (isset($data["useInfo"]) && $data["useInfo"] && isset($data["infoData"])) {
+				$paymentLinkCreateRequest->setInfo(json_decode($data["infoData"], true));
 			}
 
 			if (isset($data['extra']) && is_array($data['extra'])) {

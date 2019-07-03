@@ -554,8 +554,7 @@
 	"address1":"Test street 1.",
 	"city":"Budapest",
 	"postalCode":"9999"
-}
-		</textarea>
+}</textarea>
 	</label>
 
 	<label class="providerData BBAruhitel">
@@ -764,8 +763,12 @@
 
 	<? } ?>
 
-	<label class="label-chkbox2">
+	<label class="label-chkbox-second">
 		<span>Check to use info data: <input type="checkbox" name="useInfo" value="1" class="input All"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+	</label>
+	<label>
+		<span>Info data:</span>
+		<textarea name="infoData" class="input All"><?php print_r(json_encode(Demo::getGeneratedInfoObject()->getData(), JSON_PRETTY_PRINT)); ?></textarea>
 	</label>
 
 	<input type="submit" name="submit" value="Next">
