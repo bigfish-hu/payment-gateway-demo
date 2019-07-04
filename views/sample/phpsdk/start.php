@@ -346,6 +346,7 @@
 				<blockquote>'e-mail' => 'The loan applicant's email address',</blockquote>
 				<blockquote>'term' => 'The term of the loan',</blockquote>
 				<blockquote>'offerId' => 'Loan offer identifier'</blockquote>
+				<blockquote>'testMode' => 'Use BIG FISH Payment Gateway test interface'</blockquote>
 			);<br />
 		</span>
 		<span class="providerData code PayURest">

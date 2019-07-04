@@ -68,6 +68,10 @@
 							E-pin (if necessary): 112233<br />
 							<br />
 							To request status change, please write a letter to peter.bakti@budapestbank.hu by specifying the transaction ID.
+							<hr>
+							Or you can use BIG FISH Payment Gateway test interface for Budapest Bank Áruhitel:<br />
+							<br />
+							Put testMode into extra JSON object with true value.
 						</td>
 					</tr>
 				</tbody>
@@ -565,9 +569,11 @@
 	"lastName":"Doe",
 	"e-mail":"test@bbaruhiteltest.hu",
 	"term":"10",
-	"offerId":"tesztkonstrukcio1"
-}</textarea>
-	</label>
+	"offerId":"tesztkonstrukcio1",
+	"testMode":false
+}
+		</textarea>
+    </label>
 
 	<label class="providerData PayURest">
 		<span>Extra data:</span>
