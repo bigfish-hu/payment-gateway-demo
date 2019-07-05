@@ -611,7 +611,8 @@ abstract class Demo
 			->setPhoneCc("36")
 			->setPhone("801234567")
 			->setCity("Budapest")
-			->setCountry("HUN")
+			->setCountry("Hungary")
+			->setCountryCode("348")
 			->setLine1("Nyugati tér")
 			->setLine2("1-2")
 			->setLine3("7. emelet")
@@ -633,7 +634,8 @@ abstract class Demo
 			->setPhoneCc("36")
 			->setPhone("801234567")
 			->setCity("Budapest")
-			->setCountry("HUN")
+			->setCountry("Hungary")
+			->setCountryCode("348")
 			->setLine1("Nyugati tér")
 			->setLine2("1-2")
 			->setLine3("7. emelet")
@@ -654,10 +656,11 @@ abstract class Demo
 			->setSku("PMG00010" . $suffix)
 			->setName("Termék" . $suffix)
 			->setQuantity("10")
+			->setQuantityUnit("db")
 			->setUnitPrice("22")
 			->setPrice("220")
 			->setImageUrl("http://webhsop/termek" . $suffix . ".jpg")
-			->setDescription("Termék " . $suffix . " leírása");
+			->setDescription("Termék" . $suffix . " leírása");
 
 		return $infoOrderProductItem;
 	}

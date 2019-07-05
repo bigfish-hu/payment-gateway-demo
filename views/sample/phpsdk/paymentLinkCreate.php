@@ -303,7 +303,8 @@
 			<blockquote>->setFirstName('John')</blockquote>
 			<blockquote>->setLastName('Doe')</blockquote>
 			<blockquote>->setCity('Budapest')</blockquote>
-			<blockquote>->setCountry('HUN')</blockquote>
+			<blockquote>->setCountry('Hungary')</blockquote>
+			<blockquote>->setCountryCode('348')</blockquote>
 			<blockquote>->setLine1('Nyugati ter')</blockquote>
 			<blockquote>->setLine2('1-2')</blockquote>
 			<blockquote>->setPostalCode('1066');</blockquote>
