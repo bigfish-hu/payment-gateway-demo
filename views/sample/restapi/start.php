@@ -27,7 +27,7 @@
 		OneClickPayment<br />
 		OneClickReferenceId<br />
 		AutoCommit (2-step payment if false)<br />
-		Extra (<a href="https://github.com/bigfish-hu/payment-gateway-php-sdk/blob/master/src/BigFish/PaymentGateway/Request/Init.php#L573" target="_blank">See here how to use: public function setExtra()</a>)<br />
+		Extra (<a href="https://github.com/bigfish-hu/payment-gateway-php-sdk/blob/master/src/BigFish/PaymentGateway/Request/Init.php#L591" target="_blank">See here how to use: public function setExtra()</a>)<br />
 		GatewayPaymentPage (MKBSZEP: Card data handling on Payment Gateway page or Merchant website.)<br />
 		NotificationUrl<br />
 		ModuleName<br />
