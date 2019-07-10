@@ -76,6 +76,29 @@ abstract class Demo
 	}
 
 	/**
+	 * Get info
+	 * 
+	 * @param array $data
+	 * @return array
+	 * @access private
+	 * @static
+	 */
+	private static function getInfo($data)
+	{
+		if (isset($data["useInfo"]) && $data["useInfo"] && isset($data["infoData"]) && !empty($data["infoData"])) {
+			$infoData = json_decode($data["infoData"], true);
+
+			if (json_last_error() !== JSON_ERROR_NONE) {
+				throw new \BigFish\PaymentGateway\Exception("The info data is not JSON format.");
+			}
+
+			return $infoData;
+		}
+
+		return array();
+	}
+
+	/**
 	 * Init and start transaction
 	 * 
 	 * @param array $data
@@ -168,9 +191,7 @@ abstract class Demo
 					break;
 			}
 
-			if (isset($data["useInfo"]) && $data["useInfo"] && isset($data["infoData"])) {
-				$initRequest->setInfo(json_decode($data["infoData"], true));
-			}
+			$initRequest->setInfo(self::getInfo($data));
 
 			if (isset($data['extra']) && is_array($data['extra'])) {
 				$initRequest->setExtra($data['extra']);
@@ -241,7 +262,7 @@ abstract class Demo
 	public static function details(array $data = array())
 	{
 		try {
-			$detailsResponse = \BigFish\PaymentGateway::details(new \BigFish\PaymentGateway\Request\Details($data['TransactionId'], false));
+			$detailsResponse = \BigFish\PaymentGateway::details(new \BigFish\PaymentGateway\Request\Details($data['TransactionId'], false, true));
 
 			return $detailsResponse;
 		} catch (\BigFish\PaymentGateway\Exception $e) {
@@ -288,9 +309,7 @@ abstract class Demo
 				->setOrderId($data['orderId'])
 				->setUserId($data['userId']);
 
-			if (isset($data["useInfo"]) && $data["useInfo"] && isset($data["infoData"])) {
-				$initRPRequest->setInfo(json_decode($data["infoData"], true));
-			}
+			$initRPRequest->setInfo(self::getInfo($data));
 
 			$initRPResponse = \BigFish\PaymentGateway::initRP($initRPRequest);
 			
@@ -431,9 +450,7 @@ abstract class Demo
 					break;
 			}
 
-			if (isset($data["useInfo"]) && $data["useInfo"] && isset($data["infoData"])) {
-				$paymentLinkCreateRequest->setInfo(json_decode($data["infoData"], true));
-			}
+			$paymentLinkCreateRequest->setInfo(self::getInfo($data));
 
 			if (isset($data['extra']) && is_array($data['extra'])) {
 				$paymentLinkCreateRequest->setExtra($data['extra']);
@@ -458,7 +475,7 @@ abstract class Demo
 	public static function paymentLinkDetails(array $data = array())
 	{
 		try {
-			$paymentLinkDetailsResponse = \BigFish\PaymentGateway::paymentLinkDetails(new \BigFish\PaymentGateway\Request\PaymentLinkDetails($data['PaymentLinkName']));
+			$paymentLinkDetailsResponse = \BigFish\PaymentGateway::paymentLinkDetails(new \BigFish\PaymentGateway\Request\PaymentLinkDetails($data['PaymentLinkName'], true));
 
 			return $paymentLinkDetailsResponse;
 		} catch (\BigFish\PaymentGateway\Exception $e) {
@@ -492,9 +509,9 @@ abstract class Demo
 	{
 		$infoObject = new \BigFish\PaymentGateway\Data\Info();
 
-		$infoObject->setData(self::getCustomerBrowser());
 		$infoObject->setData(self::getCustomerGeneral());
 		$infoObject->setData(self::getCustomerStoreSpecific());
+		$infoObject->setData(self::getCustomerBrowser());
 		$infoObject->setData(self::getOrderGeneral());
 		$infoObject->setData(self::getOrderBillingData());
 		$infoObject->setData(self::getOrderShippingData());
