@@ -625,16 +625,18 @@ abstract class Demo
 		$infoOrderShipping
 			->setFirstName("John")
 			->setLastName("Doe")
+			->setEmail("test@testmail.com")
 			->setPhoneCc("36")
 			->setPhone("801234567")
 			->setCity("Budapest")
 			->setCountry("Hungary")
-			->setCountryCode("348")
+			->setCountryCode1("348")
+			->setCountryCode2("HU")
+			->setCountryCode3("HU-BU")
 			->setLine1("Nyugati tér")
 			->setLine2("1-2")
 			->setLine3("7. emelet")
-			->setPostalCode("1066")
-			->setState("HU");
+			->setPostalCode("1066");
 
 		return $infoOrderShipping;
 	}
@@ -648,16 +650,18 @@ abstract class Demo
 		$infoOrderBilling
 			->setFirstName("John")
 			->setLastName("Doe")
+			->setEmail("test@testmail.com")
 			->setPhoneCc("36")
 			->setPhone("801234567")
 			->setCity("Budapest")
 			->setCountry("Hungary")
-			->setCountryCode("348")
+			->setCountryCode1("348")
+			->setCountryCode2("HU")
+			->setCountryCode3("HU-BU")
 			->setLine1("Nyugati tér")
 			->setLine2("1-2")
 			->setLine3("7. emelet")
-			->setPostalCode("1066")
-			->setState("HU");
+			->setPostalCode("1066");
 
 		return $infoOrderBilling;
 	}
@@ -674,8 +678,7 @@ abstract class Demo
 			->setName("Termék" . $suffix)
 			->setQuantity("10")
 			->setQuantityUnit("db")
-			->setUnitPrice("22")
-			->setPrice("220")
+			->setUnitPrice("22.00")
 			->setImageUrl("http://webhsop/termek" . $suffix . ".jpg")
 			->setDescription("Termék" . $suffix . " leírása");
 
