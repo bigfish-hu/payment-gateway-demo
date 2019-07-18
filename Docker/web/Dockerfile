@@ -5,6 +5,13 @@ FROM docker.big.hu/development/nginx-php:5.6.30
 MAINTAINER BIG FISH <cafe@bigfish.hu>
 
 #
+# Set Debian repository
+#
+RUN sed -i '/jessie-updates/d' /etc/apt/sources.list \
+	&& echo "deb http://repo.big.hu/debian jessie-backports main" >> /etc/apt/sources.list \
+	&& wget -qO - https://repo.big.hu/repo.big.hu.key | apt-key add -
+
+#
 # Install extra PHP modules
 #
 RUN apt-get update
