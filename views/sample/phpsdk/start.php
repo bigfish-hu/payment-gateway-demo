@@ -152,92 +152,6 @@
 			</font><br />
 			$initRequest->setOneClickForcedRegistration(true);<br />
 		</span>
-		<span class="providerData code OTPSimple">
-			<br />
-			<font>
-				/**<br />
-				&nbsp;* Send custom data if you want<br />
-				&nbsp;*/
-			</font><br />
-			$data['extra'] = array(<br />
-				<blockquote>'ORDER_PNAME' => 'Product name',</blockquote>
-				<blockquote>'ORDER_PCODE' => 'Product unique id',</blockquote>
-				<blockquote>'ORDER_PINFO' => 'Product description',</blockquote>
-				<blockquote>'BILL_FNAME' => 'Customer first name',</blockquote>
-				<blockquote>'BILL_LNAME' => 'Customer last name',</blockquote>
-				<blockquote>'BILL_PHONE' => 'Customer phone number',</blockquote>
-				<blockquote>'BILL_FAX' => 'Customer fax',</blockquote>
-				<blockquote>'BILL_ADDRESS' => 'Customer billing address',</blockquote>
-				<blockquote>'BILL_ADDRESS2' => 'More customer billing address',</blockquote>
-				<blockquote>'BILL_ZIPCODE' => 'Customer billing zip code',</blockquote>
-				<blockquote>'BILL_CITY' => 'Customer billing city',</blockquote>
-				<blockquote>'BILL_STATE' => 'Customer billing state',</blockquote>
-				<blockquote>'BILL_COUNTRYCODE' => 'Customer billing country code',</blockquote>
-				<blockquote>'BILL_EMAIL' => 'Customer billing email',</blockquote>
-				<blockquote>'DELIVERY_FNAME' => 'Customer delivery first name',</blockquote>
-				<blockquote>'DELIVERY_LNAME' => 'Customer delivery last name',</blockquote>
-				<blockquote>'DELIVERY_PHONE' => 'Customer delivery phone number',</blockquote>
-				<blockquote>'DELIVERY_ADDRESS' => 'Customer delivery address',</blockquote>
-				<blockquote>'DELIVERY_ADDRESS2' => 'More customer delivery address',</blockquote>
-				<blockquote>'DELIVERY_ZIPCODE' => 'Customer delivery zip code',</blockquote>
-				<blockquote>'DELIVERY_CITY' => 'Customer delivery city',</blockquote>
-				<blockquote>'DELIVERY_STATE' => 'Customer delivery state',</blockquote>
-				<blockquote>'DELIVERY_COUNTRYCODE' => 'Customer delivery country code',</blockquote>
-			);<br />
-			<br />
-			<font>
-				/**<br />
-				&nbsp;* Send more than one product<br />
-				&nbsp;*/
-			</font><br />
-			$data['extra']['productItems'] = array(<br />
-				<blockquote>array(
-					<blockquote>'Name' => 'Product name 1',</blockquote>
-					<blockquote>'SKU' => 'Product ID 1',</blockquote>
-					<blockquote>'Description' => 'Product description 1',</blockquote>
-					<blockquote>'Price' => 'Product price',</blockquote>
-					<blockquote>'Quantity' => 'Ordered quantity'</blockquote>
-				),</blockquote>
-				<blockquote>array(
-					<blockquote>'Name' => 'Product name 2',</blockquote>
-					<blockquote>'SKU' => 'Product ID 2',</blockquote>
-					<blockquote>'Description' => 'Product description 2',</blockquote>
-					<blockquote>'Price' => 'Product price',</blockquote>
-					<blockquote>'Quantity' => 'Ordered quantity'</blockquote>
-				),</blockquote>
-				<blockquote>...</blockquote>
-			);<br />
-		</span>
-		<span class="providerData code Borgun">
-			<br />
-			<font>
-				/**<br />
-				&nbsp;* Set product data if you want<br />
-				&nbsp;*/
-			</font><br />
-			$data['extra']['productItems'] = array(<br />
-				<blockquote>array(
-					<blockquote>'Name' => 'Product name 1',</blockquote>
-					<blockquote>'Price' => 'Product price',</blockquote>
-					<blockquote>'Quantity' => 'Ordered quantity'</blockquote>
-				),</blockquote>
-				<blockquote>array(
-					<blockquote>'Name' => 'Product name 2',</blockquote>
-					<blockquote>'Price' => 'Product price',</blockquote>
-					<blockquote>'Quantity' => 'Ordered quantity'</blockquote>
-				),</blockquote>
-				<blockquote>...</blockquote>
-			);<br />
-		</span>
-		<span class="providerData code PayU2">
-			<br />
-			<font>
-				/**<br />
-				&nbsp;* Set customer email if you want<br />
-				&nbsp;*/
-			</font><br />
-			$data['extra']['email'] = $data['email'];<br />
-		</span>
 		<span class="providerData code PayPal">
 			<br />
 			<font>
@@ -365,33 +279,11 @@
 				<blockquote><blockquote>),</blockquote></blockquote>
 				<blockquote>),</blockquote>
 				<blockquote>'buyer' => array(</blockquote>
-				<blockquote><blockquote>'customerIp' => 'Buyer's IP address',</blockquote></blockquote>
-				<blockquote><blockquote>'email' => 'Buyer's email address',</blockquote></blockquote>
-				<blockquote><blockquote>'phone' => 'Buyer's telephone number',</blockquote></blockquote>
-				<blockquote><blockquote>'firstName' => 'Buyer's first name',</blockquote></blockquote>
-				<blockquote><blockquote>'lastName' => 'Buyer's last name',</blockquote></blockquote>
 				<blockquote><blockquote>'nin' => 'National Identification Number',</blockquote></blockquote>
 				<blockquote><blockquote>'language' => 'Denotes the language version of e-mail messages sent from PayU to the payer',</blockquote></blockquote>
 				<blockquote><blockquote>'delivery' => array(</blockquote></blockquote>
-				<blockquote><blockquote><blockquote>'street' => 'Street',</blockquote></blockquote></blockquote>
 				<blockquote><blockquote><blockquote>'postalBox' => 'Postal box',</blockquote></blockquote></blockquote>
-				<blockquote><blockquote><blockquote>'postalCode' => 'Postal code',</blockquote></blockquote></blockquote>
-				<blockquote><blockquote><blockquote>'city' => 'City',</blockquote></blockquote></blockquote>
-				<blockquote><blockquote><blockquote>'state' => 'State',</blockquote></blockquote></blockquote>
-				<blockquote><blockquote><blockquote>'countryCode' => 'Two-letter country code compliant with ISO-3166',</blockquote></blockquote></blockquote>
-				<blockquote><blockquote><blockquote>'name' => 'Address description',</blockquote></blockquote></blockquote>
-				<blockquote><blockquote><blockquote>'recipientName' => 'Recipient name',</blockquote></blockquote></blockquote>
-				<blockquote><blockquote><blockquote>'recipientEmail' => 'Recipient email',</blockquote></blockquote></blockquote>
-				<blockquote><blockquote><blockquote>'recipientPhone' => 'Recipient phone number'</blockquote></blockquote></blockquote>
 				<blockquote><blockquote>)</blockquote></blockquote>
-				<blockquote>),</blockquote>
-				<blockquote>'products' => array(</blockquote>
-				<blockquote><blockquote>array(</blockquote></blockquote>
-				<blockquote><blockquote><blockquote>'name' => 'Name of the product',</blockquote></blockquote></blockquote>
-				<blockquote><blockquote><blockquote>'unitPrice' => 'Unit price',</blockquote></blockquote></blockquote>
-				<blockquote><blockquote><blockquote>'quantity' => 'Quantity'</blockquote></blockquote></blockquote>
-				<blockquote><blockquote>),</blockquote></blockquote>
-				<blockquote><blockquote>...</blockquote></blockquote>
 				<blockquote>)</blockquote>
 			);<br />
 		</span>
