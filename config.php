@@ -2,6 +2,9 @@
 
 define('PROJECT_PATH', realpath(dirname(__FILE__)));
 define('DS', DIRECTORY_SEPARATOR);
+ini_set('xdebug.var_display_max_depth', '-1');
+ini_set('xdebug.var_display_max_children', '-1');
+ini_set('xdebug.var_display_max_data', '-1');
 
 function var_dump_custom($data) {
 	if (function_exists('xdebug_disable')) {
