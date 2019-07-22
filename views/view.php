@@ -45,6 +45,30 @@ class View
 		'paymentLinkDetails' => 'Get payment link details (paymentLinkDetails)',
 		'paymentLinkCancel' => 'Cancel payment link (paymentLinkCancel)',
 	);
+
+	/**
+	 * Docs
+	 * 
+	 * @var array
+	 * @access public
+	 * @static
+	 */
+	public static $docs = array(
+		'start' => '#functions-initialising-transactions',
+		'result' => '#functions-querying-transaction-results',
+		'close' => '#functions-closing-the-pre-authorised-transactions',
+		'details' => '#functions-querying-transaction-details',
+		'refund' => '#functions-refunding-transaction-amounts',
+		'selectOcp' => '#functions-querying-the-details-of-registered-bank-cards',
+		'startOcp' => '#functions-creating-a-transaction-using-a-registered-bank-card-initialising-a-transaction-using-the-service-providers-reference-transaction',
+		'startRP' => '#functions-creating-a-transaction-using-a-registered-bank-card-initialising-a-transaction-using-the-big-fish-payment-gateway-reference-transaction',
+		'invoice' => '#functions-invoicing-paybill',
+		'oneClickTokenCancel' => '#functions-cancelling-a-bank-card-registration',
+		'oneClickTokenCancelAll' => '#functions-cancelling-all-bank-card-registrations',
+		'paymentLinkCreate' => '#functions-payment-link-paylink-creating-a-payment-link',
+		'paymentLinkDetails' => '#functions-payment-link-paylink-querying-payment-link-details',
+		'paymentLinkCancel' => '#functions-payment-link-paylink-cancelling-a-payment-link',
+	);
 	
 	/**
 	 * Saferpay payment methods

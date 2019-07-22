@@ -129,15 +129,16 @@
 
 				echo '<div class="cont">';
 					echo '<h1>' . self::$header[$this->controller->action] . '</h1>';
-					
+
 					if (!empty($this->controller->result)) {
 						var_dump_custom($this->controller->result);
 					} else {
 						require_once(PROJECT_PATH . DS . 'views' . DS . $this->include);
-						
+
 						if (isset($_GET['action']) && !empty($_GET['action'])) {
-							require_once('sample' . DS . 'phpsdk.php');
-							require_once('sample' . DS . 'restapi.php');
+							require_once('sample' . DS . 'docs.php');
+							//require_once('sample' . DS . 'phpsdk.php');
+							//require_once('sample' . DS . 'restapi.php');
 						}
 
 						if (in_array($this->controller->action, array('start', 'paymentLinkCreate'))) { ?>
