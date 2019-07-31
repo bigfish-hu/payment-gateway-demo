@@ -17,6 +17,7 @@
 		<li><label><input type="radio" name="providerName" value="MKBSZEP"><span><span></span></span>MKB SZÉP Card</label></li>
 		<li><label><input type="radio" name="providerName" value="OTP"><span><span></span></span>OTP Bank, OTP SZÉP Card</label></li>
 		<li><label><input type="radio" name="providerName" value="OTP2"><span><span></span></span>OTP Bank (two-party)</label></li>
+		<li><label><input type="radio" name="providerName" value="OTPAruhitel"><span><span></span></span>OTP Bank Áruhitel</label></li>
 		<li><label><input type="radio" name="providerName" value="OTPMultipont"><span><span></span></span>OTP Multipont</label></li>
 		<li><label><input type="radio" name="providerName" value="OTPSimple"><span><span></span></span>OTP Simple</label></li>
 		<li><label><input type="radio" name="providerName" value="OTPSimpleWire"><span><span></span></span>OTP Simple wire</label></li>
@@ -560,6 +561,15 @@
 	"postalCode":"9999"
 }</textarea>
 	</label>
+
+    <label class="providerData OTPAruhitel">
+        <span>Extra data:</span>
+        <textarea name="extra[OTPAruhitel]" class="input OTPAruhitel">
+{
+	"constructionGroup":"1000044"
+}
+		</textarea>
+    </label>
 
 	<label class="providerData BBAruhitel">
 		<span>Extra data:</span>
