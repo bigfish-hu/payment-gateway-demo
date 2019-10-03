@@ -65,7 +65,7 @@ abstract class Demo
 	private static function setProviderExtra(&$data)
 	{
 		if (isset($_POST['useExtra']) && (int)$_POST['useExtra'] && isset($_POST['extra'][$data['providerName']]) && !empty($_POST['extra'][$data['providerName']])) {
-			if (in_array($data['providerName'], array(\BigFish\PaymentGateway::PROVIDER_BBARUHITEL, \BigFish\PaymentGateway::PROVIDER_PAYUREST))) {
+			if (in_array($data['providerName'], array(\BigFish\PaymentGateway::PROVIDER_BBARUHITEL, \BigFish\PaymentGateway::PROVIDER_OTPARUHITEL, \BigFish\PaymentGateway::PROVIDER_PAYUREST))) {
 				$data['extra'] = json_decode($_POST['extra'][$data['providerName']], true);
 			} else {
 				$data['extra'][$data['providerName']] = json_decode($_POST['extra'][$data['providerName']], true);
@@ -158,16 +158,10 @@ abstract class Demo
 								->setOtpExpiration($data["cardExpiration"])
 								->setOtpCvc($data["cardCvc"]);
 					break;
-				case \BigFish\PaymentGateway::PROVIDER_OTPAY:
-					if (!empty($data['phoneNumber'])) {
-						$initRequest->setMppPhoneNumber($data['phoneNumber']);
-					}
-					break;
 				case \BigFish\PaymentGateway::PROVIDER_BARION2:
 				case \BigFish\PaymentGateway::PROVIDER_PAYUREST:
 					self::setProviderExtra($data);
 				case \BigFish\PaymentGateway::PROVIDER_BORGUN2:
-				case \BigFish\PaymentGateway::PROVIDER_ESCALION:
 				case \BigFish\PaymentGateway::PROVIDER_GP:
 				case \BigFish\PaymentGateway::PROVIDER_OTP_SIMPLE:
 				case \BigFish\PaymentGateway::PROVIDER_SAFERPAY:
@@ -184,9 +178,8 @@ abstract class Demo
 					}
 					break;
 				case \BigFish\PaymentGateway::PROVIDER_PAYSAFECASH:
-					self::setProviderExtra($data);
-					break;
 				case \BigFish\PaymentGateway::PROVIDER_BBARUHITEL:
+				case \BigFish\PaymentGateway::PROVIDER_OTPARUHITEL:
 					self::setProviderExtra($data);
 					break;
 			}
@@ -446,6 +439,7 @@ abstract class Demo
 				case \BigFish\PaymentGateway::PROVIDER_PAYSAFECASH:
 				case \BigFish\PaymentGateway::PROVIDER_BBARUHITEL:
 				case \BigFish\PaymentGateway::PROVIDER_PAYUREST:
+				case \BigFish\PaymentGateway::PROVIDER_OTPARUHITEL:
 					self::setProviderExtra($data);
 					break;
 			}

@@ -8,7 +8,7 @@
 			<blockquote>->setOrderId($data['orderId'])</blockquote>
 			<blockquote>->setUserId($data['userId'])</blockquote>
 			<blockquote>->setLanguage($data['language']);</blockquote>
-		<span class="providerData code Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
+		<span class="providerData code Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
 			<br />
 			<font>
 				/**<br />
@@ -117,20 +117,7 @@
 			<blockquote>->setOtpExpiration($data['cardExpiration'])</blockquote>
 			<blockquote>->setOtpCvc($data['cardCvc']);</blockquote>
 		</span>
-		<span class="providerData code OTPay">
-			<br />
-			if (isset($data['phoneNumber']) && !empty($data['phoneNumber'])) {
-				<blockquote>
-					<font>
-						/**<br />
-						&nbsp;* If you want to set phone number<br />
-						&nbsp;*/
-					</font><br />
-					$initRequest->setMppPhoneNumber($data['phoneNumber']);<br />
-				</blockquote>
-			}<br />
-		</span>
-		<span class="providerData code Barion2 Borgun2 Escalion GP OTPSimple PayURest Saferpay Virpay">
+		<span class="providerData code Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay">
 			<br />
 			<font>
 				/**<br />
@@ -143,7 +130,7 @@
 			</font><br />
 			$initRequest->setOneClickPayment(true);<br />
 		</span>
-		<span class="providerData code Barion2 Borgun2 Escalion GP OTPSimple PayURest Saferpay Virpay">
+		<span class="providerData code Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay">
 			<br />
 			<font>
 				/**<br />
@@ -287,6 +274,17 @@
 				<blockquote>)</blockquote>
 			);<br />
 		</span>
+		<span class="providerData code OTPAruhitel">
+			<br />
+			<font>
+				/**<br />
+				&nbsp;* If you want to set custom data<br />
+				&nbsp;*/
+			</font><br />
+			$data['extra'] = array(<br />
+				<blockquote>'ConstructionGroup' => 'Loan construction identifier',</blockquote>
+			);<br />
+		</span>
 		<br />
 		if (isset($data['extra']) && is_array($data['extra'])) {<br />
 			<blockquote>$initRequest->setExtra($data['extra']);</blockquote>
@@ -345,7 +343,7 @@
 					<blockquote>new \BigFish\PaymentGateway\Request\Start($initResponse->TransactionId)</blockquote>
 				);
 				<br />
-				<span class="providerData code Escalion OTPSimple Saferpay">
+				<span class="providerData code OTPSimple Saferpay">
 					<br />
 					<font>
 						/**<br />

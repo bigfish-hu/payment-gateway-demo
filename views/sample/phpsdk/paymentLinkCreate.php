@@ -10,7 +10,7 @@
 			<blockquote>->setExpirationTime($data['expirationTime'])</blockquote>
 			<blockquote>->setNotificationEmail($data['notificationEmail'])</blockquote>
 			<blockquote>->setEmailNotificationOnlySuccess($data['emailNotificationOnlySuccess']);</blockquote>
-		<span class="providerData code Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
+		<span class="providerData code Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
 			<br />
 			<font>
 				/**<br />
@@ -169,6 +169,17 @@
 				<blockquote><blockquote><blockquote>'postalBox' => 'Postal box',</blockquote></blockquote></blockquote>
 				<blockquote><blockquote>)</blockquote></blockquote>
 				<blockquote>)</blockquote>
+			);<br />
+		</span>
+		<span class="providerData code OTPAruhitel">
+			<br />
+			<font>
+				/**<br />
+				&nbsp;* If you want to set custom data<br />
+				&nbsp;*/
+			</font><br />
+			$data['extra'] = array(<br />
+				<blockquote>'ConstructionGroup' => 'Loan construction identifier',</blockquote>
 			);<br />
 		</span>
 		<br />

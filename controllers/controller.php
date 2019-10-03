@@ -166,7 +166,7 @@ class Controller
 	{
 		$oneClickOptions = Demo::oneClickOptions($_POST);
 		
-		if (isset($oneClickOptions->Data) && is_array($oneClickOptions->Data)) {
+		if (isset($oneClickOptions->Data) && is_array($oneClickOptions->Data) && !empty($oneClickOptions->Data)) {
 			$this->action = 'startOcp';
 			$this->data = $oneClickOptions->Data;
 		} else {

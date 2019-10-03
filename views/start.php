@@ -8,7 +8,6 @@
 		<li><label><input type="radio" name="providerName" value="Borgun2"><span><span></span></span>Borgun RPG</label></li>
 		<li><label><input type="radio" name="providerName" value="BBAruhitel"><span><span></span></span>Budapest Bank Áruhitel</label></li>
 		<li><label><input type="radio" name="providerName" value="CIB"><span><span></span></span>CIB Bank</label></li>
-		<li><label><input type="radio" name="providerName" value="Escalion"><span><span></span></span>Escalion</label></li>
 		<li><label><input type="radio" name="providerName" value="FHB"><span><span></span></span>FHB Bank</label></li>
 		<li><label><input type="radio" name="providerName" value="GP"><span><span></span></span>Global Payments</label></li>
 		<li><label><input type="radio" name="providerName" value="IPG"><span><span></span></span>Intelligent Payments</label></li>
@@ -18,18 +17,14 @@
 		<li><label><input type="radio" name="providerName" value="OTP"><span><span></span></span>OTP Bank, OTP SZÉP Card</label></li>
 		<li><label><input type="radio" name="providerName" value="OTP2"><span><span></span></span>OTP Bank (two-party)</label></li>
 		<li><label><input type="radio" name="providerName" value="OTPAruhitel"><span><span></span></span>OTP Bank Áruhitel</label></li>
-		<li><label><input type="radio" name="providerName" value="OTPMultipont"><span><span></span></span>OTP Multipont</label></li>
 		<li><label><input type="radio" name="providerName" value="OTPSimple"><span><span></span></span>OTP Simple</label></li>
 		<li><label><input type="radio" name="providerName" value="OTPSimpleWire"><span><span></span></span>OTP Simple wire</label></li>
-		<li><label><input type="radio" name="providerName" value="OTPay"><span><span></span></span>OTPay</label></li>
-		<li><label><input type="radio" name="providerName" value="OTPayMP"><span><span></span></span>OTPay MasterPass</label></li>
 		<li><label><input type="radio" name="providerName" value="PayPal"><span><span></span></span>PayPal</label></li>
 		<li><label><input type="radio" name="providerName" value="PSC"><span><span></span></span>paysafecard</label></li>
 		<li><label><input type="radio" name="providerName" value="Paysafecash"><span><span></span></span>Paysafecash</label></li>
 		<li><label><input type="radio" name="providerName" value="PayU2"><span><span></span></span>PayU Classic</label></li>
 		<li><label><input type="radio" name="providerName" value="PayURest"><span><span></span></span>PayU REST</label></li>
 		<li><label><input type="radio" name="providerName" value="Saferpay"><span><span></span></span>Saferpay (SIX Payment)</label></li>
-		<li><label><input type="radio" name="providerName" value="SMS"><span><span></span></span>SMS</label></li>
 		<li><label><input type="radio" name="providerName" value="Sofort"><span><span></span></span>Sofort Banking</label></li>
 		<li><label><input type="radio" name="providerName" value="UniCredit"><span><span></span></span>UniCredit Bank</label></li>
 		<li><label><input type="radio" name="providerName" value="Virpay"><span><span></span></span>VirPAY</label></li>
@@ -107,16 +102,6 @@
 				<tbody>
 					<tr><td>To success payment:</td><td>4111 1111 1111 1111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
 					<tr><td>To failed payment:</td><td>4999 9999 9999 9999</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>111</td></tr>
-				</tbody>
-			</table>
-		</div>
-
-		<div class="providerData Escalion">
-			<table class="table-test-data">
-				<thead><tr><th colspan="6">Test data:</th></tr></thead>
-				<tbody>
-					<tr><td>To success payment:</td><td>5431111111111111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-					<tr><td>To failed payment:</td><td>4111111111111111</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -211,56 +196,9 @@
 			</table>
 		</div>
 
-		<div class="providerData OTPMultipont">
-			<table class="table-test-data">
-				<thead><tr><th colspan="2">Test data:</th></tr></thead>
-				<tbody><tr><td>To success payment:</td><td>6369471300001646</td></tr></tbody>
-			</table>
-		</div>
-
 		<div class="providerData OTPSimple">
 			<table class="table-test-data">
 				<tbody><tr><td><em>If you chose EUR currency authorization must be set "Later". (Only required for the default store.)</em></td></tr></tbody>
-			</table>
-		</div>
-
-		<div class="providerData OTPay">
-			<table class="table-test-data">
-				<thead><tr><th colspan="2">Test data:</th></tr></thead>
-				<tbody><tr><td>Phone number:</td><td>36101022001</td></tr></tbody>
-			</table>
-		</div>
-
-		<div class="providerData OTPayMP">
-			<table class="table-test-data">
-				<thead><tr><th colspan="2">Test data to register mCard in app:</th></tr></thead>
-				<tbody>
-					<tr>
-						<td colspan="2">
-							<p>
-								<strong>Android test application: </strong>
-								<br><a href="https://rink.hockeyapp.net/apps/fb0e2cb7852d2e61cf1101aa29852510" target="_blank">https://rink.hockeyapp.net/apps/fb0e2cb7852d2e61cf1101aa29852510</a>
-								<br>It is necessary to intall the application on a device which live OTPay is not installed.
-								<br>Do not update the test application!
-								<br>During the registration you have to receive a code in SMS. Send a reply to get the 5-digit code.
-							</p>
-						</td>
-					</tr>
-					<tr><td>mCard name:</td><td>any</td></tr>
-					<tr><td>Name on card:</td><td>TESZT 84</td></tr>
-					<tr><td>Card number:</td><td>5417 0491 0062 2029</td></tr>
-					<tr><td>Expiration date (mm/yy):</td><td>1020</td></tr>
-					<tr><td>CVC:</td><td>111</td></tr>
-					<tr><td>Card activation number:</td><td>0000</td></tr>
-				</tbody>
-			</table>
-
-			<table class="table-test-data">
-				<thead><tr><th colspan="2">Choose next on MasterPass:</th></tr></thead>
-				<tbody>
-					<tr><td>Country:</td><td>Magyarország</td></tr>
-					<tr><td>Wallet:</td><td>test OTPay</td></tr>
-				</tbody>
 			</table>
 		</div>
 
@@ -430,9 +368,9 @@
 			</select>
 		</label>
 		
-		<label class="col-2 providerData Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
+		<label class="col-2 providerData Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
 			<span>Authorization:</span>
-			<select name="autoCommit" class="input Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPay OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
+			<select name="autoCommit" class="input Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
 				<option value="true">Immediate</option>
 				<option value="false">Later</option>
 			</select>
@@ -456,28 +394,23 @@
 
 	<? if ($this->controller->action == "start") { ?>
 
-		<label class="providerData OTPay">
-			<span>Phone number:</span>
-			<input type="text" name="phoneNumber" value="" class="input OTPay">
-		</label>
-
 		<label class="providerData OTP OTP2">
 			<span>OTP consumer registration ID (One Click Payment):</span>
 			<input type="text" name="otpConsumerRegistrationId" value="" class="input OTP OTP2">
 		</label>
 
-		<label class="label-chkbox providerData Barion2 Borgun2 Escalion GP OTPSimple PayURest Saferpay Virpay">
-			<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 Escalion GP OTPSimple PayURest Saferpay Virpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		<label class="label-chkbox providerData Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay">
+			<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 		</label>
 
-		<label class="label-chkbox-second providerData Barion2 Borgun2 Escalion GP OTPSimple PayURest Saferpay Virpay">
-			<span>One Click Payment with forced registration (Normal payment with card registration): <input type="checkbox" name="oneClickForcedRegistration" value="1" class="input Barion2 Borgun2 Escalion GP OTPSimple PayURest Saferpay Virpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		<label class="label-chkbox-second providerData Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay">
+			<span>One Click Payment with forced registration (Normal payment with card registration): <input type="checkbox" name="oneClickForcedRegistration" value="1" class="input Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 		</label>
 
 	<? } ?>
 
-	<label class="label-chkbox providerData Barion2 BBAruhitel Paysafecash PayURest">
-		<span>Check to use extra data: <input type="checkbox" name="useExtra" value="1" class="input Barion2 BBAruhitel Paysafecash PayURest"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+	<label class="label-chkbox providerData Barion2 BBAruhitel OTPAruhitel Paysafecash PayURest">
+		<span>Check to use extra data: <input type="checkbox" name="useExtra" value="1" class="input Barion2 BBAruhitel OTPAruhitel Paysafecash PayURest"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
 
 	<label class="providerData Barion2">
@@ -562,15 +495,6 @@
 }</textarea>
 	</label>
 
-    <label class="providerData OTPAruhitel">
-        <span>Extra data:</span>
-        <textarea name="extra[OTPAruhitel]" class="input OTPAruhitel">
-{
-	"constructionGroup":"1000044"
-}
-		</textarea>
-    </label>
-
 	<label class="providerData BBAruhitel">
 		<span>Extra data:</span>
 		<textarea name="extra[BBAruhitel]" class="input BBAruhitel">
@@ -634,6 +558,15 @@
 			"quantity": "2"
 		}
 	]
+}
+		</textarea>
+	</label>
+
+	<label class="providerData OTPAruhitel">
+		<span>Extra data:</span>
+		<textarea name="extra[OTPAruhitel]" class="input OTPAruhitel">
+{
+	"ConstructionGroup":"1000000"
 }
 		</textarea>
 	</label>
