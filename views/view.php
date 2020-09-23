@@ -108,42 +108,8 @@ class View
 	 * @static
 	 */
 	public static $saferpayWallets = array(
+		'APPLEPAY' => 'APPLEPAY',
 		'MASTERPASS' => 'MASTERPASS',
-	);
-
-	/**
-	 * Wirecard payment types
-	 * 
-	 * @var array
-	 * @access public
-	 * @static
-	 */
-	public static $wirecardPaymentTypes = array(
-		'SELECT' => 'Select it on Wirecard side',
-		'BANCONTACT_MISTERCASH' => 'Bancontact/Mister Cash',
-		'CCARD' => 'Credit Card, Maestro SecureCode',
-		'CCARD-MOTO' => 'Credit Card - Mail Order and Telephone Order',
-		'EKONTO' => 'eKonto',
-		'EPAY_BG' => 'ePay.bg',
-		'EPS' => 'eps Online-wire',
-		'GIROPAY' => 'giropay',
-		'IDL' => 'iDEAL',
-		'MONETA' => 'moneta.ru',
-		'MPASS' => 'mpass',
-		'PRZELEWY24' => 'Przelewy24',
-		'PAYPAL' => 'PayPal',
-		'PBX' => 'paybox',
-		'POLI' => 'POLi',
-		'PSC' => 'paysafecard',
-		'QUICK' => '@Quick',
-		'SEPA-DD' => 'SEPA Direct Debit',
-		'SKRILLDIRECT' => 'Skrill Direct',
-		'SKRILLWALLET' => 'Skrill Digital Wallet',
-		'SOFORTUEBERWEISUNG' => 'SOFORT Banking',
-		'TATRAPAY' => 'TatraPay',
-		'TRUSTLY' => 'Trustly',
-		'TRUSTPAY' => 'TrustPay',
-		'VOUCHER' => 'My Voucher',
 	);
 
 	/**

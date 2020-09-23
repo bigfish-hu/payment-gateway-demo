@@ -69,7 +69,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>For clients with a non-Hungarian seat</span>
 			</td>
 			<td class="check yes">&nbsp;</td>
@@ -99,7 +99,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>For clients with a non-Hungarian seat</span>
 			</td>
 			<td class="check yes">&nbsp;</td>
@@ -195,7 +195,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>For clients with a non-Hungarian seat</span>
 			</td>
 			<td class="check yes">&nbsp;</td>
@@ -222,7 +222,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>For clients with a non-Hungarian seat</span>
 			</td>
 			<td class="check yes">&nbsp;</td>
@@ -354,7 +354,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>For clients with a non-Hungarian seat</span>
 			</td>
 			<td class="check yes">&nbsp;</td>
@@ -363,6 +363,33 @@
 			<td>PayPal</td>
 		</tr>
 		<tr class="datarow even">
+			<td>PayPal REST</td>
+			<td>
+				<div class="info">HUF, EUR, USD, ...</div>
+				<span>GBP, PLN, CZK, ...</span>
+			</td>
+			<td>hu, en, de, ...</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">
+				<div class="info">*</div>
+				<span>For clients with a non-Hungarian seat</span>
+			</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
+			<td>PayPalRest</td>
+		</tr>
+		<tr class="datarow odd">
 			<td>Paysafecard</td>
 			<td>HUF, EUR, USD</td>
 			<td>hu, en, de</td>
@@ -370,11 +397,11 @@
 			<td class="check no">&nbsp;</td>
 			<td class="check no">&nbsp;</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>To Paysafecard account</span>
 			</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>To Paysafecard account</span>
 			</td>
 			<td class="check no">&nbsp;</td>
@@ -389,7 +416,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>PSC</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>Paysafecash</td>
 			<td>HUF, EUR</td>
 			<td>hu, de</td>
@@ -397,11 +424,11 @@
 			<td class="check no">&nbsp;</td>
 			<td class="check no">&nbsp;</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>To Paysafecard account</span>
 			</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>To Paysafecard account</span>
 			</td>
 			<td class="check no">&nbsp;</td>
@@ -416,7 +443,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>Paysafecash</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>PayU Classic</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -443,7 +470,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>PayU2</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>PayU REST</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -470,12 +497,12 @@
 			<td class="check no">&nbsp;</td>
 			<td>PayURest</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>Simple</td>
 			<td>HUF, EUR, USD</td>
 			<td>
 				<div class="info">hu, en, de, ...</div>
-				<span>it, hr, cz, pl, ro, sk</span>
+				<span>it, cs, pl, ro, hr, sk, bg, es, fr, ru, tr</span>
 			</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
@@ -484,7 +511,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check no">&nbsp;</td>
-			<td class="check yes">&nbsp;</td>
+			<td class="check no">&nbsp;</td>
 			<td class="check no">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
@@ -494,12 +521,12 @@
 			<td class="check no">&nbsp;</td>
 			<td>OTPSimple</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>Simple wire</td>
 			<td>HUF, EUR, USD</td>
 			<td>
 				<div class="info"> hu, en, de,...</div>
-				<span>it, hr, cz, pl, ro, sk</span>
+				<span>it, cs, pl, ro, hr, sk, bg, es, fr, ru, tr</span>
 			</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check no">&nbsp;</td>
@@ -518,7 +545,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td>OTPSimpleWire</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>SIX Saferpay</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -534,13 +561,13 @@
 			<td class="check no">&nbsp;</td>
 			<td class="check no">&nbsp;</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>MasterPass</span>
 			</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>For clients with a non-Hungarian seat</span>
 			</td>
 			<td class="check yes">&nbsp;</td>
@@ -548,7 +575,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>Saferpay</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>Sofort Banking</td>
 			<td>
 				<div class="info">HUF, EUR, GBP, ...</div>
@@ -575,7 +602,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td>Sofort</td>
 		</tr>
-		<tr class="datarow even">
+		<tr class="datarow odd">
 			<td>UniCredit Bank</td>
 			<td>HUF, EUR, USD</td>
 			<td>
@@ -599,7 +626,7 @@
 			<td class="check no">&nbsp;</td>
 			<td>UniCredit</td>
 		</tr>
-		<tr class="datarow odd">
+		<tr class="datarow even">
 			<td>VirPAY</td>
 			<td>
 				<div class="info">HUF, EUR, USD, ...</div>
@@ -621,7 +648,7 @@
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>For clients with a non-Hungarian seat</span>
 			</td>
 			<td class="check yes">&nbsp;</td>
@@ -629,32 +656,44 @@
 			<td class="check no">&nbsp;</td>
 			<td>Virpay</td>
 		</tr>
-		<tr class="datarow even">
-			<td>Wirecard QPAY</td>
-			<td>HUF, EUR, USD</td>
-			<td>
-				<div class="info">hu, en, de, ...</div>
-				<span>nl, fr, es, it</span>
+		<tr class="datarow odd">
+			<td>Wirecard</td>
+			<td>HUF, EUR, USD, ...</td>
+			<td>hu, en, de, ...</td>
+			<td class="check yes">&nbsp;</td>
+			<td class="check yes">
+				<div class="info">*</div>
+				<span>Credit card, SEPA Direct Debit</span>
+			</td>
+			<td class="check yes">
+				<div class="info">*</div>
+				<span>Credit card, SEPA Direct Debit</span>
 			</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
-			<td class="check yes">&nbsp;</td>
-			<td class="check yes">&nbsp;</td>
-			<td class="check yes">&nbsp;</td>
-			<td class="check yes">&nbsp;</td>
+			<td class="check yes">
+				<div class="info">*</div>
+				<span>Credit card</span>
+			</td>
 			<td class="check no">&nbsp;</td>
-			<td class="check no">&nbsp;</td>
+			<td class="check yes">
+				<div class="info">*</div>
+				<span>Credit card, SEPA Direct Debit</span>
+			</td>
 			<td class="check no">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check yes">
-				<div class="info ">*</div>
+				<div class="info">*</div>
 				<span>For clients with a non-Hungarian seat</span>
 			</td>
 			<td class="check yes">&nbsp;</td>
 			<td class="check no">&nbsp;</td>
-			<td class="check no">&nbsp;</td>
-			<td>QPAY</td>
+			<td class="check yes">
+				<div class="info">*</div>
+				<span>eps, iDEAL, SEPA Direct Debit, Sofort</span>
+			</td>
+			<td>Wirecard</td>
 		</tr>
 	</tbody>
 </table>

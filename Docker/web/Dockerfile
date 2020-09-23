@@ -1,68 +1,40 @@
-#
-# Web node
-#
-FROM docker.big.hu/development/nginx-php:5.6.30
+FROM alpine:3.12
 MAINTAINER BIG FISH <cafe@bigfish.hu>
 
-#
-# Set Debian repository
-#
-RUN sed -i '/jessie-updates/d' /etc/apt/sources.list \
-	&& echo "deb http://repo.big.hu/debian jessie-backports main" >> /etc/apt/sources.list \
-	&& wget -qO - https://repo.big.hu/repo.big.hu.key | apt-key add -
+ENV PHP7_VERSION 7.3.22-r0
 
-#
-# Install extra PHP modules
-#
-RUN apt-get update
+RUN set -ex \
+  && addgroup -S www-data && adduser -S www-data -G www-data \
+  && apk --no-cache add --update \
+    tzdata \
+    curl \
+    nginx \
+    php7=${PHP7_VERSION} \
+    php7-common=${PHP7_VERSION} \
+    php7-curl=${PHP7_VERSION} \
+    php7-fpm=${PHP7_VERSION} \
+    php7-iconv=${PHP7_VERSION} \
+    php7-json=${PHP7_VERSION} \
+    php7-mbstring=${PHP7_VERSION} \
+    php7-opcache=${PHP7_VERSION} \
+    php7-openssl=${PHP7_VERSION} \
+    php7-phar=${PHP7_VERSION} \
+    php7-xmlrpc=${PHP7_VERSION} \
+    php7-xsl=${PHP7_VERSION} \
+    php7-pecl-xdebug \
+  && rm -rf /var/cache/apk/* \
+  && cd /usr/local/bin \
+  && curl -o composer https://getcomposer.org/composer-stable.phar \
+  && chmod ugo+rx composer \
+  && ln -sf /dev/stdout /var/log/php_error.log \
+  && mkdir -p /var/www/dev \
+  && rm -rf /var/www/dev/* \
+  && chown -R www-data:www-data /var/www/dev \
+  && chown -R www-data:www-data /var/log/php_error.log \
+  && echo "zend_extension=xdebug.so" > /etc/php7/conf.d/xdebug.ini
 
-RUN apt-get install -t jessie-bigfish -y \
-    php5-memcached \
-    php5-xsl=${PHP5_VERSION} \
-    php5-xmlrpc=${PHP5_VERSION}
+ENV TZ=Europe/Budapest
+RUN cp /usr/share/zoneinfo/${TZ} /etc/localtime
+RUN echo "${TZ}" > /etc/timezone
 
-#
-# PHP-FPM config
-#
-ADD ./src/php/www.conf /etc/php5/fpm/pool.d/www.conf
-
-#
-# PHP settings
-#
-ADD ./src/php/000-php-settings.ini /etc/php5/mods-available/000-php-settings.ini
-RUN ln -s /etc/php5/mods-available/000-php-settings.ini /etc/php5/cli/conf.d/000-php-settings.ini
-RUN ln -s /etc/php5/mods-available/000-php-settings.ini /etc/php5/fpm/conf.d/000-php-settings.ini
-
-#
-# Forward PHP error log to docker log collector
-#
-RUN ln -sf /dev/stdout /var/log/php_error.log
-
-#
-# Get composer
-#
-RUN cd /usr/local/bin \
-    && wget -q https://getcomposer.org/download/1.1.3/composer.phar \
-    && chmod ugo+rx composer.phar \
-    && ln -s composer.phar composer
-
-#
-# Set www-data user
-#
-RUN usermod -s /bin/bash -d /home/www-data www-data
-
-#
-# Nginx config
-#
-RUN rm -Rf /etc/nginx/conf.d/*
-ADD ./src/nginx/nginx.conf /etc/nginx/nginx.conf
-ADD ./src/nginx/default.conf /etc/nginx/conf.d/default.conf
-
-#
-# Docroot
-#
-RUN mkdir -p /var/www/dev/paymentgateway-demo \
-    && chown -R www-data:www-data /var/www/dev/paymentgateway-demo \
-    && rm -rf /var/www/dev/paymentgateway-demo/*
-
-VOLUME ["/var/www/dev/paymentgateway-demo"]
+WORKDIR "/var/www/dev"

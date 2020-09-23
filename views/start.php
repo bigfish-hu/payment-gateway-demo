@@ -20,6 +20,7 @@
 		<li><label><input type="radio" name="providerName" value="OTPSimple"><span><span></span></span>OTP Simple</label></li>
 		<li><label><input type="radio" name="providerName" value="OTPSimpleWire"><span><span></span></span>OTP Simple wire</label></li>
 		<li><label><input type="radio" name="providerName" value="PayPal"><span><span></span></span>PayPal</label></li>
+		<li><label><input type="radio" name="providerName" value="PayPalRest"><span><span></span></span>PayPal REST</label></li>
 		<li><label><input type="radio" name="providerName" value="PSC"><span><span></span></span>paysafecard</label></li>
 		<li><label><input type="radio" name="providerName" value="Paysafecash"><span><span></span></span>Paysafecash</label></li>
 		<li><label><input type="radio" name="providerName" value="PayU2"><span><span></span></span>PayU Classic</label></li>
@@ -28,7 +29,7 @@
 		<li><label><input type="radio" name="providerName" value="Sofort"><span><span></span></span>Sofort Banking</label></li>
 		<li><label><input type="radio" name="providerName" value="UniCredit"><span><span></span></span>UniCredit Bank</label></li>
 		<li><label><input type="radio" name="providerName" value="Virpay"><span><span></span></span>VirPAY</label></li>
-		<li><label><input type="radio" name="providerName" value="QPAY"><span><span></span></span>Wirecard QPAY</label></li>
+		<li><label><input type="radio" name="providerName" value="Wirecard"><span><span></span></span>Wirecard</label></li>
 	</ul>
 	
 	<div id="testData"></div>
@@ -151,7 +152,7 @@
 				<thead><tr><th colspan="3">Test data:</th></tr></thead>
 				<tbody>
 					<tr><td>To success payment:</td><td>Card number:</td><td>64719254</td></tr>
-					<tr><td></td><td>Expiration date:</td><td>12/2019</td></tr>
+					<tr><td></td><td>Expiration date:</td><td>12/2030</td></tr>
 					<tr><td></td><td>Controlling value:</td><td>213</td></tr>
 					<tr><td></td><td>Password:</td><td>PGtest01</td></tr>
 					<tr><td>To failed payment:</td><td>Card number:</td><td>05101182</td></tr>
@@ -173,14 +174,13 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>4908366099900425</td><td>Expiration date:</td><td>10/14</td><td>CVC2:</td><td>823</td></tr>
+					<tr><td>To success payment:</td><td>4908366099706566</td><td>Expiration date:</td><td>02/23</td><td>CVC2:</td><td>298</td></tr>
 					<tr><td>To failed payment:</td><td>1111111111111117</td><td>Expiration date:</td><td>04/04</td><td>CVC2:</td><td>111</td></tr>
 				</tbody>
 			</table>
 
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">SZÉP Card test data:</th></tr></thead>
-				<tbody><tr><td>To success payment:</td><td>6101324221952665</td><td>Expiration date:</td><td>10/23</td><td>CVC2:</td><td>282</td></tr></tbody>
 				<tbody><tr><td>To success payment:</td><td>6101324010002441</td><td>Expiration date:</td><td>02/06</td><td>CVC2:</td><td>282</td></tr></tbody>
 			</table>
 		</div>
@@ -196,18 +196,22 @@
 			</table>
 		</div>
 
-		<div class="providerData OTPSimple">
-			<table class="table-test-data">
-				<tbody><tr><td><em>If you chose EUR currency authorization must be set "Later". (Only required for the default store.)</em></td></tr></tbody>
-			</table>
-		</div>
-
 		<div class="providerData PayPal">
 			<table class="table-test-data">
 				<thead><tr><th colspan="2">Test data:</th></tr></thead>
 				<tbody>
 					<tr><td>Buyer e-mail:</td><td>paymentgateway+paypalbuyer@bigfish.hu</td></tr>
 					<tr><td>Password:</td><td>bfppbuyer@</td></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="providerData PayPalRest">
+			<table class="table-test-data">
+				<thead><tr><th colspan="2">Test data:</th></tr></thead>
+				<tbody>
+				<tr><td>Buyer e-mail:</td><td>paymentgateway+paypalbuyer@bigfish.hu</td></tr>
+				<tr><td>Password:</td><td>bfppbuyer@</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -273,27 +277,35 @@
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>To success payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/20</td><td>CVV2:</td><td>123</td></tr>
-					<tr><td>To failed payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/22</td><td>CVV2:</td><td>123</td></tr>
+					<tr><td>To success payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/22</td><td>CVV2:</td><td>123</td></tr>
+					<tr><td>To failed payment:</td><td>4314229999999913</td><td>Expiration date:</td><td>01/21</td><td>CVV2:</td><td>123</td></tr>
 				</tbody>
 			</table>
 		</div>
 
-		<div class="providerData QPAY">
+		<div class="providerData Wirecard">
 			<table class="table-test-data">
 				<thead><tr><th colspan="6">Test data:</th></tr></thead>
 				<tbody>
-					<tr><td>MasterCard without MasterCard SecureCode (SSL only):</td><td>9500000000000002</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-					<tr><td>MasterCard with MasterCard SecureCode:</td><td>9500000000000001</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-					<tr><td>Visa without Verified by Visa (SSL only):</td><td>9400000000000004</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-					<tr><td>Visa with Verified by Visa:</td><td>9400000000000003</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-					<tr><td>Maestro with Maestro SecureCode:</td><td>9600000000000005</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-					<tr><td>American Express (SSL only):</td><td>9100000000000006</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-					<tr><td>American Express with American Express SafeKey:</td><td>9100000000000005</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-					<tr><td>Diners Club (SSL only):</td><td>9200000000000007</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-					<tr><td>JCB (SSL only):</td><td>9300000000000008</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-					<tr><td>UATP (SSL only):</td><td>9110000000000010</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
-					<tr><td>Discover (SSL only):</td><td>9090000000000011</td><td>Expiration date:</td><td>any</td><td>CVC:</td><td>any</td></tr>
+				<tr><td width="205">Credit card (No 3DSecure):</td><td>5413330300002004, Date: 01/23, CVC: 004</td></tr>
+				<tr><td>Credit card (3DSecure 1.0.2):</td><td>4012000300001003, Date: 01/23, CVC: 003, Password: wirecard</td></tr>
+				<tr><td>Credit card (3DSecure 2.1.0):</td><td>5413330300201002, Date: 01/23, CVC: 002, Password: wirecard</td></tr>
+				<tr><td>Credit card (Issuer declined):</td><td>5413330500050001, Date: 01/23, CVC: 001</td></tr>
+				<tr><td>eps:</td><td>BIC: BWFBATW1XXX, Login data: Just click to continue - no input needed.</td></tr>
+				<tr><td>iDEAL:</td><td>Bank: ING or Rabobank</td></tr>
+				<tr><td>SEPA Direct Debit:</td><td>IBAN: DE42512308000000060004</td></tr>
+				<tr><td>Sofort:</td><td>Bank name, User ID, PIN: 00000, TAN: 12345</td></tr>
+				<tr><td>Alipay:</td><td>Account name: alipaytest20091@gmail.com, Password: 111111, Payment Password: 111111</td></tr>
+				<tr>
+					<td colspan="2">
+						<dl>
+							<li>Payment method names in the Extra parameter: alipay-xborder, creditcard, eps, ideal, sepadirectdebit, sofortbanking</li>
+							<li>Enter an email address in the Customer:General:Email or Order:BillingData:Email SCA info object to test 3DSecure 2.0</li>
+							<li>Later authorization is only allowed for Credit card payment method</li>
+							<li>One Click Payment is only allowed for Credit card and SEPA Direct Debit payment methods</li>
+							<li>Use IBAN (NL53INGB0654422370) and BIC (INGBNL2A) code in the Extra parameter to refund eps and Sofort transactions.</li>
+						</dl>
+					</td></tr>
 				</tbody>
 			</table>
 		</div>
@@ -304,12 +316,43 @@
 		</label>
 	<? } ?>
 
+	<? if ($this->controller->action == "paymentLinkCreate") { ?>
+		<div class="row">
+			<label class="col-2">
+				<span>Flexible amount:</span>
+				<select name="flexibleAmount" onchange="document.getElementById('amount-row').style.display = (this.value === 'true' ? 'none' : 'block'); document.getElementById('flexible-amount-row').style.display = (this.value === 'true' ? 'block' : 'none');">
+					<option value="false">No</option>
+					<option value="true">Yes</option>
+				</select>
+			</label>
+			<label class="col-2" id="amount-row">
+				<span>Amount *:</span>
+				<input type="text" name="amount" value="">
+			</label>
+		</div>
+	<? } ?>
+
+	<? if ($this->controller->action == "paymentLinkCreate") { ?>
+		<div class="row" id="flexible-amount-row" style="display: none;">
+			<label class="col-2">
+				<span>Minimum amount *:</span>
+				<input type="text" name="minimumAmount" value="">
+			</label>
+			<label class="col-2">
+				<span>Maximum amount:</span>
+				<input type="text" name="maximumAmount" value="">
+			</label>
+		</div>
+	<? } ?>
+
 	<div class="row">
-		<label class="col-2">
-			<span>Amount *:</span>
-			<input type="text" name="amount" value="">
-		</label>
-		
+		<? if ($this->controller->action != "paymentLinkCreate") { ?>
+			<label class="col-2">
+				<span>Amount *:</span>
+				<input type="text" name="amount" value="">
+			</label>
+		<? } ?>
+
 		<label class="col-2">
 			<span>Currency:</span>
 			<select name="currency">
@@ -331,16 +374,37 @@
 				<option value="SEK">SEK</option>
 			</select>
 		</label>
+
+		<? if ($this->controller->action == "paymentLinkCreate") { ?>
+			<label class="col-2 providerData Barion2 Borgun Borgun2 BBAruhitel CIB FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPAruhitel OTPSimple OTPSimpleWire PayPal PayPalRest PSC Paysafecash PayU2 PayURest Saferpay Sofort UniCredit Virpay">
+				<span>Allow multiple transactions:</span>
+				<select name="multipleTransactions" onchange="
+				(function(multipleTransaction) {
+					if (multipleTransaction) {
+						document.querySelector('input[name=userId]').setAttribute('disabled', 'disabled');
+						document.querySelector('textarea[name=infoData]').setAttribute('disabled', 'disabled');
+						document.getElementById('userId').style.display = document.getElementById('info').style.display = 'none';
+					} else {
+						document.querySelector('input[name=userId]').removeAttribute('disabled');
+						document.querySelector('textarea[name=infoData]').removeAttribute('disabled');
+						document.getElementById('userId').style.display = document.getElementById('info').style.display = 'block';
+					}
+				})(this.value === 'true');" class="input Barion2 Borgun Borgun2 BBAruhitel CIB FHB GP IPG KHB KHBSZEP MKBSZEP OTP OTP2 OTPAruhitel OTPSimple OTPSimpleWire PayPal PayPalRest PSC Paysafecash PayU2 PayURest Saferpay Sofort UniCredit Virpay">
+					<option value="false">No</option>
+					<option value="true">Yes</option>
+				</select>
+			</label>
+		<? } ?>
 	</div>
 
 	<div class="row">
 		<label class="col-2">
-			<span>Order ID *:</span>
+			<span>Order ID:</span>
 			<input type="text" name="orderId" value="">
 		</label>
 
-		<label class="col-2">
-			<span>User ID *:</span>
+		<label class="col-2" id="userId">
+			<span>User ID:</span>
 			<input type="text" name="userId" value="">
 		</label>
 	</div>
@@ -367,10 +431,10 @@
 				<option value="SK">SK</option>
 			</select>
 		</label>
-		
-		<label class="col-2 providerData Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
+
+		<label class="col-2 providerData Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPSimple PayU2 PayURest UniCredit Saferpay Virpay Wirecard PayPalRest">
 			<span>Authorization:</span>
-			<select name="autoCommit" class="input Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPSimple PayU2 PayURest UniCredit QPAY Saferpay Virpay">
+			<select name="autoCommit" class="input Barion2 Borgun2 FHB GP IPG OTP OTP2 OTPSimple PayU2 PayURest UniCredit Saferpay Virpay Wirecard PayPalRest">
 				<option value="true">Immediate</option>
 				<option value="false">Later</option>
 			</select>
@@ -387,11 +451,6 @@
 		</select>
 	</label>
 
-	<label class="providerData GP">
-		<span>Fastpay ID (previous provider transaction ID):</span>
-		<input type="text" name="extra[FASTPAYID]" value="" class="input GP">
-	</label>
-
 	<? if ($this->controller->action == "start") { ?>
 
 		<label class="providerData OTP OTP2">
@@ -399,18 +458,18 @@
 			<input type="text" name="otpConsumerRegistrationId" value="" class="input OTP OTP2">
 		</label>
 
-		<label class="label-chkbox providerData Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay">
-			<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		<label class="label-chkbox providerData Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay Wirecard PayPalRest">
+			<span>One Click Payment (Card registration or pay by a registered card on Payment Gateway page): <input type="checkbox" name="oneClickPayment" value="1" class="input Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay Wirecard PayPalRest"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 		</label>
 
-		<label class="label-chkbox-second providerData Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay">
-			<span>One Click Payment with forced registration (Normal payment with card registration): <input type="checkbox" name="oneClickForcedRegistration" value="1" class="input Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		<label class="label-chkbox-second providerData Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay Wirecard PayPalRest">
+			<span>One Click Payment with forced registration (Normal payment with card registration): <input type="checkbox" name="oneClickForcedRegistration" value="1" class="input Barion2 Borgun2 GP OTPSimple PayURest Saferpay Virpay Wirecard PayPalRest"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 		</label>
 
 	<? } ?>
 
-	<label class="label-chkbox providerData Barion2 BBAruhitel OTPAruhitel Paysafecash PayURest">
-		<span>Check to use extra data: <input type="checkbox" name="useExtra" value="1" class="input Barion2 BBAruhitel OTPAruhitel Paysafecash PayURest"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+	<label class="label-chkbox providerData Barion2 BBAruhitel GP OTPAruhitel Paysafecash PayURest Wirecard">
+		<span>Check to use extra data: <input type="checkbox" name="useExtra" value="1" class="input Barion2 BBAruhitel GP OTPAruhitel Paysafecash PayURest Wirecard PayPalRest"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 	</label>
 
 	<label class="providerData Barion2">
@@ -492,7 +551,8 @@
 	"address1":"Test street 1.",
 	"city":"Budapest",
 	"postalCode":"9999"
-}</textarea>
+}
+		</textarea>
 	</label>
 
 	<label class="providerData BBAruhitel">
@@ -507,7 +567,17 @@
 	"testMode":false
 }
 		</textarea>
-    </label>
+	</label>
+
+	<label class="providerData GP">
+		<span>Extra data:</span>
+		<textarea name="extra[GP]" class="input GP">
+{
+	"PAYMETHODS":"GPAY",
+	"FASTPAYID":0
+}
+		</textarea>
+	</label>
 
 	<label class="providerData PayURest">
 		<span>Extra data:</span>
@@ -571,6 +641,19 @@
 		</textarea>
 	</label>
 
+	<label class="providerData Wirecard">
+		<span>Extra data:</span>
+		<textarea name="extra[Wirecard]" class="input Wirecard">
+{
+	"paymentMethod": "sepadirectdebit",
+	"descriptor": "account statement note",
+	"theme": "test",
+	"mandateId": "123456789",
+	"mandateSignedDate": "<?=date('Y-m-dP');?>"
+}
+		</textarea>
+	</label>
+
 	<? if ($this->controller->action == "start") { ?>
 
 		<ul class="providerData PayPal">
@@ -630,6 +713,17 @@
 			</table>
 		</div>
 
+		<ul class="providerData PayPalRest">
+			<li><label><input type="radio" name="PaymentType" class="input PayPalRest" onclick="showPayPalRestSubscription(false);" checked><span><span></span></span>Normal Payment</label></li>
+			<li><label><input type="radio" name="PaymentType" value="2" class="input PayPalRest" onclick="showPayPalRestSubscription(true);"><span><span></span></span>Buyer registration to Subscription Payment</label></li>
+		</ul>
+		<div class="row providerData PayPalRest-Subscription">
+			<label>
+				<span>Extra data:</span>
+				<textarea name="extra[PayPalRest]" class="input PayPalRest"><?php print_r(json_encode(Demo::getGeneratedPayPalRestSubscriptionExtra(), JSON_PRETTY_PRINT)); ?></textarea>
+			</label>
+		</div>
+
 		<label class="label-chkbox providerData MKBSZEP OTP2">
 			<span>Add your card data on merchant's page:</span>
 		</label>
@@ -679,24 +773,11 @@
 		<?}?>
 	</div>
 
-	<label class="providerData QPAY">
-		<span>Payment type:</span>
-	</label>
-
-	<div class="row providerData QPAY">
-		<select name="extra[QpayPaymentType]" class="input QPAY">
-			<option value="">Setting by store</option>
-			<?foreach (self::$wirecardPaymentTypes as $wirecardPaymentTypeKey => $wirecardPaymentTypeName) {?>
-				<option value="<?=$wirecardPaymentTypeKey;?>"><?=$wirecardPaymentTypeName;?></option>
-			<?}?>
-		</select>
-	</div>
-
 	<? if ($this->controller->action == "paymentLinkCreate") { ?>
 
 		<div class="row">
 			<label class="col-2">
-				<span>Merchant notification email *:</span>
+				<span>Merchant notification email <sup>**</sup>:</span>
 				<input type="text" name="notificationEmail" value="">
 			</label>
 
@@ -710,15 +791,40 @@
 			<span>Email notification only if the transaction is successful: <input type="checkbox" name="emailNotificationOnlySuccess" value="1" class="input All"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
 		</label>
 
+		<div class="row">
+			<label class="col-2">
+				<span>Information form:</span>
+				<select name="infoForm">
+					<option value="" selected>No</option>
+					<option value="product">Product</option>
+					<option value="service">Service</option>
+				</select>
+			</label>
+
+			<label class="col-2">
+				<span>Redirect URL:</span>
+				<input type="text" name="redirectUrl" value="">
+			</label>
+		</div>
+
+		<div class="row">
+			<label class="col-2">
+				<span>Privacy policy URL:</span>
+				<input type="text" name="privacyPolicyUrl" value="">
+			</label>
+		</div>
+
 	<? } ?>
 
-	<label class="label-chkbox-second">
-		<span>Check to use info data: <input type="checkbox" name="useInfo" value="1" class="input All"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
-	</label>
-	<label>
-		<span>Info data:</span>
-		<textarea name="infoData" class="input All"><?php print_r(json_encode(Demo::getGeneratedInfoObject()->getData(), JSON_PRETTY_PRINT)); ?></textarea>
-	</label>
+	<div id="info">
+		<label class="label-chkbox-second">
+			<span>Check to use info data: <input type="checkbox" name="useInfo" value="1" class="input All"><span class="chkbox"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-check"></use></svg></span></span>
+		</label>
+		<label>
+			<span>Info data:</span>
+			<textarea name="infoData" class="input All"><?php print_r(json_encode(Demo::getGeneratedInfoObject()->getData(), JSON_PRETTY_PRINT)); ?></textarea>
+		</label>
+	</div>
 
 	<input type="submit" name="submit" value="Next">
 </form>

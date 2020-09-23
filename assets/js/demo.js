@@ -64,6 +64,23 @@ function showPayPalReference(data) {
 	}
 }
 
+function showPayPalRestSubscription(data) {
+	var display = 'block',
+		disabled = false,
+		elemDiv = document.getElementsByClassName('PayPalRest-Subscription'),
+		elemInput = document.getElementsByClassName('input PayPalRest-Subscription');
+	if (typeof data != 'undefined' && data === false) {
+		display = 'none';
+		disabled = true;
+	}
+	for(var i = 0; i < elemDiv.length; i++) {
+		elemDiv[i].style.display = display;
+	}
+	for(var i = 0; i < elemInput.length; i++) {
+		elemInput[i].disabled = disabled;
+	}
+}
+
 function jumpTo(id) {
 	window.scrollTo(0, document.getElementById(id).offsetTop);
 }

@@ -6,9 +6,15 @@ services:
     domainname: dev.big.hu
     environment:
       - DEVELOPMENT_USER=${USER}
-      - PMGW_URL_TEST=http://paymentgateway.dev.big.hu
+      - PMGW_URL_TEST=https://system-test.paymentgateway.hu
+    command: ["sh", "-c", 'nginx -g "daemon off;" & php-fpm7 -F']
     volumes:
-      - ./:/var/www/dev/paymentgateway-demo
+      - ./:/var/www/dev:rw
+      - ./Docker/web/src/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./Docker/web/src/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./Docker/web/src/php/000-php-settings.ini:/etc/php7/conf.d/000-php-settings.ini:ro
+      - ./Docker/web/src/php/php-fpm.conf:/etc/php7/php-fpm.conf:ro
+      - ./Docker/web/src/php/www.conf:/etc/php7/php-fpm.d/www.conf:ro
     labels:
       - traefik.enable=true
       - traefik.port=80

@@ -65,7 +65,7 @@ abstract class Demo
 	private static function setProviderExtra(&$data)
 	{
 		if (isset($_POST['useExtra']) && (int)$_POST['useExtra'] && isset($_POST['extra'][$data['providerName']]) && !empty($_POST['extra'][$data['providerName']])) {
-			if (in_array($data['providerName'], array(\BigFish\PaymentGateway::PROVIDER_BBARUHITEL, \BigFish\PaymentGateway::PROVIDER_OTPARUHITEL, \BigFish\PaymentGateway::PROVIDER_PAYUREST))) {
+			if (in_array($data['providerName'], array(\BigFish\PaymentGateway::PROVIDER_BBARUHITEL, \BigFish\PaymentGateway::PROVIDER_GP, \BigFish\PaymentGateway::PROVIDER_OTPARUHITEL, \BigFish\PaymentGateway::PROVIDER_PAYPALREST, \BigFish\PaymentGateway::PROVIDER_PAYUREST, \BigFish\PaymentGateway::PROVIDER_WIRECARD))) {
 				$data['extra'] = json_decode($_POST['extra'][$data['providerName']], true);
 			} else {
 				$data['extra'][$data['providerName']] = json_decode($_POST['extra'][$data['providerName']], true);
@@ -158,11 +158,18 @@ abstract class Demo
 								->setOtpExpiration($data["cardExpiration"])
 								->setOtpCvc($data["cardCvc"]);
 					break;
+				case \BigFish\PaymentGateway::PROVIDER_PAYPALREST:
+					$_POST['useExtra'] = 0;
+
+					if ($_POST['PaymentType'] == 2) {
+						$_POST['useExtra'] = 1;
+					}
 				case \BigFish\PaymentGateway::PROVIDER_BARION2:
+				case \BigFish\PaymentGateway::PROVIDER_GP:
 				case \BigFish\PaymentGateway::PROVIDER_PAYUREST:
+				case \BigFish\PaymentGateway::PROVIDER_WIRECARD:
 					self::setProviderExtra($data);
 				case \BigFish\PaymentGateway::PROVIDER_BORGUN2:
-				case \BigFish\PaymentGateway::PROVIDER_GP:
 				case \BigFish\PaymentGateway::PROVIDER_OTP_SIMPLE:
 				case \BigFish\PaymentGateway::PROVIDER_SAFERPAY:
 				case \BigFish\PaymentGateway::PROVIDER_PAYPAL:
@@ -262,7 +269,7 @@ abstract class Demo
 			return $e->getMessage();
 		}
 	}
-	
+
 	/**
 	 * Refund transaction
 	 * 
@@ -274,7 +281,13 @@ abstract class Demo
 	public static function refund(array $data = array())
 	{
 		try {
-			$refundResponse = \BigFish\PaymentGateway::refund(new \BigFish\PaymentGateway\Request\Refund($data['TransactionId'], $data['amount']));
+			$refundRequest = new \BigFish\PaymentGateway\Request\Refund($data['TransactionId'], $data['amount']);
+
+			if (isset($_POST['useExtra']) && (int)$_POST['useExtra'] && isset($_POST['extra']) && !empty($_POST['extra'])) {
+				$refundRequest->setExtra(json_decode($_POST['extra'], true));
+			}
+
+			$refundResponse = \BigFish\PaymentGateway::refund($refundRequest);
 
 			return $refundResponse;
 		} catch (\BigFish\PaymentGateway\Exception $e) {
@@ -407,13 +420,22 @@ abstract class Demo
 			$paymentLinkCreateRequest = new \BigFish\PaymentGateway\Request\PaymentLinkCreate();
 
 			$paymentLinkCreateRequest->setProviderName($data['providerName'])
-				->setAmount($data['amount'])
 				->setCurrency($data['currency'])
+				->setMultipleTransactions($data['multipleTransactions'])
 				->setOrderId($data['orderId'])
 				->setUserId($data['userId'])
 				->setExpirationTime($data['expirationTime'])
 				->setNotificationEmail($data['notificationEmail'])
-				->setEmailNotificationOnlySuccess($data['emailNotificationOnlySuccess']);
+				->setEmailNotificationOnlySuccess($data['emailNotificationOnlySuccess'])
+				->setInfoForm($data['infoForm'])
+				->setPrivacyPolicyUrl($data['privacyPolicyUrl'])
+				->setRedirectUrl($data['redirectUrl']);
+
+			if (filter_var($data['flexibleAmount'], FILTER_VALIDATE_BOOLEAN)) {
+				$paymentLinkCreateRequest->setFlexibleAmount($data['minimumAmount'], $data['maximumAmount']);
+			} else {
+				$paymentLinkCreateRequest->setAmount($data['amount']);
+			}
 
 			if (!empty($data["language"])) {
 				$paymentLinkCreateRequest->setLanguage($data["language"]);
@@ -440,11 +462,14 @@ abstract class Demo
 				case \BigFish\PaymentGateway::PROVIDER_BBARUHITEL:
 				case \BigFish\PaymentGateway::PROVIDER_PAYUREST:
 				case \BigFish\PaymentGateway::PROVIDER_OTPARUHITEL:
+				case \BigFish\PaymentGateway::PROVIDER_WIRECARD:
 					self::setProviderExtra($data);
 					break;
 			}
 
-			$paymentLinkCreateRequest->setInfo(self::getInfo($data));
+			if (!filter_var($data['multipleTransactions'], FILTER_VALIDATE_BOOLEAN)) {
+				$paymentLinkCreateRequest->setInfo(self::getInfo($data));
+			}
 
 			if (isset($data['extra']) && is_array($data['extra'])) {
 				$paymentLinkCreateRequest->setExtra($data['extra']);
@@ -515,6 +540,98 @@ abstract class Demo
 		$infoObject->setData(self::getOrderRecurringPayment());
 
 		return $infoObject;
+	}
+
+	/**
+	 * @return
+	 */
+	public static function getGeneratedPayPalRestSubscriptionExtra()
+	{
+		return array (
+			'isSubscriptionPayment' => true,
+			'Product' =>
+				array (
+					'name' => 'Video Streaming Service',
+					'description' => 'Video streaming service',
+					'type' => 'SERVICE',
+					'category' => 'SOFTWARE',
+					'image_url' => 'https://example.com/streaming.jpg',
+					'home_url' => 'https://example.com/home',
+				),
+			'Plan' =>
+				array (
+					'name' => 'Basic Plan',
+					'description' => 'Basic plan',
+					'quantity_supported' => true,
+					'billing_cycles' =>
+						array (
+							0 =>
+								array (
+									'frequency' =>
+										array (
+											'interval_unit' => 'DAY',
+											'interval_count' => 1,
+										),
+									'tenure_type' => 'TRIAL',
+									'sequence' => 1,
+									'total_cycles' => 1,
+									'pricing_scheme' =>
+										array (
+											'fixed_price' =>
+												array (
+													'value' => '10.0',
+													'currency_code' => 'USD',
+												),
+										),
+								),
+							1 =>
+								array (
+									'frequency' =>
+										array (
+											'interval_unit' => 'DAY',
+											'interval_count' => 1,
+										),
+									'tenure_type' => 'REGULAR',
+									'sequence' => 2,
+									'total_cycles' => 3,
+									'pricing_scheme' =>
+										array (
+											'fixed_price' =>
+												array (
+													'value' => '20.0',
+													'currency_code' => 'USD',
+												),
+										),
+								),
+						),
+					'payment_preferences' =>
+						array (
+							'auto_bill_outstanding' => false,
+							'setup_fee_failure_action' => 'CANCEL',
+							'setup_fee' =>
+								array (
+									'value' => '10.0',
+									'currency_code' => 'USD',
+								),
+							'payment_failure_threshold' => 1,
+						),
+				),
+			'Subscription' =>
+				array (
+					'quantity' => '1',
+					'shipping_amount' =>
+						array (
+							'currency_code' => 'USD',
+							'value' => '1.00',
+						),
+					'application_context' =>
+						array (
+							'brand_name' => 'Demo LTD Brand Name',
+							'locale' => 'en-US',
+							'shipping_preference' => 'SET_PROVIDED_ADDRESS',
+						),
+				),
+		);
 	}
 
 	/**

@@ -40,7 +40,7 @@
 			<span>Registered card *:</span>
 			<select name="cardReferenceId">
 				<? foreach ($this->controller->data as $data) { ?>
-					<option value="<?=$data->card_reference_id;?>"><?=$data->currency;?>: <?=strlen($data->card_pan) == 4 ? '**** **** **** ' : '';?><?=$data->card_pan;?> (<?=$data->card_type;?>)</option>
+					<option value="<?=$data->card_reference_id;?>"><?=$data->currency;?><?=(!empty($data->payment_method) ? ', ' . $data->payment_method : '')?>: <?=strlen($data->card_pan) == 4 ? '**** **** **** ' : '';?><?=$data->card_pan;?> (<?=$data->card_type;?>)</option>
 				<? } ?>
 			</select>
 		</label>
